@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEBE Alpine Ski Touring & Expeditions | Karakoram • Alps • Tian Shan</title>
+  <meta name="description" content="Official platform for KEBE Alpine Ski Touring & High-Altitude Expeditions. Flagship Gappa 2027 Karakoram departure, certified IFMGA/UIAGM mountain guides, and bespoke alpine adventures worldwide.">
+  <link rel="icon" type="image/jpeg" href="assets/logo-brand.jpg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & Vazirmatn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#0B0D10',
+              surface: '#13171C',
+              panel: '#1A2028',
+              orange: '#FF5722',
+              orangeHover: '#F4511E',
+              orangeLight: '#FF8A65',
+              ice: '#E0F2FE',
+              glacier: '#38BDF8',
+              muted: '#94A3B8',
+              border: '#242C38'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Vazirmatn', 'system-ui', 'sans-serif'],
+            fa: ['Vazirmatn', 'Inter', 'sans-serif'],
+            mono: ['Inter', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B0D10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FF5722;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF8A65;
+    }
+    
+    .glass-nav {
+      background: rgba(11, 13, 16, 0.90);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-card {
+      background: rgba(19, 23, 28, 0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(255, 87, 34, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -12px rgba(255, 87, 34, 0.18);
+    }
+
+    .hero-mask {
+      background: linear-gradient(180deg, rgba(11,13,16,0.25) 0%, rgba(11,13,16,0.85) 75%, #0B0D10 100%);
+    }
+
+    .topo-bg {
+      background-image: radial-gradient(#242C38 1.2px, transparent 1.2px);
+      background-size: 26px 26px;
+    }
+
+    html[dir="rtl"] {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    html[dir="ltr"] {
+      font-family: 'Inter', sans-serif;
+    }
+
+    @keyframes pulse-gentle {
+      0%, 100% { opacity: 0.92; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+    .animate-pulse-gentle {
+      animation: pulse-gentle 7s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-charcoal text-slate-100 selection:bg-brand-orange selection:text-white antialiased overflow-x-hidden">
+
+  <!-- Header & Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Section: Exact Faceted KB Emblem with Non-K2/K3 Chiseled Geometry -->
+        <a href="#hero" class="flex items-center gap-3.5 group focus:outline-none">
+          <div class="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105 duration-300">
+            <svg viewBox="0 0 140 130" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Left Vertical Stem (Faceted K - Charcoal & Slate) -->
+              <polygon points="14,12 40,12 40,118 14,118" stroke="#CBD5E1" stroke-width="4.5" fill="#1E293B" />
+              <polygon points="14,12 27,26 40,12" stroke="#94A3B8" stroke-width="3" fill="#334155" />
+              <polygon points="14,118 27,104 40,118" stroke="#94A3B8" stroke-width="3" fill="#334155" />
+              <line x1="27" y1="26" x2="27" y2="104" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="1 3" />
+              
+              <!-- Upper Diagonal Arm of K (Transitions to B) -->
+              <polygon points="38,64 82,14 100,14 52,76" stroke="#E2E8F0" stroke-width="4" fill="#1E293B" />
+              
+              <!-- Lower Diagonal Arm of K -->
+              <polygon points="38,66 52,56 98,118 78,118" stroke="#E2E8F0" stroke-width="4" fill="#1E293B" />
+              
+              <!-- Upper Loop of B (Faceted Emergency Safety Orange - Enclosed Loop) -->
+              <polygon points="80,14 116,14 132,30 132,52 110,65 72,65 82,53 108,53 118,46 118,36 108,26 80,26" 
+                stroke="#FF5722" stroke-width="4.5" fill="#C2410C" fill-opacity="0.32" stroke-linejoin="round"/>
+              <line x1="116" y1="14" x2="108" y2="26" stroke="#FF5722" stroke-width="2.5" />
+              <line x1="132" y1="30" x2="118" y2="36" stroke="#FF5722" stroke-width="2.5" />
+              <line x1="132" y1="52" x2="118" y2="46" stroke="#FF5722" stroke-width="2.5" />
+              <line x1="110" y1="65" x2="108" y2="53" stroke="#FF5722" stroke-width="2.5" />
+
+              <!-- Lower Loop of B (Faceted Emergency Safety Orange - Enclosed Loop) -->
+              <polygon points="72,65 112,65 132,78 132,104 118,118 78,118 88,106 110,106 120,98 120,84 108,76 78,76" 
+                stroke="#FF5722" stroke-width="4.5" fill="#C2410C" fill-opacity="0.32" stroke-linejoin="round"/>
+              <line x1="112" y1="65" x2="108" y2="76" stroke="#FF5722" stroke-width="2.5" />
+              <line x1="132" y1="78" x2="120" y2="84" stroke="#FF5722" stroke-width="2.5" />
+              <line x1="132" y1="104" x2="120" y2="98" stroke="#FF5722" stroke-width="2.5" />
+              <line x1="118" y1="118" x2="110" y2="106" stroke="#FF5722" stroke-width="2.5" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-black tracking-widest text-white font-mono leading-none">KEBE</span>
+            <span class="text-[9px] uppercase tracking-[0.25em] text-brand-orange font-bold mt-1">ALPINE SKI TOURING</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-300">
+          <a href="#destinations" class="hover:text-brand-orange transition-colors" data-i18n="nav_destinations">Destinations</a>
+          <a href="#categories" class="hover:text-brand-orange transition-colors" data-i18n="nav_disciplines">Disciplines</a>
+          <a href="#safety" class="hover:text-brand-orange transition-colors" data-i18n="nav_safety">IFMGA Safety</a>
+          <a href="#calculator" class="hover:text-brand-orange transition-colors" data-i18n="nav_calculator">Estimator</a>
+          <a href="#screening" class="hover:text-brand-orange transition-colors" data-i18n="nav_screening">Technical Screening</a>
+          <!-- Executive Dossier Trigger -->
+          <button onclick="toggleDossierModal()" class="flex items-center gap-1.5 text-xs text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 rounded-lg hover:bg-amber-500/20 transition-all font-mono">
+            <i class="fa-solid fa-briefcase"></i>
+            <span data-i18n="nav_dossier">Executive Blueprint</span>
+          </button>
+        </nav>
+
+        <!-- Right Side: 5-Language Switcher & Quick CTA -->
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <button id="langBtn" onclick="toggleLangDropdown()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs font-bold text-slate-200 hover:border-brand-orange transition-colors">
+              <i class="fa-solid fa-globe text-brand-orange"></i>
+              <span id="currentLangLabel">EN</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-slate-400"></i>
+            </button>
+            <div id="langDropdown" class="hidden absolute right-0 mt-2 w-36 rounded-xl bg-brand-surface border border-brand-border shadow-2xl py-1 z-50">
+              <button onclick="setLanguage('en')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200">
+                <span>English</span> <span class="text-slate-500 font-mono text-[10px]">EN</span>
+              </button>
+              <button onclick="setLanguage('fr')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200">
+                <span>Français</span> <span class="text-slate-500 font-mono text-[10px]">FR</span>
+              </button>
+              <button onclick="setLanguage('de')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200">
+                <span>Deutsch</span> <span class="text-slate-500 font-mono text-[10px]">DE</span>
+              </button>
+              <button onclick="setLanguage('es')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200">
+                <span>Español</span> <span class="text-slate-500 font-mono text-[10px]">ES</span>
+              </button>
+              <button onclick="setLanguage('fa')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200 border-t border-brand-border">
+                <span>فارسی</span> <span class="text-brand-orange font-mono text-[10px]">FA</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Join CTA -->
+          <a href="#screening" class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-brand-orange hover:bg-brand-orangeHover px-4 py-2 text-xs font-bold text-white shadow-lg shadow-orange-500/20 transition-all duration-200 active:scale-95" data-i18n="nav_apply_cta">
+            <i class="fa-solid fa-person-skiing"></i>
+            <span>Join Expedition</span>
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden text-slate-300 hover:text-white p-2" aria-label="Menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Drawer -->
+      <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-border py-4 space-y-3">
+        <a href="#gappa" onclick="toggleMobileMenu()" class="block text-brand-orange font-bold py-1 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+          <span data-i18n="nav_gappa">Gappa 2027 (Pakistan)</span>
+        </a>
+        <a href="#destinations" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_destinations">Destinations</a>
+        <a href="#categories" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_disciplines">Disciplines</a>
+        <a href="#safety" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_safety">Safety Standards</a>
+        <a href="#calculator" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_calculator">Cost Estimator</a>
+        <a href="#screening" onclick="toggleMobileMenu()" class="block px-3 py-2 text-brand-orange font-bold text-sm" data-i18n="nav_screening">Technical Screening</a>
+        <button onclick="toggleMobileMenu(); toggleDossierModal()" class="w-full text-left px-3 py-2 text-amber-400 font-mono text-sm font-bold flex items-center gap-2">
+          <i class="fa-solid fa-briefcase"></i> <span data-i18n="nav_dossier">Executive Blueprint</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=2200&q=85" 
+           alt="High altitude ski mountaineering expedition" 
+           class="w-full h-full object-cover object-center scale-105 animate-pulse-gentle filter brightness-70"
+           onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=2000&q=80'">
+      <div class="absolute inset-0 hero-mask"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
+      <!-- High Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange text-xs sm:text-sm font-bold mb-6 tracking-wide backdrop-blur">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-ping"></span>
+        <span data-i18n="hero_badge">High-Altitude Alpine Ski Touring & Summer Alpinism</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight mb-6">
+        <span data-i18n="hero_title_1">Ascend Untouched Glaciers,</span><br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-400 to-sky-300" data-i18n="hero_title_2">
+          Drop the Purest Alpine Lines
+        </span>
+      </h1>
+
+      <p class="max-w-3xl mx-auto text-base sm:text-xl text-slate-300 mb-10 leading-relaxed font-light" data-i18n="hero_subtitle">
+        <strong>KEBE</strong> operates elite ski touring and summer alpinism expeditions across 11+ high-mountain regions worldwide. From the perpetual ice of the Swiss 4,000ers and the Arctic fjords of Norway, to Kyrgyzstan’s virgin powder, Patagonia, and the Himalayas.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+        <a href="#destinations" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-base transition-all duration-300 shadow-xl shadow-orange-500/25 flex items-center justify-center gap-3">
+          <i class="fa-solid fa-compass"></i>
+          <span data-i18n="hero_btn_destinations">Explore 11+ Destinations</span>
+        </a>
+        <a href="#screening" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-surface/90 hover:bg-brand-panel text-slate-200 border border-brand-border font-bold text-base transition-all duration-300 flex items-center justify-center gap-3">
+          <i class="fa-solid fa-file-shield text-brand-orange"></i>
+          <span data-i18n="hero_btn_screening">Technical Qualification</span>
+        </a>
+      </div>
+
+      <!-- Live Metric Badges -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-white/10 text-center">
+        <div class="p-3">
+          <div class="text-3xl font-mono font-extrabold text-white">11+</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase font-semibold" data-i18n="metric_countries">Countries with Local DMC</div>
+        </div>
+        <div class="p-3">
+          <div class="text-3xl font-mono font-extrabold text-brand-orange">100%</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase font-semibold" data-i18n="metric_guides">IFMGA / UIAGM Certified</div>
+        </div>
+        <div class="p-3">
+          <div class="text-3xl font-mono font-extrabold text-white">7,546m</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase font-semibold" data-i18n="metric_peak">Highest Ski Descent (Muztagh)</div>
+        </div>
+        <div class="p-3">
+          <div class="text-3xl font-mono font-extrabold text-brand-glacier">24/7</div>
+          <div class="text-xs text-slate-400 mt-1 uppercase font-semibold" data-i18n="metric_sat">Satellite & Air Evac Link</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Flagship Departure: Gappa, Nagar Valley 2027 (from PDF proposal) -->
+  <section id="gappa" class="py-24 relative overflow-hidden border-b border-brand-border topo-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-star"></i> <span data-i18n="gappa_tag">Flagship Departure · Spring 2027</span>
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 leading-tight" data-i18n="gappa_title">Gappa, Nagar Valley — Ski Touring in Pakistan</h2>
+        <p class="text-slate-400 mt-4 leading-relaxed" data-i18n="gappa_sub">Gappa is a magnificent, off-the-beaten-track corner of Gilgit-Baltistan, in the heart of the Karakoram: meadows, glacier views and untouched ski terrain above a private base camp.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Left: image, stats, itinerary -->
+        <div class="lg:col-span-2 space-y-8">
+          <div class="relative rounded-3xl overflow-hidden h-64 sm:h-80 border border-brand-border">
+            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80" alt="Karakoram ski touring, Gappa Nagar Valley" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/30 to-transparent"></div>
+            <div class="absolute bottom-0 inset-x-0 p-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold" data-i18n="gappa_stat_dates">Dates</div>
+                <div class="text-sm sm:text-base font-bold text-white" data-i18n="gappa_stat_dates_val">3 – 16 Apr 2027</div>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold" data-i18n="gappa_stat_duration">Duration</div>
+                <div class="text-sm sm:text-base font-bold text-white" data-i18n="gappa_stat_duration_val">14 days</div>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold" data-i18n="gappa_stat_ski">Skiing</div>
+                <div class="text-sm sm:text-base font-bold text-brand-orange" data-i18n="gappa_stat_ski_val">Up to 7–8 days*</div>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold" data-i18n="gappa_stat_region">Region</div>
+                <div class="text-sm sm:text-base font-bold text-white" data-i18n="gappa_stat_region_val">Karakoram, Gilgit-Baltistan</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-3xl p-6 sm:p-8">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-route text-brand-orange"></i> <span data-i18n="gappa_itin_title">Day-by-day itinerary</span>
+            </h3>
+            <ol id="gappaItinerary" class="relative border-s border-brand-border ms-4"></ol>
+            <p class="text-[11px] text-slate-500 mt-6" data-i18n="gappa_ski_note">* Number of ski days depends on weather and snow conditions.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card rounded-3xl p-6">
+              <h4 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i> <span data-i18n="gappa_inc_title">Included in the price</span>
+              </h4>
+              <ul id="gappaIncluded" class="space-y-2.5 text-xs text-slate-300 leading-relaxed"></ul>
+            </div>
+            <div class="glass-card rounded-3xl p-6 h-fit">
+              <h4 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-circle-xmark text-rose-400"></i> <span data-i18n="gappa_exc_title">Not included</span>
+              </h4>
+              <ul id="gappaExcluded" class="space-y-2.5 text-xs text-slate-300 leading-relaxed"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: sticky booking card -->
+        <aside class="lg:sticky lg:top-28 h-fit space-y-6">
+          <div class="rounded-3xl p-6 sm:p-8 bg-brand-surface border border-brand-orange/40 shadow-2xl shadow-orange-500/10">
+            <div class="flex items-end gap-2">
+              <span class="text-5xl font-black font-mono text-brand-orange" id="gappaPrice">€3,000</span>
+              <span class="text-xs text-slate-400 mb-2" data-i18n="gappa_price_label">per person</span>
+            </div>
+            <div class="mt-6 space-y-3 text-xs">
+              <div class="flex justify-between gap-4 pb-3 border-b border-brand-border">
+                <span class="text-slate-400" data-i18n="gappa_deposit_label">Deposit at booking (50%)</span>
+                <span class="text-white font-bold font-mono" id="gappaDeposit">€1,500</span>
+              </div>
+              <div class="flex justify-between gap-4 pb-3 border-b border-brand-border">
+                <span class="text-slate-400" data-i18n="gappa_final_label">Balance due</span>
+                <span class="text-white font-semibold text-end" data-i18n="gappa_final_val">4 weeks before departure</span>
+              </div>
+              <div class="flex justify-between gap-4">
+                <span class="text-slate-400" data-i18n="gappa_pay_label">Payment</span>
+                <span class="text-white font-semibold text-end" data-i18n="gappa_pay_val">Bank wire transfer · EUR</span>
+              </div>
+            </div>
+            <button onclick="applyFor('gappa')" class="w-full mt-8 py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-sm transition-colors shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-person-skiing"></i> <span data-i18n="gappa_btn_book">Book Gappa 2027</span>
+            </button>
+            <button onclick="openModal('termsModal')" class="w-full mt-3 py-3 rounded-xl bg-brand-charcoal border border-brand-border hover:border-brand-orange text-slate-200 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+              <i class="fa-solid fa-file-contract text-brand-orange"></i> <span data-i18n="gappa_btn_terms">Booking terms &amp; cancellation</span>
+            </button>
+          </div>
+
+          <div class="glass-card rounded-3xl p-6">
+            <h4 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-user-group text-brand-glacier"></i> <span data-i18n="gappa_leaders_title">Your expedition leaders</span>
+            </h4>
+            <div id="gappaLeaders" class="space-y-4"></div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Categories & Operational Pillars -->
+  <section id="categories" class="py-24 bg-brand-surface border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-[0.25em] text-brand-orange font-bold mb-3" data-i18n="cat_tagline">Core Operational Pillars</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="cat_title">Why Ski Touring & Summer Alpinism are Our First Priority</p>
+        <p class="text-slate-400 mt-4 leading-relaxed" data-i18n="cat_desc">
+          We reject mass tourism. All KEBE expeditions are engineered around fast-and-light alpine style, skinning up perpetual glaciers, and dropping technical lines with verified snowpack stability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Discipline 1: High-Altitude Ski Touring -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6">
+              <i class="fa-solid fa-person-skiing"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_1_title">Ski Mountaineering & Touring</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_1_desc">
+              Ascend active glaciers with technical skins, explore untracked powder basins in Norway, Kyrgyzstan, and Nagano without relying on mechanical ski lifts.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_1">Crevasse rescue training & roped glacier travel</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_2">Barryvox 3-antenna beacons, carbon shovels & probes</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_3">Technical descent corridors (35° to 50° sustained)</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border">
+            <span class="text-xs font-mono text-brand-orange uppercase font-bold" data-i18n="disc_1_focus">Focus: Glacier Traverses & Wild Powder</span>
+          </div>
+        </div>
+
+        <!-- Discipline 2: Summer Alpinism on Glaciers -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand-glacier/10 border border-brand-glacier/30 flex items-center justify-center text-brand-glacier text-2xl mb-6">
+              <i class="fa-solid fa-mountain"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_2_title">Summer Alpinism & Glaciers</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_2_desc">
+              June through September ascents across European Alps, Caucasus, and Tien Shan. Granite ridge traverses paired with icy couloirs during prime stable weather.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_1">Ascents of 4,000m summits (Breithorn, Mont Blanc, Kazbek)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_2">High-altitude alpine hut staging (Monte Rosa, Rifugio Torino)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_3">Advanced crampon & ice axe progression on steep terrain</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border">
+            <span class="text-xs font-mono text-brand-glacier uppercase font-bold" data-i18n="disc_2_focus">Focus: High Ridges & Alpine Huts</span>
+          </div>
+        </div>
+
+        <!-- Discipline 3: Southern Hemisphere Reverse Season -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-6">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_3_title">Reverse Season (Southern Winter)</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_3_desc">
+              When summer strikes the Northern Hemisphere, we chase true mid-winter powder in the Southern Alps of New Zealand and the volcanoes of Patagonia (Chile & Argentina).
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_1">Heli-assisted glacier touring in July & August</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_2">Andes volcanic summits & pristine beech forest lines</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_3">365-day endless winter operational calendar</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border">
+            <span class="text-xs font-mono text-amber-400 uppercase font-bold" data-i18n="disc_3_focus">Focus: 365 Days of Ski Touring</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section id="destinations" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs uppercase tracking-[0.2em] text-brand-orange font-bold" data-i18n="dest_section_tag">Global Expedition Grid</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-2" data-i18n="dest_section_title">11+ Countries for Mountaineering & Ski Touring</h2>
+      </div>
+      
+      <!-- Filter Controls -->
+      <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="filterContainer">
+        <button onclick="filterDestinations('all')" class="filter-btn active px-4 py-2 rounded-lg text-xs font-bold bg-brand-orange text-white" data-i18n="filter_all">All Destinations</button>
+        <button onclick="filterDestinations('europe')" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-brand-surface text-slate-300 hover:text-white border border-brand-border" data-i18n="filter_europe">Europe & Arctic</button>
+        <button onclick="filterDestinations('central-asia')" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-brand-surface text-slate-300 hover:text-white border border-brand-border" data-i18n="filter_central_asia">Central Asia & Caucasus</button>
+        <button onclick="filterDestinations('high-peaks')" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-brand-surface text-slate-300 hover:text-white border border-brand-border" data-i18n="filter_high_peaks">Himalayas & 7,000m+</button>
+        <button onclick="filterDestinations('southern')" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-brand-surface text-slate-300 hover:text-white border border-brand-border" data-i18n="filter_southern">Southern Hemisphere & Japan</button>
+      </div>
+    </div>
+
+    <!-- Destinations Grid: Injected dynamically via JS for instant translations -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="destinationsGrid">
+      <!-- Destination cards injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- IFMGA Safety & Risk Management Section -->
+  <section id="safety" class="py-24 bg-brand-surface border-y border-brand-border topo-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-xs uppercase tracking-[0.2em] text-brand-orange font-bold" data-i18n="safety_tag">Risk Management & Integrity</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 leading-tight" data-i18n="safety_title">
+            The KEBE Operating Model: Whiteout Reliability Built on Alpine Rigor
+          </h2>
+          <p class="text-slate-300 mt-6 text-base leading-relaxed" data-i18n="safety_desc">
+            In high-altitude glaciated terrain, errors translate directly into catastrophe. KEBE operates strictly under three non-negotiable safety pillars:
+          </p>
+
+          <div class="mt-8 space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-orange/20 border border-brand-orange/40 flex-shrink-0 flex items-center justify-center text-brand-orange font-bold">
+                1
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg" data-i18n="safety_p1_title">Strict Guide-to-Client Ratios (1:2 & 1:4)</h4>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="safety_p1_desc">All technical glaciated tours are captained by fully certified <strong>IFMGA/UIAGM</strong> mountain guides. We never compromise on rope team integrity.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-orange/20 border border-brand-orange/40 flex-shrink-0 flex items-center justify-center text-brand-orange font-bold">
+                2
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg" data-i18n="safety_p2_title">Direct Satellite Telemetry & Heli Evac Protocols</h4>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="safety_p2_desc">Every lead guide carries dual Garmin InReach / Iridium satellite devices synced directly with regional rescue aviation (Air Zermatt, Kailash Heli).</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-orange/20 border border-brand-orange/40 flex-shrink-0 flex items-center justify-center text-brand-orange font-bold">
+                3
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg" data-i18n="safety_p3_title">Official Local DMCs & Uncompromised Permits</h4>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="safety_p3_desc">In each of our 11+ destinations, expedition logistics, permits, and base camp support are executed directly with registered legal alpine partners.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gear Specs Card -->
+        <div class="glass-card rounded-3xl p-8 border border-white/10 relative overflow-hidden shadow-2xl">
+          <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="flex items-center justify-between border-b border-brand-border pb-6 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-300" data-i18n="spec_title">Mandatory Technical Spec</span>
+            </div>
+            <span class="text-xs text-brand-orange font-bold font-mono">KEBE TECH-SPEC v3.2</span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-brand-charcoal/60 border border-brand-border flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-helmet-safety text-brand-orange"></i>
+                <span class="text-sm font-semibold text-white" data-i18n="spec_item_1">Triple-Antenna Beacon + Carbon Shovel & 280cm Probe</span>
+              </div>
+              <span class="text-[11px] px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-bold" data-i18n="spec_status_verified">Verified</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-charcoal/60 border border-brand-border flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-person-skiing text-brand-glacier"></i>
+                <span class="text-sm font-semibold text-white" data-i18n="spec_item_2">Pin-Tech Bindings & Carbon Tour Ski with Tail Notch</span>
+              </div>
+              <span class="text-[11px] px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-bold" data-i18n="spec_status_verified">Verified</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-charcoal/60 border border-brand-border flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-icicles text-amber-400"></i>
+                <span class="text-sm font-semibold text-white" data-i18n="spec_item_3">30m Hyperstatic RAD Line + Aluminum Ski Crampons</span>
+              </div>
+              <span class="text-[11px] px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-bold" data-i18n="spec_status_glacier">Glacier Mandatory</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-charcoal/60 border border-brand-border flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-kit-medical text-red-400"></i>
+                <span class="text-sm font-semibold text-white" data-i18n="spec_item_4">Altitude Medical Protocol (Pulse Ox, Dexamethasone)</span>
+              </div>
+              <span class="text-[11px] px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-bold" data-i18n="spec_status_guide">Guide Monitored</span>
+            </div>
+          </div>
+
+          <div class="mt-8 p-4 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-center">
+            <p class="text-xs text-brand-orange font-bold flex items-center justify-center gap-2">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span data-i18n="safety_badge_insurance">International High-Altitude Evacuation Insurance (Global Rescue) mandatory for all athletes.</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Financial Calculator Section -->
+  <section id="calculator" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase tracking-[0.2em] text-brand-orange font-bold" data-i18n="calc_tag">Financial Transparency</span>
+      <h2 class="text-3xl sm:text-5xl font-black text-white mt-2" data-i18n="calc_title">Expedition Cost Estimator</h2>
+      <p class="text-slate-400 text-sm mt-3" data-i18n="calc_desc">Select your target country, technical discipline, and support tier for an instant cost breakdown.</p>
+    </div>
+
+    <div class="glass-card rounded-3xl p-8 sm:p-12 border border-brand-border">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Controls Column -->
+        <div class="space-y-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="calc_label_country">Destination & Peak</label>
+            <select id="calcCountry" onchange="calculateExpeditionPrice()" class="w-full bg-brand-charcoal border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none">
+              <!-- Populated dynamically via JS -->
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="calc_label_discipline">Expedition Discipline</label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="flex items-center gap-2 p-3 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer hover:border-brand-orange transition-colors">
+                <input type="radio" name="calcActivity" value="0" checked onchange="calculateExpeditionPrice()" class="accent-brand-orange">
+                <span class="text-xs text-slate-200" data-i18n="calc_opt_ski">Ski Touring Pure</span>
+              </label>
+              <label class="flex items-center gap-2 p-3 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer hover:border-brand-orange transition-colors">
+                <input type="radio" name="calcActivity" value="450" onchange="calculateExpeditionPrice()" class="accent-brand-orange">
+                <span class="text-xs text-slate-200" data-i18n="calc_opt_alpine">Ridge Alpinism + Ski</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="calc_label_services">Premium Logistics & Gear</label>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer text-xs">
+                <span class="text-slate-300" data-i18n="calc_opt_guide">Private 1:1 IFMGA Mountain Guide</span>
+                <input type="checkbox" id="calcPrivateGuide" value="700" onchange="calculateExpeditionPrice()" class="accent-brand-orange w-4 h-4">
+              </label>
+              <label class="flex items-center justify-between p-3 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer text-xs">
+                <span class="text-slate-300" data-i18n="calc_opt_gear">Carbon Touring Skis + Avalanche Safety Rental</span>
+                <input type="checkbox" id="calcGearRental" value="320" onchange="calculateExpeditionPrice()" class="accent-brand-orange w-4 h-4">
+              </label>
+              <label class="flex items-center justify-between p-3 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer text-xs">
+                <span class="text-slate-300" data-i18n="calc_opt_insurance">Global Rescue Satellite Evacuation Policy</span>
+                <input type="checkbox" id="calcRescueInsurance" value="210" checked onchange="calculateExpeditionPrice()" class="accent-brand-orange w-4 h-4">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-time Quotation Box -->
+        <div class="bg-brand-charcoal rounded-2xl p-6 sm:p-8 border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-brand-border">
+              <span data-i18n="calc_box_tag">Estimated Package Base</span>
+              <span class="text-emerald-400 font-mono" data-i18n="calc_box_status">SEASON 2026 / 2027</span>
+            </div>
+            
+            <div class="text-center py-6">
+              <div class="text-xs text-slate-400 mb-1" data-i18n="calc_box_per_athlete">Approx. Price per Athlete</div>
+              <div class="text-5xl sm:text-6xl font-black font-mono text-brand-orange" id="calcTotalPrice">$2,660</div>
+              <div class="text-xs text-slate-500 mt-2" data-i18n="calc_box_inclusive">Includes peak permits, alpine huts, logistics & lead guides</div>
+            </div>
+
+            <div class="text-xs text-slate-400 space-y-2 mt-4 pt-4 border-t border-brand-border">
+              <div class="flex justify-between">
+                <span data-i18n="calc_early_bird">Early Booking Advantage:</span>
+                <span class="text-emerald-400 font-bold" data-i18n="calc_early_bird_val">5% Credited</span>
+              </div>
+              <div class="flex justify-between">
+                <span data-i18n="calc_team_size">Max Rope Team Size:</span>
+                <span class="text-white" data-i18n="calc_team_val">3 to 5 Athletes per Guide</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="prefillApplication()" class="w-full mt-6 py-3.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-sm transition-colors shadow-lg shadow-orange-500/20" data-i18n="calc_btn_prefill">
+            Transfer to Screening Application
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Screening Application Section -->
+  <section id="screening" class="py-24 bg-brand-surface border-t border-brand-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-[0.2em] text-brand-orange font-bold" data-i18n="screen_tag">Safety Admission</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-2" data-i18n="screen_title">Technical Athlete Screening</h2>
+        <p class="text-slate-400 text-sm mt-3 max-w-xl mx-auto" data-i18n="screen_desc">
+          To preserve expedition safety on glaciated couloirs, participation is subject to verification of your off-piste ski control and mountaineering resume.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-brand-border">
+        <form id="screeningForm" onsubmit="handleFormSubmission(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form_name">Full Name</label>
+              <input type="text" required placeholder="e.g. Marc Beaumont" class="w-full bg-brand-charcoal border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form_phone">Phone / WhatsApp</label>
+              <input type="tel" required placeholder="+41 79 123 4567" class="w-full bg-brand-charcoal border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none" dir="ltr">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form_email">Email Address</label>
+              <input type="email" required placeholder="athlete@domain.com" class="w-full bg-brand-charcoal border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none" dir="ltr">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form_destination">Selected Country / Destination</label>
+              <select id="formCountrySelect" class="w-full bg-brand-charcoal border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none">
+                <!-- Populated dynamically via JS -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Technical Skiing Capability -->
+          <div class="pt-4 border-t border-brand-border space-y-4">
+            <h4 class="text-sm font-bold text-brand-orange flex items-center gap-2">
+              <i class="fa-solid fa-person-skiing"></i> <span data-i18n="form_ski_level_title">Off-Piste & Ski Mountaineering Experience</span>
+            </h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="p-4 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer hover:border-brand-orange block">
+                <input type="radio" name="skiSkill" value="intermediate" checked class="accent-brand-orange mb-2 block">
+                <span class="text-sm font-bold text-white block" data-i18n="skill_int_title">Intermediate Touring</span>
+                <span class="text-xs text-slate-400 mt-1 block" data-i18n="skill_int_desc">Black-diamond mastery, basic skinning technique, and 25°-35° variable snow control.</span>
+              </label>
+
+              <label class="p-4 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer hover:border-brand-orange block">
+                <input type="radio" name="skiSkill" value="advanced" class="accent-brand-orange mb-2 block">
+                <span class="text-sm font-bold text-white block" data-i18n="skill_adv_title">Advanced Alpinist</span>
+                <span class="text-xs text-slate-400 mt-1 block" data-i18n="skill_adv_desc">Multi-day hut-to-hut ski traverses, kick-turn confidence on 40° hardpack, bootpacking.</span>
+              </label>
+
+              <label class="p-4 rounded-xl bg-brand-charcoal border border-brand-border cursor-pointer hover:border-brand-orange block">
+                <input type="radio" name="skiSkill" value="expert" class="accent-brand-orange mb-2 block">
+                <span class="text-sm font-bold text-white block" data-i18n="skill_exp_title">Expert / Steep Descent</span>
+                <span class="text-xs text-slate-400 mt-1 block" data-i18n="skill_exp_desc">Comfortable on 45°+ couloirs, crampons & ice axe roped traverses, crevasse self-rescue.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Previous Experience Resume -->
+          <div>
+            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="form_resume_label">Mountaineering & Recent Ski Experience</label>
+            <textarea rows="3" placeholder="List summits climbed, altitude experience (e.g. 4000m+), courses attended, or notable descents..." class="w-full bg-brand-charcoal border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:border-brand-orange focus:outline-none"></textarea>
+          </div>
+
+          <!-- Notification feedback box -->
+          <div id="formStatus" class="hidden p-4 rounded-xl text-sm font-semibold"></div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-base transition-all duration-300 shadow-xl shadow-orange-500/25 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-i18n="form_submit_btn">Submit Dossier to Lead Mountain Guide</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Executive Dossier & Business Blueprint Modal (Full Offline Inspection) -->
+  <div id="dossierModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md p-4 sm:p-6 lg:p-10">
+    <div class="max-w-5xl mx-auto bg-brand-surface border border-brand-border rounded-3xl overflow-hidden shadow-2xl">
+      
+      <!-- Dossier Header -->
+      <div class="flex items-center justify-between p-6 sm:p-8 bg-brand-panel border-b border-brand-border">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-brand-orange font-bold">EXECUTIVE DOSSIER</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-mono font-bold">CONFIDENTIAL</span>
+            </div>
+            <h3 class="text-2xl font-black text-white mt-1">KEBE Alpine Ski Touring — Master Business Blueprint</h3>
+          </div>
+        </div>
+        <button onclick="toggleDossierModal()" class="w-10 h-10 rounded-xl bg-brand-charcoal hover:bg-brand-surface border border-brand-border flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Dossier Body Content (Offline Blueprint & Strategy) -->
+      <div class="p-6 sm:p-10 space-y-10 text-slate-300 text-sm leading-relaxed overflow-y-auto max-h-[75vh]">
+        
+        <!-- 1. Executive Summary & Brand Genesis -->
+        <section class="border-b border-brand-border pb-8">
+          <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved text-brand-orange"></i>
+            <span>1. Identity, Brand Genesis & Anti-K2/K3 Differentiation</span>
+          </h4>
+          <p class="mb-4">
+            <strong>Brand Name:</strong> KEBE Alpine Ski Touring (Domain Target: <code class="text-brand-orange">kebealpine.com</code> / <code class="text-brand-orange">kebeexpeditions.com</code>). Inspired by the intimate phonetics of "Kebe", engineered for high-altitude ski touring and summer alpinism.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-brand-charcoal p-5 rounded-2xl border border-brand-border text-xs">
+            <div>
+              <span class="font-bold text-brand-orange block mb-1">Geometric Monogram Architecture:</span>
+              <p>Combined <strong>K</strong> (switchback ski-skin tracks on steep terrain) and <strong>B</strong> (chiseled, enclosed faceted loops). Crafted with fine monoline precision and Swiss alpine styling.</p>
+            </div>
+            <div>
+              <span class="font-bold text-brand-glacier block mb-1">Strict Differentiation from K2 & K3:</span>
+              <p>Completely avoids blocky 90s graffiti aesthetics, hollow rounded loops, or open numerals. The enclosed rectangular facets strictly enforce the letter 'B' (not the number '3') with zero trademark overlap.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Business Model & Unit Economics -->
+        <section class="border-b border-brand-border pb-8">
+          <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-chart-line text-emerald-400"></i>
+            <span>2. Business Model, Profit Margins & Unit Economics</span>
+          </h4>
+          <p class="mb-4">
+            KEBE operates as a premium high-altitude DMC network and expediting operator. All trips are capped at strict client-to-guide ratios (1:2 for technical couloirs, 1:4 for glacier tours), ensuring premium pricing power and gross margins of <strong>22% to 34%</strong> per expedition.
+          </p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left border border-brand-border rounded-xl overflow-hidden">
+              <thead class="bg-brand-panel text-slate-300 font-bold uppercase">
+                <tr>
+                  <th class="p-3">Cost Category</th>
+                  <th class="p-3">Share (%)</th>
+                  <th class="p-3">Operational Scope</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-brand-border bg-brand-charcoal">
+                <tr>
+                  <td class="p-3 font-semibold text-white">Government Permits & Hut Logistics</td>
+                  <td class="p-3 text-brand-orange font-mono">25% - 32%</td>
+                  <td class="p-3 text-slate-400">Summit royalties, national park permits, high-altitude alpine hut staging.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">IFMGA Certified Guiding Corps</td>
+                  <td class="p-3 text-brand-orange font-mono">24% - 28%</td>
+                  <td class="p-3 text-slate-400">Lead mountain guides, certified Sherpa climbing leads, porter stipends.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Evacuation Logistics & Satellite Telemetry</td>
+                  <td class="p-3 text-brand-orange font-mono">10% - 15%</td>
+                  <td class="p-3 text-slate-400">Air Zermatt / Kailash heli retainer, Garmin InReach enterprise tracking, Global Rescue.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Target Operating Net Margin</td>
+                  <td class="p-3 text-emerald-400 font-mono font-bold">22% - 30%</td>
+                  <td class="p-3 text-slate-400">Direct retained profit per booked athlete slot.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 3. Target 11+ Destinations Matrix -->
+        <section class="border-b border-brand-border pb-8">
+          <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-globe text-brand-glacier"></i>
+            <span>3. Complete 11+ Countries & Seasonal Operations Matrix</span>
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇨🇭 Switzerland (Zermatt)</span>
+              <span class="text-slate-400">Breithorn 4,164m, Monte Rosa glacier traverses. June - Sept & March - May.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇮🇹 Italy (Dolomites & Blanc)</span>
+              <span class="text-slate-400">Gran Paradiso 4,061m, Courmayeur technical couloirs. June - Sept.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇳🇴 Norway (Lyngen & Arctic)</span>
+              <span class="text-slate-400">Peak-to-Fjord midnight sun touring, sea vessel support. April - June.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇰🇬 Kyrgyzstan (Tien Shan)</span>
+              <span class="text-slate-400">Aksu backcountry, sub-zero powder, Peak Lenin base. Jan - March & July - August.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇰🇿 Kazakhstan (Almaty)</span>
+              <span class="text-slate-400">Bogdanovich Glacier 4,376m, Shymbulak off-piste. March - July.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇬🇪 Georgia (Caucasus)</span>
+              <span class="text-slate-400">Mount Kazbek 5,047m ski descent, Betlemi hut staging. May - July.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇳🇵 Nepal (Khumbu)</span>
+              <span class="text-slate-400">Mera Peak 6,476m, high-altitude 6000m+ ski mountaineering. April - May & Oct - Nov.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇵🇰 Pakistan (Karakoram)</span>
+              <span class="text-slate-400">Spantik 7,027m (Golden Peak), Baltoro ski traverses. June - July.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇳🇿 New Zealand (Southern Alps)</span>
+              <span class="text-slate-400">Tasman Glacier, Mt Cook heli-touring (Reverse Season). July - August.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇯🇵 Japan (Hokkaido & Hakuba)</span>
+              <span class="text-slate-400">Asahidake volcanic touring, deepest JaPow powder basins. Jan - April.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇨🇳 China (Pamir)</span>
+              <span class="text-slate-400">Muztagh Ata 7,546m: The world's highest accessible ski descent. July - August.</span>
+            </div>
+            <div class="p-3 bg-brand-charcoal rounded-xl border border-brand-border">
+              <span class="font-bold text-white block">🇦🇷 Patagonia (Chile / Argentina)</span>
+              <span class="text-slate-400">Villarrica active volcano & Bariloche backcountry. August - Sept.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Mandatory Safety Standards -->
+        <section>
+          <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+            <span>4. Athlete Screening, Legal Waivers & Technical Requirements</span>
+          </h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Every candidate must clear the triple-tier screening protocol: Proof of 40° hardpack control, crevasse self-rescue fundamentals, and up-to-date altitude medical clearance. Comprehensive liability waivers (Waivers of Liability & Assumption of Risk) are digitally counter-signed with mandatory Global Rescue repatriation policy.
+          </p>
+          <div class="flex justify-end">
+            <button onclick="toggleDossierModal()" class="px-6 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-xs transition-colors">
+              Close & Return to Platform
+            </button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-brand-charcoal border-t border-brand-border py-16 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4 md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <svg viewBox="0 0 140 130" class="w-full h-full" fill="none">
+                <polygon points="14,12 40,12 40,118 14,118" stroke="#CBD5E1" stroke-width="5" fill="#1E293B" />
+                <polygon points="38,64 82,14 100,14 52,76" stroke="#E2E8F0" stroke-width="4.5" fill="#1E293B" />
+                <polygon points="38,66 52,56 98,118 78,118" stroke="#E2E8F0" stroke-width="4.5" fill="#1E293B" />
+                <polygon points="80,14 116,14 132,30 132,52 110,65 72,65 82,53 108,53 118,46 118,36 108,26 80,26" stroke="#FF5722" stroke-width="5" fill="#FF5722" fill-opacity="0.3"/>
+                <polygon points="72,65 112,65 132,78 132,104 118,118 78,118 88,106 110,106 120,98 120,84 108,76 78,76" stroke="#FF5722" stroke-width="5" fill="#FF5722" fill-opacity="0.3"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xl font-black text-white font-mono">KEBE</span>
+              <span class="text-[9px] uppercase tracking-[0.2em] text-brand-orange block font-bold">ALPINE SKI TOURING</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md" data-i18n="footer_about">
+            International alpine ski touring and glacier expedition operator. Headquarters in Zermatt, Switzerland, with active local DMCs and certified IFMGA guiding corps across 11+ global mountain destinations.
+          </p>
+        </div>
+
+        <!-- Quick Destinations -->
+        <div>
+          <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-4" data-i18n="footer_dest_title">Featured Glaciers</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#destinations" class="hover:text-brand-orange transition-colors">Switzerland - Monte Rosa & Breithorn</a></li>
+            <li><a href="#destinations" class="hover:text-brand-orange transition-colors">Norway - Lyngen Arctic Sea-to-Summit</a></li>
+            <li><a href="#destinations" class="hover:text-brand-orange transition-colors">Kyrgyzstan - Aksu & Tien Shan Backcountry</a></li>
+            <li><a href="#destinations" class="hover:text-brand-orange transition-colors">New Zealand - Mt Cook Tasman Glacier</a></li>
+            <li><a href="#destinations" class="hover:text-brand-orange transition-colors">China - Muztagh Ata 7,546m Ski Descent</a></li>
+          </ul>
+        </div>
+
+        <!-- Operations Hubs -->
+        <div>
+          <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-4" data-i18n="footer_contact_title">Operations & Base</h5>
+          <p class="text-xs text-slate-400 mb-2 leading-relaxed">
+            <i class="fa-solid fa-location-dot text-brand-orange mr-1"></i> <span data-i18n="footer_hub">Stations: Zermatt (CH), Chamonix (FR), Almaty (KZ), Bishkek (KG)</span>
+          </p>
+          <p class="text-xs text-slate-400 mb-2">
+            <i class="fa-solid fa-envelope text-brand-orange mr-1"></i> expeditions@kebealpine.com
+          </p>
+          <p class="text-xs text-slate-400">
+            <i class="fa-solid fa-phone text-brand-orange mr-1"></i> +41 27 966 8000 (Switzerland)
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>© 2026 KEBE Alpine Ski Touring. All rights reserved.</p>
+        <div class="flex gap-4 mt-4 sm:mt-0">
+          <button onclick="toggleDossierModal()" class="text-amber-400 hover:text-amber-300 font-mono font-bold">Inspect Master Blueprint</button>
+          <span class="text-slate-400 hover:text-white cursor-pointer" data-i18n="footer_privacy">Privacy Policy</span>
+          <span class="text-slate-400 hover:text-white cursor-pointer" data-i18n="footer_liability">Liability Waiver</span>
+          <span class="text-slate-400 hover:text-white cursor-pointer" data-i18n="footer_cert">IFMGA / UIAGM Protocols</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Destination Detail Modal (filled by JS) -->
+  <div id="destModal" class="hidden fixed inset-0 z-[60] overflow-y-auto bg-black/85 backdrop-blur-md p-4 sm:p-8" onclick="if(event.target===this) closeModal('destModal')">
+    <div class="max-w-3xl mx-auto bg-brand-surface border border-brand-border rounded-3xl overflow-hidden shadow-2xl relative">
+      <button onclick="closeModal('destModal')" class="absolute top-4 end-4 z-10 w-10 h-10 rounded-xl bg-brand-charcoal/80 border border-brand-border flex items-center justify-center text-slate-300 hover:text-white" aria-label="Close">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div id="destModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Booking Terms Modal (from PDF: deposits, final payment, cancellation) -->
+  <div id="termsModal" class="hidden fixed inset-0 z-[60] overflow-y-auto bg-black/85 backdrop-blur-md p-4 sm:p-8" onclick="if(event.target===this) closeModal('termsModal')">
+    <div class="max-w-3xl mx-auto bg-brand-surface border border-brand-border rounded-3xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-6 sm:p-8 bg-brand-panel border-b border-brand-border">
+        <h3 class="text-xl sm:text-2xl font-black text-white flex items-center gap-3">
+          <i class="fa-solid fa-file-contract text-brand-orange"></i> <span data-i18n="terms_title">Booking Terms &amp; Conditions</span>
+        </h3>
+        <button onclick="closeModal('termsModal')" class="w-10 h-10 rounded-xl bg-brand-charcoal border border-brand-border flex items-center justify-center text-slate-400 hover:text-white" aria-label="Close">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div id="termsBody" class="p-6 sm:p-8 space-y-6 text-sm text-slate-300 leading-relaxed"></div>
+      <div class="px-6 sm:px-8 pb-8 flex justify-end">
+        <button onclick="closeModal('termsModal')" class="px-6 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-xs" data-i18n="terms_close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp quick contact -->
+  <a id="waFloat" href="#" target="_blank" rel="noopener" class="fixed bottom-5 end-5 z-40 flex items-center gap-2 ps-4 pe-5 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-sm shadow-2xl shadow-emerald-500/30 transition-all hover:scale-105" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="hidden sm:inline" data-i18n="wa_float">Chat with a guide</span>
+  </a>
+
+
+
+  <script>
+    // Current Active Language state
+    let currentLang = 'en';
+
+    // Comprehensive 5-Language Dictionary
+    const i18nData = {
+      en: {
+        nav_destinations: "11+ Destinations",
+        nav_disciplines: "Ski Touring & Alpinism",
+        nav_safety: "IFMGA Safety",
+        nav_calculator: "Cost Estimator",
+        nav_screening: "Screening Application",
+        nav_dossier: "Executive Blueprint",
+        nav_apply_cta: "Join Expedition",
+        hero_badge: "High-Altitude Alpine Ski Touring & Summer Alpinism",
+        hero_title_1: "Ascend Untouched Glaciers,",
+        hero_title_2: "Drop the Purest Alpine Lines",
+        hero_subtitle: "KEBE operates premier ski touring and summer alpinism expeditions across 11+ iconic global mountain ranges. From perpetual Swiss 4000m ice to Kyrgyzstan's wild backcountry, Arctic Norway, Patagonia, and the 7000ers of Asia.",
+        hero_btn_destinations: "Explore 11+ Destinations",
+        hero_btn_screening: "Technical Screening",
+        metric_countries: "Global Countries with DMC",
+        metric_guides: "IFMGA/UIAGM Guides",
+        metric_peak: "Highest Ski Descent (Muztagh)",
+        metric_sat: "24/7 Satellite & Air Evac",
+        cat_tagline: "Core Operational Pillars",
+        cat_title: "Why Ski Touring & Summer Alpinism are Our First Priority",
+        cat_desc: "We leave mass tourism behind. Every expedition is engineered around fast-and-light alpine style, skinning up perpetual glaciers, and descending technical lines with verified snowpack stability.",
+        disc_1_title: "High-Altitude Ski Touring",
+        disc_1_desc: "Ascend active glaciers with technical skins, explore untracked powder basins in Norway, Kyrgyzstan, and Nagano without relying on mechanical ski lifts.",
+        disc_1_bullet_1: "Crevasse rescue training & roped glacier travel",
+        disc_1_bullet_2: "Barryvox 3-antenna beacons, carbon shovels & probes",
+        disc_1_bullet_3: "Technical descent corridors (35° to 50° sustained)",
+        disc_1_focus: "Focus: Glaciers & Untracked Powder",
+        disc_2_title: "Summer Alpinism & Glaciers",
+        disc_2_desc: "June through September ascents across European Alps, Caucasus, and Tien Shan. Granite ridge traverses paired with icy couloirs during prime stable weather.",
+        disc_2_bullet_1: "Ascents of 4,000m summits (Breithorn, Mont Blanc, Kazbek)",
+        disc_2_bullet_2: "High-altitude alpine hut staging (Monte Rosa, Rifugio Torino)",
+        disc_2_bullet_3: "Advanced crampon & ice axe progression on steep terrain",
+        disc_2_focus: "Focus: High Ridges & Alpine Huts",
+        disc_3_title: "Reverse Season (Southern Winter)",
+        disc_3_desc: "When summer strikes the Northern Hemisphere, we chase true mid-winter powder in the Southern Alps of New Zealand and the volcanoes of Patagonia (Chile & Argentina).",
+        disc_3_bullet_1: "Heli-assisted glacier touring in July & August",
+        disc_3_bullet_2: "Andes volcanic summits & pristine beech forest lines",
+        disc_3_bullet_3: "365-day endless winter operational calendar",
+        disc_3_focus: "Focus: 365 Days of Ski Touring",
+        dest_section_tag: "Global Expedition Grid",
+        dest_section_title: "11+ Countries for Mountaineering & Ski Touring",
+        filter_all: "All Destinations",
+        filter_europe: "Europe & Arctic",
+        filter_central_asia: "Central Asia & Caucasus",
+        filter_high_peaks: "Himalayas & 7,000m+",
+        filter_southern: "Southern Hemisphere & Japan",
+        safety_tag: "Risk Management & Integrity",
+        safety_title: "The KEBE Operating Model: Whiteout Reliability Built on Alpine Rigor",
+        safety_desc: "In high-altitude glaciated terrain, errors translate directly into catastrophe. KEBE operates strictly under three non-negotiable safety pillars:",
+        safety_p1_title: "Strict Guide-to-Client Ratios (1:2 & 1:4)",
+        safety_p1_desc: "All technical glaciated tours are captained by fully certified IFMGA/UIAGM mountain guides. We never compromise on rope team integrity.",
+        safety_p2_title: "Direct Satellite Telemetry & Heli Evac Protocols",
+        safety_p2_desc: "Every lead guide carries dual Garmin InReach / Iridium satellite devices synced directly with regional rescue aviation (Air Zermatt, Kailash Heli).",
+        safety_p3_title: "Official Local DMCs & Uncompromised Permits",
+        safety_p3_desc: "In each of our 11+ destinations, expedition logistics, permits, and base camp support are executed directly with registered legal alpine partners.",
+        spec_title: "Mandatory Technical Spec",
+        spec_item_1: "Triple-Antenna Beacon + Carbon Shovel & 280cm Probe",
+        spec_item_2: "Pin-Tech Bindings & Carbon Tour Ski with Tail Notch",
+        spec_item_3: "30m Hyperstatic RAD Line + Aluminum Ski Crampons",
+        spec_item_4: "Altitude Medical Protocol (Pulse Ox, Dexamethasone)",
+        spec_status_verified: "Verified",
+        spec_status_glacier: "Glacier Mandatory",
+        spec_status_guide: "Guide Monitored",
+        safety_badge_insurance: "International High-Altitude Evacuation Insurance (Global Rescue) mandatory for all athletes.",
+        calc_tag: "Financial Transparency",
+        calc_title: "Expedition Cost Estimator",
+        calc_desc: "Select your target country, technical discipline, and support tier for an instant cost breakdown.",
+        calc_label_country: "Destination & Peak",
+        calc_label_discipline: "Expedition Discipline",
+        calc_opt_ski: "Ski Touring Pure",
+        calc_opt_alpine: "Ridge Alpinism + Ski",
+        calc_label_services: "Premium Logistics & Gear",
+        calc_opt_guide: "Private 1:1 IFMGA Mountain Guide",
+        calc_opt_gear: "Carbon Touring Skis + Avalanche Safety Rental",
+        calc_opt_insurance: "Global Rescue Satellite Evacuation Policy",
+        calc_box_tag: "Estimated Package Base",
+        calc_box_status: "SEASON 2026 / 2027",
+        calc_box_per_athlete: "Approx. Price per Athlete",
+        calc_box_inclusive: "Includes peak permits, alpine huts, logistics & lead guides",
+        calc_early_bird: "Early Booking Advantage:",
+        calc_early_bird_val: "5% Credited",
+        calc_team_size: "Max Rope Team Size:",
+        calc_team_val: "3 to 5 Athletes per Guide",
+        calc_btn_prefill: "Transfer to Screening Application",
+        screen_tag: "Safety Admission",
+        screen_title: "Technical Athlete Screening",
+        screen_desc: "To preserve expedition safety on glaciated couloirs, participation is subject to verification of your off-piste ski control and mountaineering resume.",
+        form_name: "Full Name",
+        form_phone: "Phone / WhatsApp",
+        form_email: "Email Address",
+        form_destination: "Selected Country / Destination",
+        form_ski_level_title: "Off-Piste & Ski Mountaineering Experience",
+        skill_int_title: "Intermediate Touring",
+        skill_int_desc: "Black-diamond mastery, basic skinning technique, and 25°-35° variable snow control.",
+        skill_adv_title: "Advanced Alpinist",
+        skill_adv_desc: "Multi-day hut-to-hut ski traverses, kick-turn confidence on 40° hardpack, bootpacking.",
+        skill_exp_title: "Expert / Steep Descent",
+        skill_exp_desc: "Comfortable on 45°+ couloirs, crampons & ice axe roped traverses, crevasse self-rescue.",
+        form_resume_label: "Mountaineering & Recent Ski Experience",
+        form_submit_btn: "Submit Dossier to Lead Mountain Guide",
+        footer_about: "International alpine ski touring and glacier expedition operator. Headquarters in Zermatt, Switzerland, with active local DMCs and certified IFMGA guiding corps across 11+ global mountain destinations.",
+        footer_dest_title: "Featured Glaciers",
+        footer_contact_title: "Operations & Base",
+        footer_hub: "Stations: Zermatt (CH), Chamonix (FR), Almaty (KZ), Bishkek (KG)",
+        footer_privacy: "Privacy Policy",
+        footer_liability: "Liability Waiver",
+        footer_cert: "IFMGA / UIAGM Protocols"
+      },
+
+      fr: {
+        nav_destinations: "11+ Destinations",
+        nav_disciplines: "Ski de Randonnée & Alpinisme",
+        nav_safety: "Sécurité IFMGA",
+        nav_calculator: "Simulateur de Coût",
+        nav_screening: "Dossier Technique",
+        nav_dossier: "Plan Stratégique",
+        nav_apply_cta: "Rejoindre l'Expédition",
+        hero_badge: "Ski de Randonnée Glaciaire & Alpinisme Estival",
+        hero_title_1: "Gravissez des Glaciers Vierges,",
+        hero_title_2: "Tracez les Plus Belles Lignes Alpines",
+        hero_subtitle: "KEBE organise des expéditions expertes de ski alpinisme et d'alpinisme estival à travers 11+ massifs emblématiques. Des 4 000m suisses aux vallées sauvages du Kirghizistan, en passant par les fjords arctiques de Norvège et les sommets himalayens.",
+        hero_btn_destinations: "Découvrir les 11+ Destinations",
+        hero_btn_screening: "Évaluation Technique",
+        metric_countries: "Pays avec DMC Locaux",
+        metric_guides: "Guides Certifiés UIAGM",
+        metric_peak: "Descente à Ski Record (7 546m)",
+        metric_sat: "Évacuation Héli & Suivi Sat 24/7",
+        cat_tagline: "Nos Piliers Opérationnels",
+        cat_title: "Pourquoi le Ski Alpinisme et l'Alpinisme Sont Notre Priorité",
+        cat_desc: "Nous refusons le tourisme de masse. Chaque expédition est pensée en style alpin léger, ascension en peaux de phoque sur glaciers actifs et descentes de couloirs techniques.",
+        disc_1_title: "Ski de Randonnée en Haute Altitude",
+        disc_1_desc: "Ascension en peaux sur glaciers permanents, exploration de champs de poudreuse vierge en Norvège, au Kirghizistan et au Japon, loin des remontées mécaniques.",
+        disc_1_bullet_1: "Sauvetage en crevasse et progression sur glacier encordé",
+        disc_1_bullet_2: "DVA 3 antennes Barryvox, pelles carbone et sondes 280cm",
+        disc_1_bullet_3: "Lignes de descente raides et engagées (35° à 50° soutenus)",
+        disc_1_focus: "Focus : Traversées Glaciaires & Poudreuse Sauvage",
+        disc_2_title: "Alpinisme Estival sur Glaciers",
+        disc_2_desc: "Ascensions de juin à septembre dans les Alpes, le Caucase et les Tian Shan. Arêtes de granit pur combinées aux couloirs de neige sous météo estivale stable.",
+        disc_2_bullet_1: "Sommets de 4 000m (Breithorn, Mont-Blanc, Kazbek)",
+        disc_2_bullet_2: "Refuges d'altitude légendaires (Monte Rosa, Rifugio Torino)",
+        disc_2_bullet_3: "Techniques avancées de cramponnage et piolet-traction",
+        disc_2_focus: "Focus : Arêtes Aiguës & Nuits en Refuge",
+        disc_3_title: "Saison Inversée (Hémisphère Sud)",
+        disc_3_desc: "Quand l'été arrive au Nord, nous partons skier la poudreuse hivernale dans les Alpes du Sud en Nouvelle-Zélande et sur les volcans de Patagonie.",
+        disc_3_bullet_1: "Dépose héli-ski glaciaire en juillet et août",
+        disc_3_bullet_2: "Volcans de la cordillère des Andes et forêts de hêtres",
+        disc_3_bullet_3: "Calendrier 365 jours de ski sans interruption",
+        disc_3_focus: "Focus : 365 Jours de Ski par An",
+        dest_section_tag: "Réseau Mondial d'Expéditions",
+        dest_section_title: "11+ Pays pour l'Alpinisme et le Ski de Randonnée",
+        filter_all: "Toutes les Destinations",
+        filter_europe: "Europe & Arctique",
+        filter_central_asia: "Asie Centrale & Caucase",
+        filter_high_peaks: "Himalaya & 7 000m+",
+        filter_southern: "Hémisphère Sud & Japon",
+        safety_tag: "Gestion des Risques & Rigueur",
+        safety_title: "Le Modèle Opérationnel KEBE : Rigueur Alpine et Sécurité Totale",
+        safety_desc: "Sur glacier en haute altitude, l'erreur est impardonnable. KEBE s'appuie sur trois piliers stricts de sécurité :",
+        safety_p1_title: "Ratios Resserres Guide/Client (1:2 & 1:4)",
+        safety_p1_desc: "Toutes nos sorties glaciaires sont encadrées par des guides certifiés UIAGM/IFMGA. La sécurité de la cordée ne fait aucun compromis.",
+        safety_p2_title: "Télémétrie Satellite & Évacuation Héli Immédiate",
+        safety_p2_desc: "Chaque chef d'expédition dispose de balises Garmin InReach reliées aux services de secours spécialisés (Air Zermatt, secours népalais).",
+        safety_p3_title: "Agences Réceptives Locales & Permis Officiels",
+        safety_p3_desc: "Dans nos 11+ destinations, permis de sommet, logistique de camp de base et liaisons locales sont assurés par des partenaires enregistrés.",
+        spec_title: "Spécification Technique Obligatoire",
+        spec_item_1: "DVA 3 antennes + Pelle carbone & Sonde 280cm",
+        spec_item_2: "Fixations légères à inserts & Skis carbone avec encoche",
+        spec_item_3: "Cordelette RAD Line 30m + Couteaux à ski métalliques",
+        spec_item_4: "Trousse médicale haute altitude (Oxymètre, Dexaméthasone)",
+        spec_status_verified: "Validé",
+        spec_status_glacier: "Obligatoire Glacier",
+        spec_status_guide: "Contrôle Guide",
+        safety_badge_insurance: "Assurance sauvetage haute altitude (Global Rescue) exigée pour tous les participants.",
+        calc_tag: "Transparence Financière",
+        calc_title: "Simulateur de Budget d'Expédition",
+        calc_desc: "Choisissez le pays cible, la discipline technique et le niveau d'encadrement pour une estimation instantanée.",
+        calc_label_country: "Destination & Sommet",
+        calc_label_discipline: "Discipline de l'Expédition",
+        calc_opt_ski: "Ski de Rando Pur",
+        calc_opt_alpine: "Alpinisme d'Arête + Ski",
+        calc_label_services: "Logistique & Matériel Premium",
+        calc_opt_guide: "Guide UIAGM Privé (Ratio 1:1)",
+        calc_opt_gear: "Location Skis Carbone & Pack Sécurité Avalanche",
+        calc_opt_insurance: "Police d'Assurance Sauvetage Satellite",
+        calc_box_tag: "Estimation Forfait de Base",
+        calc_box_status: "SAISON 2026 / 2027",
+        calc_box_per_athlete: "Tarif Approximatif par Athlète",
+        calc_box_inclusive: "Comprend permis, refuges d'altitude, logistique et guides",
+        calc_early_bird: "Avantage Réservation Anticipée :",
+        calc_early_bird_val: "5% de Remise",
+        calc_team_size: "Taille Maximale de la Cordée :",
+        calc_team_val: "3 à 5 Athlètes par Guide",
+        calc_btn_prefill: "Transférer au Formulaire de Candidature",
+        screen_tag: "Admission Sécurité",
+        screen_title: "Sélection Technique des Athlètes",
+        screen_desc: "Pour garantir la sécurité en couloir glaciaire, chaque participation requiert une validation de votre niveau en ski hors-piste et alpinisme.",
+        form_name: "Nom et Prénom",
+        form_phone: "Téléphone / WhatsApp",
+        form_email: "Adresse E-mail",
+        form_destination: "Destination / Massif Choisi",
+        form_ski_level_title: "Expérience en Ski Hors-Piste et Randonnée",
+        skill_int_title: "Rando Intermédiaire",
+        skill_int_desc: "Pistes noires maîtrisées, conversions de base en montée, contrôle sur neiges changeantes 25°-35°.",
+        skill_adv_title: "Alpiniste Confirmé",
+        skill_adv_desc: "Raid à ski sur plusieurs jours, conversions sûres sur pente 40°, portage des skis sur sac.",
+        skill_exp_title: "Expert Pentes Raides",
+        skill_exp_desc: "Couloirs 45°+, marche en crampons/piolet encordé, autonomie en secours crevasse.",
+        form_resume_label: "Sommets Gravis et Expérience Récente",
+        form_submit_btn: "Envoyer le Dossier au Guide Responsable",
+        footer_about: "Opérateur international d'expéditions de ski de randonnée et d'alpinisme glaciaire. Siège à Zermatt, Suisse, avec réceptifs locaux et guides UIAGM dans 11+ pays.",
+        footer_dest_title: "Glaciers à l'Honneur",
+        footer_contact_title: "Bases Opérationnelles",
+        footer_hub: "Postes : Zermatt (CH), Chamonix (FR), Almaty (KZ), Bichkek (KG)",
+        footer_privacy: "Confidentialité",
+        footer_liability: "Décharge de Responsabilité",
+        footer_cert: "Normes UIAGM / IFMGA"
+      },
+
+      de: {
+        nav_destinations: "11+ Destinationen",
+        nav_disciplines: "Skitouren & Alpinismus",
+        nav_safety: "IFMGA Sicherheit",
+        nav_calculator: "Kostenrechner",
+        nav_screening: "Eignungsprüfung",
+        nav_dossier: "Business-Plan",
+        nav_apply_cta: "Expedition Buchen",
+        hero_badge: "Hochalpine Skitouren & Sommer-Alpinismus",
+        hero_title_1: "Erobern Sie unberührte Gletscher,",
+        hero_title_2: "Ziehen Sie reinste alpine Spuren",
+        hero_subtitle: "KEBE führt anspruchsvolle Skitouren- und Alpinismusexpeditionen in 11+ Gebirgsregionen weltweit durch. Vom ganzjährigen Eis der Schweizer 4000er über Kirgisistans unberührte Hänge bis zu den Fjorden Norwegens und den Riesen des Himalayas.",
+        hero_btn_destinations: "11+ Länder Entdecken",
+        hero_btn_screening: "Alpine Eignungsprüfung",
+        metric_countries: "Länder mit eigenem DMC",
+        metric_guides: "100% IFMGA/UIAGM Guides",
+        metric_peak: "Höchste Skiabfahrt (7.546m)",
+        metric_sat: "24/7 Satellit & Helikopter-Evak",
+        cat_tagline: "Operative Grundsätze",
+        cat_title: "Warum Skitouren und Sommer-Alpinismus unsere Priorität sind",
+        cat_desc: "Wir meiden Massentourismus. Jede Expedition basiert auf schnellem und leichtem Alpinstil, Aufstiegen mit Fellen auf spaltenreichen Gletschern und anspruchsvollen Steilabfahrten.",
+        disc_1_title: "Hochalpine Skitouren",
+        disc_1_desc: "Aufstiege mit Steigfellen über Gletschermassive, unverspurter Pulverschnee in Norwegen, Kirgisistan und Japan – fernab von Liftanlagen.",
+        disc_1_bullet_1: "Spaltenrettungstraining & Seilschaftstechnik am Gletscher",
+        disc_1_bullet_2: "Barryvox 3-Antennen LVS, Carbonschaufeln & 280cm Sonden",
+        disc_1_bullet_3: "Anspruchsvolle Steilwandabfahrten (35° bis 50° Neigung)",
+        disc_1_focus: "Fokus: Gletscherquerungen & Tiefschnee",
+        disc_2_title: "Sommer-Alpinismus auf Gletschern",
+        disc_2_desc: "Besteigungen von Juni bis September in den Alpen, im Kaukasus und im Tian Shan. Granitgrate kombiniert mit Eisrinnen bei stabilem Sommerwetter.",
+        disc_2_bullet_1: "Besteigung von 4.000er Gipfeln (Breithorn, Mont Blanc, Kazbek)",
+        disc_2_bullet_2: "Hochalpine Hüttenstützpunkte (Monte Rosa Hütte, Rifugio Torino)",
+        disc_2_bullet_3: "Präzise Steigeisen- und Eispickeltechnik im Steilgelände",
+        disc_2_focus: "Fokus: Firngrate & Alpine Schutzhütten",
+        disc_3_title: "Gegen-Saison (Südhemisphäre)",
+        disc_3_desc: "Während unseres Sommers reisen wir in den echten Winter der Neuseeländischen Südalpen und an die Vulkane Patagoniens (Chile & Argentinien).",
+        disc_3_bullet_1: "Helikoptergestützte Gletschertouren im Juli & August",
+        disc_3_bullet_2: "Vulkanbesteigungen der Anden und Südbuchenwälder",
+        disc_3_bullet_3: "365 Tage Skibetrieb im weltweiten Jahreszyklus",
+        disc_3_focus: "Fokus: 365 Tage Skitouren im Jahr",
+        dest_section_tag: "Globales Expeditionsnetz",
+        dest_section_title: "11+ Länder für Alpinismus und Skitouren",
+        filter_all: "Alle Destinationen",
+        filter_europe: "Europa & Arktis",
+        filter_central_asia: "Zentralasien & Kaukasus",
+        filter_high_peaks: "Himalaya & 7.000m+",
+        filter_southern: "Südhemisphäre & Japan",
+        safety_tag: "Risikomanagement & Verlässlichkeit",
+        safety_title: "Das KEBE-Modell: Höchste alpine Standards und IFMGA-Führung",
+        safety_desc: "Im vergletscherten Hochgebirge verzeiht die Natur keine Fehler. KEBE arbeitet kompromisslos nach drei Sicherheitsgrundsätzen:",
+        safety_p1_title: "Strenge Guide-zu-Gast-Schlüssel (1:2 & 1:4)",
+        safety_p1_desc: "Sämtliche hochalpine Touren werden von voll lizenzierten IFMGA/UIAGM-Bergführern geleitet. Keine Kompromisse bei der Seilschaft.",
+        safety_p2_title: "Permanente Satellitenortung & Heli-Rettung",
+        safety_p2_desc: "Alle Expeditionsleiter führen Garmin InReach-Satellitengeräte mit Direktverbindung zu Rettungstransporten (Air Zermatt, Himalaya Heli).",
+        safety_p3_title: "Offizielle lokale DMCs & Gültige Genehmigungen",
+        safety_p3_desc: "In all unseren 11+ Zielgebieten werden Besteigungsgenehmigungen und Basislager von zertifizierten Partnern vor Ort betreut.",
+        spec_title: "Verbindliche Ausrüstungsnorm",
+        spec_item_1: "3-Antennen-LVS + Carbonschaufel & 280cm Sonde",
+        spec_item_2: "Pin-Bindungen & Carbon-Tourenski mit Fellbefestigung",
+        spec_item_3: "30m hyperstatisches RAD Line Seil + Harscheisen",
+        spec_item_4: "Höhenmedizinisches Notfallset (Pulsoxymeter, Dexamethason)",
+        spec_status_verified: "Geprüft",
+        spec_status_glacier: "Gletscherpflicht",
+        spec_status_guide: "Guide-Kontrolle",
+        safety_badge_insurance: "Internationale Höhenrettungsversicherung (Global Rescue) für jeden Teilnehmer obligatorisch.",
+        calc_tag: "Preistransparenz",
+        calc_title: "Expeditions-Kostenrechner",
+        calc_desc: "Wählen Sie Ihr Traumziel, die alpine Disziplin und Zusatzleistungen für eine unverbindliche Kostenschätzung.",
+        calc_label_country: "Zielgebiet & Gipfel",
+        calc_label_discipline: "Disziplin",
+        calc_opt_ski: "Reine Skitour",
+        calc_opt_alpine: "Grat-Alpinismus + Ski",
+        calc_label_services: "Zusatzleistungen & Ausrüstung",
+        calc_opt_guide: "Privater 1:1 IFMGA Bergführer",
+        calc_opt_gear: "Carbon-Tourenski & Lawinenausrüstung Miete",
+        calc_opt_insurance: "Global Rescue Satelliten-Rettungspolice",
+        calc_box_tag: "Geschätztes Basispaket",
+        calc_box_status: "SAISON 2026 / 2027",
+        calc_box_per_athlete: "Ungefährer Preis pro Athlet",
+        calc_box_inclusive: "Inklusive Gipfelgenehmigungen, Hütten, Logistik & Bergführer",
+        calc_early_bird: "Frühbuchervorteil:",
+        calc_early_bird_val: "5% Gutschrift",
+        calc_team_size: "Maximale Seilschaftsgröße:",
+        calc_team_val: "3 bis 5 Athleten pro Guide",
+        calc_btn_prefill: "In Anmeldeformular Übernehmen",
+        screen_tag: "Sicherheitsprüfung",
+        screen_title: "Technische Eignungsprüfung",
+        screen_desc: "Zur Wahrung der Sicherheit auf anspruchsvollen Steilabfahrten prüfen unsere Bergführer vorab Ihr skitechnisches und alpines Können.",
+        form_name: "Vor- und Nachname",
+        form_phone: "Telefon / WhatsApp",
+        form_email: "E-Mail-Adresse",
+        form_destination: "Ausgewählte Destination",
+        form_ski_level_title: "Skitechnisches Können & Tourenerfahrung",
+        skill_int_title: "Fortgeschritten",
+        skill_int_desc: "Sichere Beherrschung schwarzer Pisten, Grundkenntnisse im Spitzkehren, Kontrolle bei 25°-35° Hangneigung.",
+        skill_adv_title: "Erfahrener Alpinist",
+        skill_adv_desc: "Mehrtägige Skidurchquerungen, sichere Spitzkehren in 40° Steilhängen, Tragepassagen mit Rucksack.",
+        skill_exp_title: "Experte / Steilwand",
+        skill_exp_desc: "Souverän in 45°+ Rinnen, Steigeisengehen im Seilteam, Beherrschung von Selbstrettung aus Gletscherspalten.",
+        form_resume_label: "Bisherige Gipfel & Bergerfahrung",
+        form_submit_btn: "Bewerbung an den leitenden Bergführer senden",
+        footer_about: "Internationaler Spezialveranstalter für hochalpine Skitouren und Gletscherexpeditionen. Hauptsitz in Zermatt (Schweiz) mit DMCs und IFMGA-Guides in 11+ Ländern.",
+        footer_dest_title: "Ausgewählte Gletscher",
+        footer_contact_title: "Operative Stützpunkte",
+        footer_hub: "Basen: Zermatt (CH), Chamonix (FR), Almaty (KZ), Bischkek (KG)",
+        footer_privacy: "Datenschutz",
+        footer_liability: "Haftungsausschluss",
+        footer_cert: "IFMGA / UIAGM Standards"
+      },
+
+      es: {
+        nav_destinations: "11+ Destinos",
+        nav_disciplines: "Esquí de Montaña y Alpinismo",
+        nav_safety: "Seguridad IFMGA",
+        nav_calculator: "Calculadora de Costes",
+        nav_screening: "Evaluación Técnica",
+        nav_dossier: "Plan Director",
+        nav_apply_cta: "Unirse a la Expedición",
+        hero_badge: "Esquí de Travesía Glaciar y Alpinismo Estival",
+        hero_title_1: "Asciende a Glaciares Intactos,",
+        hero_title_2: "Desciende por Líneas Alpinas Inexploradas",
+        hero_subtitle: "KEBE diseña expediciones de élite en esquí de travesía y alpinismo estival en 11+ cordilleras del mundo. Desde el hielo perpetuo de los cuatromiles suizos hasta Kirguistán, los fiordos árticos de Noruega, la Patagonia y los gigantes del Himalaya.",
+        hero_btn_destinations: "Explorar los 11+ Destinos",
+        hero_btn_screening: "Evaluación de Aptitud",
+        metric_countries: "Países con DMC Oficial",
+        metric_guides: "Guías con Título IFMGA",
+        metric_peak: "Descenso Récord en Esquí (7.546m)",
+        metric_sat: "Evacuación Aérea y Satélite 24/7",
+        cat_tagline: "Nuestros Pilares Operativos",
+        cat_title: "Por Qué el Esquí de Travesía y el Alpinismo Son Nuestra Prioridad",
+        cat_desc: "Rechazamos el turismo masivo. Todas nuestras expediciones se basan en el estilo alpino ligero, ascensos con pieles de foca en glaciares activos y descensos técnicos exigentes.",
+        disc_1_title: "Esquí de Travesía de Gran Altitud",
+        disc_1_desc: "Ascensos con pieles sobre glaciares perpetuos, nieve polvo virgen en Noruega, Kirguistán y Japón, sin depender de remontes mecánicos.",
+        disc_1_bullet_1: "Rescate en grietas y progresión en glaciar encordado",
+        disc_1_bullet_2: "DVA Barryvox de 3 antenas, palas de carbono y sondas de 280cm",
+        disc_1_bullet_3: "Canales de descenso exigentes (pendientes de 35° a 50°)",
+        disc_1_focus: "Enfoque: Travesías Glaciares y Nieve Polvo",
+        disc_2_title: "Alpinismo Estival en Glaciares",
+        disc_2_desc: "Ascensiones de junio a septiembre en los Alpes, el Cáucaso y Tian Shan. Aristas de granito afiladas combinadas con corredores de nieve bajo tiempo estival estable.",
+        disc_2_bullet_1: "Cumbres de 4.000m (Breithorn, Mont Blanc, Kazbek)",
+        disc_2_bullet_2: "Refugios de gran altitud (Monte Rosa, Rifugio Torino)",
+        disc_2_bullet_3: "Técnica avanzada de crampones y piolet en terreno vertical",
+        disc_2_focus: "Enfoque: Crestas Filosas y Refugios Alpinos",
+        disc_3_title: "Temporada Inversa (Invierno Austral)",
+        disc_3_desc: "Cuando en el hemisferio norte es verano, viajamos al pleno invierno de los Alpes del Sur en Nueva Zelanda y a los volcanes nevados de la Patagonia.",
+        disc_3_bullet_1: "Heliesquí en glaciares durante julio y agosto",
+        disc_3_bullet_2: "Volcanes andinos y descensos entre bosques de araucarias",
+        disc_3_bullet_3: "Calendario de esquí operativo los 365 días del año",
+        disc_3_focus: "Enfoque: 365 Días de Esquí al Año",
+        dest_section_tag: "Red Global de Expediciones",
+        dest_section_title: "11+ Países para el Alpinismo y el Esquí de Montaña",
+        filter_all: "Todos los Destinos",
+        filter_europe: "Europa y Ártico",
+        filter_central_asia: "Asia Central y Cáucaso",
+        filter_high_peaks: "Himalaya y +7.000m",
+        filter_southern: "Hemisferio Sur y Japón",
+        safety_tag: "Gestión de Riesgo y Rigor",
+        safety_title: "El Modelo Operativo KEBE: Seguridad Rigurosa y Guiado IFMGA",
+        safety_desc: "En glaciares de gran altitud no hay margen de error. KEBE opera bajo tres principios de seguridad innegociables:",
+        safety_p1_title: "Ratios Reducidos Guía/Cliente (1:2 y 1:4)",
+        safety_p1_desc: "Todas las travesías glaciares están dirigidas por guías con certificación internacional IFMGA/UIAGM.",
+        safety_p2_title: "Telemetría Satelital y Protocolo de Evacuación Heli",
+        safety_p2_desc: "Los jefes de expedición portan dispositivos Garmin InReach conectados directamente con centros de rescate aéreo.",
+        safety_p3_title: "Agencias Locales Registradas y Permisos en Regla",
+        safety_p3_desc: "En cada uno de nuestros 11+ destinos, los permisos oficiales y la logística de base son gestionados directamente por socios locales homologados.",
+        spec_title: "Especificación Técnica Obligatoria",
+        spec_item_1: "DVA de 3 antenas + Pala de carbono y Sonda 280cm",
+        spec_item_2: "Fijaciones pin-tech y esquís de carbono con ranura en cola",
+        spec_item_3: "Cuerda RAD Line de 30m + Cuchillas para nieve dura",
+        spec_item_4: "Botiquín médico de altitud (Pulsioxímetro, Dexametasona)",
+        spec_status_verified: "Verificado",
+        spec_status_glacier: "Obligatorio Glaciar",
+        spec_status_guide: "Revisión Guía",
+        safety_badge_insurance: "Seguro de rescate de altitud (Global Rescue) obligatorio para todos los deportistas.",
+        calc_tag: "Transparencia Financiera",
+        calc_title: "Calculadora de Costes de Expedición",
+        calc_desc: "Selecciona el país de destino, la modalidad técnica y los servicios adicionales para obtener un presupuesto estimado.",
+        calc_label_country: "Destino y Cumbre",
+        calc_label_discipline: "Modalidad de la Expedición",
+        calc_opt_ski: "Esquí de Travesía Puro",
+        calc_opt_alpine: "Alpinismo de Aristas + Esquí",
+        calc_label_services: "Servicios y Material Premium",
+        calc_opt_guide: "Guía IFMGA Privado (Ratio 1:1)",
+        calc_opt_gear: "Alquiler de Esquís de Carbono y Kit de Avalanchas",
+        calc_opt_insurance: "Póliza Satelital de Rescate Global Rescue",
+        calc_box_tag: "Estimación Paquete Base",
+        calc_box_status: "TEMPORADA 2026 / 2027",
+        calc_box_per_athlete: "Precio Aprox. por Deportista",
+        calc_box_inclusive: "Incluye permisos de cumbre, refugios, logística y guías",
+        calc_early_bird: "Ventaja por Reserva Anticipada:",
+        calc_early_bird_val: "5% de Descuento",
+        calc_team_size: "Tamaño Máximo de Cordada:",
+        calc_team_val: "3 a 5 Deportistas por Guía",
+        calc_btn_prefill: "Pasar a la Solicitud de Admisión",
+        screen_tag: "Admisión de Seguridad",
+        screen_title: "Evaluación Técnica del Deportista",
+        screen_desc: "Para garantizar la máxima seguridad en canales glaciares, la participación requiere la verificación previa de su nivel técnico de esquí y alpinismo.",
+        form_name: "Nombre y Apellidos",
+        form_phone: "Teléfono / WhatsApp",
+        form_email: "Correo Electrónico",
+        form_destination: "Destino o Pico Seleccionado",
+        form_ski_level_title: "Nivel de Esquí Fuera de Pista y Travesía",
+        skill_int_title: "Travesía Intermedio",
+        skill_int_desc: "Dominio de pistas negras, vueltas maría básicas y control sobre nieves variables en 25°-35°.",
+        skill_adv_title: "Alpinista Avanzado",
+        skill_adv_desc: "Travesías de varios días entre refugios, virajes firmes en pendientes de 40°, porteo de esquís.",
+        skill_exp_title: "Experto en Pendientes Fuertes",
+        skill_exp_desc: "Soltura en corredores de 45°+, progresión con crampones/piolet encordado, autorrescate en grietas.",
+        form_resume_label: "Historial de Cumbres y Actividades Recientes",
+        form_submit_btn: "Enviar Expediente al Guía Jefe de Montaña",
+        footer_about: "Operador internacional de esquí de montaña y expediciones en glaciares. Sede en Zermatt, Suiza, con DMCs locales y guías IFMGA en 11+ países.",
+        footer_dest_title: "Glaciares Destacados",
+        footer_contact_title: "Bases de Operaciones",
+        footer_hub: "Puntos: Zermatt (CH), Chamonix (FR), Almaty (KZ), Biskek (KG)",
+        footer_privacy: "Privacidad",
+        footer_liability: "Exención de Responsabilidad",
+        footer_cert: "Normas IFMGA / UIAGM"
+      },
+
+      fa: {
+        nav_destinations: "۱۱ کشور مقصد",
+        nav_disciplines: "اسکی تورینگ و آلپینیسم",
+        nav_safety: "استاندارد ایمنی IFMGA",
+        nav_calculator: "برآورد هزینه و پکیج",
+        nav_screening: "ارزیابی فنی ورزشکار",
+        nav_dossier: "دوسیه و بیزنس‌پلان",
+        nav_apply_cta: "ثبت‌نام اکسپدیشن",
+        hero_badge: "اکسپدیشن‌های تابستانه آلپینیسم و اسکی کوهستان در ۱۱ کشور برگزیده",
+        hero_title_1: "صعود به پاک‌ترین یخچال‌ها،",
+        hero_title_2: "فرود از دست‌نخورده‌ترین خطوط برف",
+        hero_subtitle: "KEBE مجری اکسپدیشن‌های تخصصی اسکی تورینگ و آلپینیسم در ۱۱ کشور کوهستانی جهان است؛ از یخچال‌های ۴۰۰۰ متری سوئیس و خطوط قطبی نروژ تا پودر وحشی قرقیزستان، قزاقستان، پاتاگونیا و قلل بالای ۷۰۰۰ متر آسیا.",
+        hero_btn_destinations: "مشاهده ۱۱ کشور مقصد",
+        hero_btn_screening: "تست صلاحیت فنی صعود",
+        metric_countries: "کشور هدف با کارگزار رسمی",
+        metric_guides: "راهنماهای دارای مدرک IFMGA",
+        metric_peak: "بلندترین فرود با اسکی (۷,۵۴۶م)",
+        metric_sat: "ارتباط ماهواره‌ای و نجات هلی ۲۴/۷",
+        cat_tagline: "حوزه تخصصی و رویکرد اجرایی",
+        cat_title: "چرا تمرکز اول KEBE روی اسکی تورینگ و آلپینیسم است؟",
+        cat_desc: "ما گردشگری عادی را رها کرده‌ایم. تمام برنامه‌ها بر مبنای سبک سبک‌بار آلپی (Alpine Style)، صعود با پوست اسکی روی یخچال‌های فعال و فرود در شیب‌های تکنیکال طراحی شده‌اند.",
+        disc_1_title: "اسکی تورینگ در ارتفاعات بالا",
+        disc_1_desc: "صعود با سکن (پوست اسکی) روی یخچال‌های دائمی، قله‌های پوشیده از پودر دست‌نخورده در نروژ، قرقیزستان و ناگانوی ژاپن بدون اتکا به تله‌اسکی‌ها.",
+        disc_1_bullet_1: "آموزش و اجرای پروتکل‌های نجات در شکاف یخی و صعود هم‌طناب",
+        disc_1_bullet_2: "همراه داشتن سیستم بهمن، بیپر ۳ آنتنه Barryvox و پروب",
+        disc_1_bullet_3: "خطوط فرود اختصاصی با شیب‌های ۳۵ تا ۵۰ درجه پایدار",
+        disc_1_focus: "تمرکز: یخچال‌های دائمی و پودر دست‌نخورده",
+        disc_2_title: "آلپینیسم تابستانه روی یخچال‌ها",
+        disc_2_desc: "صعود یخچال‌های آلپ، قفقاز و تیان‌شان در ماه‌های ژوئن تا سپتامبر. ترکیب تیغه‌های سنگی گرانیتی با یال‌های یخ و برف در هوای پایدار تابستان.",
+        disc_2_bullet_1: "صعود قله‌های ۴۰۰۰ متری سوئیس و ایتالیا (مون‌بلان، برتهورن، کازبک)",
+        disc_2_bullet_2: "اقامت در پناه‌گاه‌های تاریخی ارتفاع بالا (Monte Rosa, Torino)",
+        disc_2_bullet_3: "آموزش و اجرای تکنیک‌های پیشرفته صعود با کرامپون و تبر یخ",
+        disc_2_focus: "تمرکز: تیغه‌های آلپی و پناه‌گاه‌های ارتفاع بالا",
+        disc_3_title: "اسکی در تابستان ایران (Reverse Season)",
+        disc_3_desc: "زمانی که نیمکره شمالی در تابستان است، ما شما را به زمستان واقعی در آلپ جنوبی نیوزیلند و آتشفشان‌های پوشیده از برف پاتاگونیا می‌بریم.",
+        disc_3_bullet_1: "هلی‌اسکی و اسکی تورینگ روی یخچال‌ها در تیر و مرداد",
+        disc_3_bullet_2: "اکسپدیشن‌های آند و پیمایش یخچال‌های تاسمانی و باریلوچه",
+        disc_3_bullet_3: "تقویم ۳۶۵ روزه اسکی فعال در سراسر کره زمین",
+        disc_3_focus: "تمرکز: ۳۶۵ روز اسکی بدون وقفه",
+        dest_section_tag: "زنجیره عملیاتی بین‌المللی",
+        dest_section_title: "۱۱ کشور منتخب برای آلپینیسم و اسکی تورینگ",
+        filter_all: "همه مقاصد",
+        filter_europe: "اروپا و قطب",
+        filter_central_asia: "آسیای میانه و قفقاز",
+        filter_high_peaks: "هیمالیا و بالای ۷۰۰۰ متر",
+        filter_southern: "نیمکره جنوبی و ژاپن",
+        safety_tag: "زیرساخت و تضمین ایمنی",
+        safety_title: "مدل عملیاتی KEBE: استانداردهای دقیق آلپینیسم و هدایت IFMGA",
+        safety_desc: "در کوهنوردی ارتفاع بالا و اسکی در شیب‌های یخچالی، اشتباه مساوی با حادثه است. بیزنس‌پلن KEBE متکی بر سه ستون خلل‌ناپذیر پایه‌ریزی شده است:",
+        safety_p1_title: "نسبت لیدر به کوهنورد (۱:۲ و ۱:۴)",
+        safety_p1_desc: "تمام تیم‌ها توسط راهنماهای رسمی دارای لایسنس IFMGA/UIAGM هدایت می‌شوند و ایمنی هم‌طنابی رعایت می‌گردد.",
+        safety_p2_title: "زنجیره نجات ماهواره‌ای و پرواز هلی‌کوپتر",
+        safety_p2_desc: "تجهیز هر سرپرست به دستگاه ماهواره‌ای گارمین InReach و ارتباط بی‌وقفه با مراکز ترابری هوایی امداد (Air Zermatt).",
+        safety_p3_title: "قراردادهای رسمی بدون واسطه (DMC بومی)",
+        safety_p3_desc: "در تمام ۱۱ کشور، مجوزهای رسمی صعود و لجستیک کمپ‌ها مستقیماً توسط کارگزاران قانونی KEBE اداره می‌شود.",
+        spec_title: "پروتکل اجباری صعود تابستانه",
+        spec_item_1: "بیپر بهمن ۳ آنتنه + بیل کربن و پروب ۲۸۰ سانتیمتری",
+        spec_item_2: "اسکی تورینگ کربن سبک با فیکس پین‌تک و چاک انتهایی",
+        spec_item_3: "طناب راد-لاین ۳۰ متری فوق سبک + تیغه کرامپون اسکی",
+        spec_item_4: "کیت پزشکی ارتفاع بالا (اکسی‌متر، دگزامتازون، استازولامید)",
+        spec_status_verified: "تأیید استاندارد",
+        spec_status_glacier: "الزامی برای یخچال",
+        spec_status_guide: "نظارت مستقیم لیدر",
+        safety_badge_insurance: "بیمه معتبر امداد بین‌المللی Global Rescue برای کلیه ورزشکاران صادر می‌شود.",
+        calc_tag: "شفافیت مالی بیزنس‌پلن",
+        calc_title: "محاسبه‌گر هوشمند هزینه اکسپدیشن",
+        calc_desc: "کشور مقصد، نوع رشته و خدمات پشتیبانی مورد نیاز را برای تخمین اولیه پکیج مشخص کنید.",
+        calc_label_country: "کشور و منطقه مقصد",
+        calc_label_discipline: "نوع رشته و فعالیت",
+        calc_opt_ski: "اسکی تورینگ خالص",
+        calc_opt_alpine: "آلپینیسم دیواره‌ای + اسکی",
+        calc_label_services: "خدمات اختصاصی پشتیبانی",
+        calc_opt_guide: "راهنمای اختصاصی IFMGA (نسبت ۱ به ۱)",
+        calc_opt_gear: "کرایه ست اسکی کربن و کیت نجات در بهمن",
+        calc_opt_insurance: "بیمه نجات ماهواره‌ای Global Rescue",
+        calc_box_tag: "برآورد اولیه پکیج رسمی KEBE",
+        calc_box_status: "فصل صعود ۲۰۲۶ / ۲۰۲۷",
+        calc_box_per_athlete: "هزینه تقریبی هر نفر",
+        calc_box_inclusive: "شامل مجوزهای دولتی، اقامت در پناه‌گاه و کادر فنی",
+        calc_early_bird: "تخفیف ثبت‌نام زودهنگام:",
+        calc_early_bird_val: "۵٪ کسر می‌شود",
+        calc_team_size: "حداکثر اندازه طناب صعود:",
+        calc_team_val: "۳ تا ۵ ورزشکار برای هر لیدر",
+        calc_btn_prefill: "انتقال این پکیج به فرم ثبت‌نام",
+        screen_tag: "فرآیند انتخابی و ارزیابی ایمنی",
+        screen_title: "غربالگری فنی متقاضی صعود",
+        screen_desc: "برای حفظ امنیت اکسپدیشن‌های آلپی، حضور در برنامه‌ها منوط به بررسی سطح مهارت اسکی خارج از پیست و سوابق کوهنوردی شماست.",
+        form_name: "نام و نام خانوادگی",
+        form_phone: "شماره تماس / واتس‌اپ",
+        form_email: "ایمیل جهت ارسال قرارداد",
+        form_destination: "مقصد انتخابی",
+        form_ski_level_title: "سطح مهارت اسکی خارج از پیست و تورینگ",
+        skill_int_title: "متوسط (Intermediate)",
+        skill_int_desc: "تسلط بر پیست‌های سیاه، آشنایی اولیه با سکن و کنترل روی برف‌های متغیر در شیب‌های ۲۵ تا ۳۵ درجه.",
+        skill_adv_title: "پیشرفته آلپی (Advanced)",
+        skill_adv_desc: "تجربه پیمایش‌های چند روزه پناه‌گاه به پناه‌گاه، چرخش مطمئن در شیب‌های ۴۰ درجه و حمل اسکی روی کوله.",
+        skill_exp_title: "حرفه‌ای / شیب تند (Expert)",
+        skill_exp_desc: "تسلط کامل در دهلیزهای ۴۵ درجه به بالا، صعود با کرامپون و تبر هم‌طناب و نجات خود در شکاف یخی.",
+        form_resume_label: "خلاصه مهم‌ترین صعودها و فعالیت‌های اخیر شما",
+        form_submit_btn: "ارسال پرونده فنی جهت بررسی توسط سرپرست صعود",
+        footer_about: "مجری بین‌المللی اکسپدیشن‌های اسکی تورینگ و آلپینیسم روی یخچال‌ها. دفتر مرکزی در زرمات سوئیس با کارگزاران محلی و راهنماهای IFMGA در ۱۱ کشور برگزیده جهان.",
+        footer_dest_title: "یخچال‌های برگزیده",
+        footer_contact_title: "پایگاه‌های عملیاتی",
+        footer_hub: "ایستگاه‌ها: زرمات (سوئیس)، شومونی (فرانسه)، آلماتی (قزاقستان)، بیشکک (قرقیزستان)",
+        footer_privacy: "حفظ حریم خصوصی",
+        footer_liability: "معافیت از مسئولیت (Waiver)",
+        footer_cert: "استانداردهای IFMGA / UIAGM"
+      }
+    };
+
+    // 11+ High Alpine Countries & Regions Dataset
+    const destinationData = [
+      {
+        id: "switzerland",
+        country: { en: "Switzerland", fr: "Suisse", de: "Schweiz", es: "Suiza", fa: "سوئیس" },
+        region: "europe",
+        flag: "🇨🇭",
+        location: { en: "Zermatt & Saas-Fee Glaciers", fr: "Glaciers de Zermatt & Saas-Fee", de: "Zermatt & Saas-Fee Gletscher", es: "Glaciares de Zermatt y Saas-Fee", fa: "زرمات، برتهورن و ساس‌فی" },
+        title: { en: "Breithorn 4,164m & Monte Rosa Traverse", fr: "Breithorn 4 164m & Traversée du Mont Rose", de: "Breithorn 4.164m & Monte Rosa Überschreitung", es: "Breithorn 4.164m y Travesía Monte Rosa", fa: "تراورس یخچال‌های مونتاروزا و برتهورن" },
+        desc: { en: "Ascend 4,000m peaks and ski Europe's longest perpetual glaciers with high-altitude alpine hut staging.", fr: "Gravissez des 4 000m et skiez sur les plus grands glaciers alpins avec nuits en refuges mythiques.", de: "Besteigung von 4.000ern und Skitouren auf Europas längsten Gletschern mit Übernachtung auf der Monte-Rosa-Hütte.", es: "Asciende a picos de 4.000m y esquía los glaciares más extensos de Europa con estancias en refugios de altura.", fa: "صعود به قله برتهورن ۴,۱۶۴ متری و اسکی روی طولانی‌ترین یخچال‌های دائمی اروپا با پشتیبانی پناه‌گاه‌های آلپی." },
+        altitude: "4,164m",
+        duration: { en: "7 Days", fr: "7 Jours", de: "7 Tage", es: "7 Días", fa: "۷ روزه" },
+        price: 2450,
+        currency: "€",
+        season: { en: "Summer & Winter", fr: "Été & Hiver", de: "Sommer & Winter", es: "Verano e Invierno", fa: "تابستان و زمستان" },
+        img: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "italy",
+        country: { en: "Italy", fr: "Italie", de: "Italien", es: "Italia", fa: "ایتالیا" },
+        region: "europe",
+        flag: "🇮🇹",
+        location: { en: "Dolomites & Courmayeur Mont Blanc", fr: "Dolomites & Courmayeur Mont-Blanc", de: "Dolomiten & Courmayeur Mont Blanc", es: "Dolomitas y Courmayeur Mont Blanc", fa: "دولومیت و کورمایر مون‌بلان" },
+        title: { en: "Gran Paradiso & Dolomite Couloirs", fr: "Grand Paradis & Couloirs des Dolomites", de: "Gran Paradiso & Dolomiten Couloirs", es: "Gran Paradiso y Canales de Dolomitas", fa: "صعود گرند پارادیزو و دهلیزهای دولومیت" },
+        desc: { en: "High-level ski mountaineering through limestone spires and technical glacial couloirs in the Italian Alps.", fr: "Ski alpinisme technique entre tours dolomitiques et couloirs glaciaires sur les versants sud du Mont-Blanc.", de: "Hochalpines Skibergsteigen zwischen schroffen Felstürmen und Gletscherrinnen auf der italienischen Alpensüdseite.", es: "Esquí de montaña técnico entre agujas de roca caliza y canales glaciares en la vertiente italiana del Mont Blanc.", fa: "ترکیب آلپینیسم تکنیکال دیواره‌ای، فرود از دهلیزهای برفی کورمایر و پیمایش یخچال‌های گرند پارادیزو." },
+        altitude: "4,061m",
+        duration: { en: "6 Days", fr: "6 Jours", de: "6 Tage", es: "6 Días", fa: "۶ روزه" },
+        price: 1980,
+        currency: "€",
+        season: { en: "Summer Alpinism", fr: "Alpinisme Estival", de: "Sommer-Alpinismus", es: "Alpinismo Estival", fa: "آلپینیسم تابستانه" },
+        img: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "norway",
+        country: { en: "Norway", fr: "Norvège", de: "Norwegen", es: "Noruega", fa: "نروژ" },
+        region: "europe",
+        flag: "🇳🇴",
+        location: { en: "Lyngen Alps & Svalbard Arctic", fr: "Alpes de Lyngen & Spitzberg Arctique", de: "Lyngen Alpen & Spitzbergen Arktis", es: "Alpes de Lyngen y Svalbard Ártico", fa: "آلپ لینگن و جزایر سوالبارد" },
+        title: { en: "Peak-to-Fjord Midnight Sun Touring", fr: "Ski Sommet-au-Fjord sous le Soleil de Minuit", de: "Gipfel-zum-Fjord unter der Mitternachtssonne", es: "Esquí de Cumbre a Fiordo bajo el Sol de Medianoche", fa: "اسکی از قله به ساحل در زیر آفتاب نیمه‌شب" },
+        desc: { en: "Skin up untouched Arctic peaks and ski all the way to the water's edge with support vessel access.", fr: "Montez en peaux sur des crêtes arctiques et descendez jusqu'à la mer avec navire expéditionnaire de soutien.", de: "Aufstieg über arktische Bergrücken und Abfahrt bis ans Meeresufer mit eigenem Expeditionsboot.", es: "Asciende cumbres árticas con pieles de foca y desciende esquiando directo hasta la orilla del mar.", fa: "فرود مستقیم از قله‌های یخ‌زده قطبی به سوی آب‌های اقیانوس منجمد شمالی با پشتیبانی قایق‌های اکتشافی." },
+        altitude: "1,833m vertical",
+        duration: { en: "8 Days", fr: "8 Jours", de: "8 Tage", es: "8 Días", fa: "۸ روزه" },
+        price: 2650,
+        currency: "€",
+        season: { en: "Late Spring / Summer", fr: "Fin Printemps / Été", de: "Spätfrühling / Sommer", es: "Primavera Tardía / Verano", fa: "بهار و تابستان قطبی" },
+        img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "kyrgyzstan",
+        country: { en: "Kyrgyzstan", fr: "Kirghizistan", de: "Kirgisistan", es: "Kirguistán", fa: "قرقیزستان" },
+        region: "central-asia",
+        flag: "🇰🇬",
+        location: { en: "Tien Shan & Karakol Yurt Camps", fr: "Tian Shan & Camps de Yourtes de Karakol", de: "Tian Shan & Jurtenlager Karakol", es: "Tian Shan y Campamentos de Yurtas", fa: "رشته‌کوه تیان‌شان و کاراکول" },
+        title: { en: "Wild Tien Shan Powder & Peak Lenin Base", fr: "Poudreuse Sauvage du Tian Shan & Pic Lénine", de: "Wilder Tian Shan Pulverschnee & Pik Lenin", es: "Nieve Polvo Salvaje en Tian Shan y Pico Lenin", fa: "اکسپدیشن دره‌های وحشی آکسو و قله لنین" },
+        desc: { en: "Vast glaciated valleys, sub-zero dry powder snow, and remote yurt camps heated with pinewood.", fr: "De vastes vallées glaciaires, une poudreuse ultra légère et des camps en yourtes traditionnelles chauffées au bois.", de: "Weite vergletscherte Hochtäler, federleichter Pulverschnee und Übernachtung in traditionellen Jurten.", es: "Valles glaciares inmensos, nieve polvo extremadamente seca y campamentos de yurtas tradicionales.", fa: "اسکی تورینگ در بکرترین برف پودر آسیای میانه با اقامت در یورت‌های گرم و عبور از یخچال‌های دست‌نخورده." },
+        altitude: "up to 7,134m",
+        duration: { en: "9 Days", fr: "9 Jours", de: "9 Tage", es: "9 Días", fa: "۹ روزه" },
+        price: 1690,
+        currency: "$",
+        season: { en: "Winter & Summer Glacier", fr: "Hiver & Glacier d'Été", de: "Winter & Sommergletscher", es: "Invierno y Glaciar de Verano", fa: "زمستان و یخچال‌های تابستانه" },
+        img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "kazakhstan",
+        country: { en: "Kazakhstan", fr: "Kazakhstan", de: "Kasachstan", es: "Kazajistán", fa: "قزاقستان" },
+        region: "central-asia",
+        flag: "🇰🇿",
+        location: { en: "Trans-Ili Alatau & Peak Talgar", fr: "Alataou Trans-Ili & Pic Talgar", de: "Trans-Ili Alatau & Pik Talgar", es: "Trans-Ili Alatau y Pico Talgar", fa: "ترانس-ایلی آلاتائو و قله تالگار" },
+        title: { en: "Bogdanovich Glacier & Shymbulak Backcountry", fr: "Glacier Bogdanovitch & Hors-Piste de Chimboulak", de: "Bogdanowitsch-Gletscher & Shymbulak Backcountry", es: "Glaciar Bogdanovich y Backcountry en Shymbulak", fa: "بک‌کانتری یخچال بوگدانوویچ و شیمبولاک" },
+        desc: { en: "Direct glacier access right out of Almaty, technical ridge traverses, and untouched couloirs up to 4,300m.", fr: "Accès direct aux glaciers depuis Almaty, arêtes alpines techniques et couloirs vierges jusqu'à 4 300m.", de: "Direkter Gletscherzugang von Almaty aus, anspruchsvolle Gratüberschreitungen und unberührte Couloirs bis 4.300m.", es: "Acceso directo a glaciares desde Almaty, crestas técnicas y canales vírgenes de hasta 4.300m.", fa: "صعود یخچال‌های بوگدانوویچ، خطوط عمیق برفی و فرود در شیب‌های بدون شلوغی با دسترسی مستقیم از آلماتی." },
+        altitude: "4,376m",
+        duration: { en: "7 Days", fr: "7 Jours", de: "7 Tage", es: "7 Días", fa: "۷ روزه" },
+        price: 1450,
+        currency: "$",
+        season: { en: "Spring & Summer", fr: "Printemps & Été", de: "Frühling & Sommer", es: "Primavera y Verano", fa: "بهار و تابستان" },
+        img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "georgia",
+        country: { en: "Georgia", fr: "Géorgie", de: "Georgien", es: "Georgia", fa: "گرجستان" },
+        region: "central-asia",
+        flag: "🇬🇪",
+        location: { en: "Mount Kazbek 5,047m & Svaneti", fr: "Mont Kazbek 5 047m & Svanétie", de: "Mount Kasbek 5.047m & Swanetien", es: "Monte Kazbek 5.047m y Svaneti", fa: "قفقاز، قله کازبک و سوانتی" },
+        title: { en: "Kazbek 5,000m Ski Summit Expedition", fr: "Expédition Ski au Sommet du Kazbek 5 047m", de: "Kasbek 5.047m Ski-Gipfelexpedition", es: "Expedición de Esquí a la Cumbre del Kazbek", fa: "اکسپدیشن صعود قله کازبک با اسکی" },
+        desc: { en: "High-altitude mountaineering with crampons and ice axe, followed by an exhilarating glacier descent down to Betlemi Hut.", fr: "Alpinisme engagé avec crampons et piolet, couronné par une descente glaciaire spectaculaire depuis 5 000m.", de: "Kombinierte Hochtour mit Steigeisen und Pickel, gefolgt von einer gewaltigen Skiabfahrt über den Gergeti-Gletscher.", es: "Alpinismo de altura con crampones y piolet, culminando en un espectacular descenso en esquís por el glaciar.", fa: "صعود فنی با کرامپون و تبر به قله ۵۰۴۷ متری کازبک و فرود هیجان‌انگیز با اسکی از کمپ متئو به گرگتی." },
+        altitude: "5,047m",
+        duration: { en: "8 Days", fr: "8 Jours", de: "8 Tage", es: "8 Días", fa: "۸ روزه" },
+        price: 1350,
+        currency: "$",
+        season: { en: "May to July", fr: "Mai à Juillet", de: "Mai bis Juli", es: "Mayo a Julio", fa: "اردیبهشت تا تیر" },
+        img: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "nepal",
+        country: { en: "Nepal", fr: "Népal", de: "Nepal", es: "Nepal", fa: "نپال" },
+        region: "high-peaks",
+        flag: "🇳🇵",
+        location: { en: "Khumbu & Mera Peak 6,476m", fr: "Khumbu & Pic Mera 6 476m", de: "Khumbu & Mera Peak 6.476m", es: "Khumbu y Mera Peak 6.476m", fa: "هیمالیا، قله مرا پیک و ماناسلو" },
+        title: { en: "Himalayan 6,000m+ Ski Mountaineering", fr: "Ski Alpinisme Himalayen à +6 000m", de: "Himalaya 6.000m+ Skibergsteigen", es: "Esquí de Montaña en el Himalaya a +6.000m", fa: "اکسپدیشن هیمالیایی مرا پیک (Mera Peak)" },
+        desc: { en: "Ascend the highest trekking peak in Nepal with certified Sherpas and drop a 2,000m vertical ski line facing Everest.", fr: "Atteignez le plus haut sommet de trekking au Népal avec des Sherpas d'élite et skiez 2 000m de dénivelé face à l'Everest.", de: "Besteigung des höchsten Trekkinggipfels in Nepal mit erfahrenen Sherpas und 2.000 Höhenmeter Skiabfahrt mit Blick auf den Everest.", es: "Asciende al pico de trekking más alto de Nepal con sherpas de élite y desciende 2.000m de desnivel esquiando frente al Everest.", fa: "صعود به بلندترین قله ترکینگ نپال با همراهی شرپاهای ارشد و طولانی‌ترین فرود با اسکی در چشم‌انداز اورست و لوتسه." },
+        altitude: "6,476m",
+        duration: { en: "18 Days", fr: "18 Jours", de: "18 Tage", es: "18 Días", fa: "۱۸ روزه" },
+        price: 3900,
+        currency: "$",
+        season: { en: "Autumn & Spring", fr: "Automne & Printemps", de: "Herbst & Frühling", es: "Otoño y Primavera", fa: "پاییز و بهار" },
+        img: "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "pakistan",
+        country: { en: "Pakistan", fr: "Pakistan", de: "Pakistan", es: "Pakistán", fa: "پاکستان" },
+        region: "high-peaks",
+        flag: "🇵🇰",
+        location: { en: "Karakoram & Spantik Peak", fr: "Karakoram & Pic Spantik", de: "Karakorum & Spantik Peak", es: "Karakórum y Pico Spantik", fa: "قره‌قروم، دره هونزا و اسپانتیک" },
+        title: { en: "Spantik 7,027m (Golden Peak) Ski Expedition", fr: "Expédition Ski au Pic Spantik 7 027m", de: "Spantik 7.027m Ski-Expedition", es: "Expedición de Esquí al Pico Spantik 7.027m", fa: "پیمایش یخچال بالتورو و قله اسپانتیک" },
+        desc: { en: "Heavy alpine expedition into the heart of Karakoram granite spires, skinning across vast high plateaus at 7,000m.", fr: "Expédition engagée au cœur des flèches de granit du Karakoram, ascension en peaux sur des plateaux glaciaires à 7 000m.", de: "Schwere alpine Expedition inmitten der Granittürme des Karakorum mit langen Ski-Aufstiegen auf Hochplateaus über 7.000m.", es: "Expedición alpina de gran envergadura entre torres de granito, foqueando por altiplanos glaciares a 7.000 metros.", fa: "فرود با اسکی روی فلات برفی اسپانتیک در قلب خشن‌ترین و بلندترین برج‌های گرانیتی جهان با پشتیبانی شرکای بومی." },
+        altitude: "7,027m",
+        duration: { en: "24 Days", fr: "24 Jours", de: "24 Tage", es: "24 Días", fa: "۲۴ روزه" },
+        price: 4800,
+        currency: "$",
+        season: { en: "June & July", fr: "Juin & Juillet", de: "Juni & Juli", es: "Junio y Julio", fa: "تیر و مرداد" },
+        img: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "newzealand",
+        country: { en: "New Zealand", fr: "Nouvelle-Zélande", de: "Neuseeland", es: "Nueva Zelanda", fa: "نیوزیلند" },
+        region: "southern",
+        flag: "🇳🇿",
+        location: { en: "Southern Alps & Tasman Glacier", fr: "Alpes du Sud & Glacier Tasman", de: "Südalpen & Tasman-Gletscher", es: "Alpes del Sur y Glaciar Tasman", fa: "آلپ جنوبی و یخچال تاسمانی" },
+        title: { en: "Mt Cook Heli-Assisted Glacier Ski Traverse", fr: "Traversée Glaciaire au Mont Cook avec Héliportage", de: "Mt Cook Helikopter-Gletschertraverse", es: "Travesía Glaciar en Mt Cook con Asistencia Heli", fa: "اسکی روی یخچال تاسمانی و مونت کوک" },
+        desc: { en: "True winter conditions during Northern Hemisphere summer. Vast seracs, deep maritime powder, and ski touring in July/August.", fr: "Conditions hivernales parfaites en plein été européen. Séracs géants et poudreuse profonde en juillet/août.", de: "Echte Winterbedingungen während des europäischen Sommers. Riesige Gletscherbrüche und Tiefschnee im Juli und August.", es: "Condiciones de pleno invierno durante el verano boreal. Espectaculares seracs y esquí de travesía en julio y agosto.", fa: "فرود هلی‌اسکی و تورینگ در اقیانوسی از برف تازه در ماه‌های گرم ایران؛ تجربه آلپی با استانداردهای نئوزیلندی." },
+        altitude: "3,724m",
+        duration: { en: "10 Days", fr: "10 Jours", de: "10 Tage", es: "10 Días", fa: "۱۰ روزه" },
+        price: 3200,
+        currency: "$",
+        season: { en: "July & August (Southern Winter)", fr: "Juillet & Août (Hiver Austral)", de: "Juli & August (Südwinter)", es: "Julio y Agosto (Invierno Austral)", fa: "فصل برعکس (تیر و مرداد)" },
+        img: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "japan",
+        country: { en: "Japan", fr: "Japon", de: "Japan", es: "Japón", fa: "ژاپن" },
+        region: "southern",
+        flag: "🇯🇵",
+        location: { en: "Hokkaido & Hakuba Northern Alps", fr: "Hokkaido & Alpes du Nord d'Hakuba", de: "Hokkaido & Hakuba Nordalpen", es: "Hokkaido y Alpes del Norte de Hakuba", fa: "هوکایدو و آلپ شمالی هاکوبا" },
+        title: { en: "Volcanic Touring: Asahidake & Alpine Hakuba", fr: "Ski Volcanique : Asahidake & Hakuba Alpin", de: "Vulkan-Skitouren: Asahidake & Hakuba", es: "Travesía Volcánica: Asahidake y Hakuba", fa: "صعود آتشفشان آساهیداکه و هاکوبا" },
+        desc: { en: "World's lightest powder snow (JaPow), steam-vent volcanic touring, birch forest lines, and natural thermal onsen.", fr: "La poudreuse la plus légère du monde (JaPow), cratères volcaniques actifs, forêts de bouleaux et onsens thermaux.", de: "Der leichteste Pulverschnee der Welt (JaPow), dampfende Vulkankrater, Birkenwälder und natürliche Thermalquellen.", es: "La nieve polvo más ligera del planeta (JaPow), cráteres volcánicos con fumarolas y relajantes onsens termales.", fa: "اسکی در سبک‌ترین پودر جهان، چشمه‌های آبگرم اونسن در میان برف‌های متری و خط‌الرأس‌های آلپی هاکوبا." },
+        altitude: "2,932m",
+        duration: { en: "8 Days", fr: "8 Jours", de: "8 Tage", es: "8 Días", fa: "۸ روزه" },
+        price: 2750,
+        currency: "$",
+        season: { en: "Jan to April", fr: "Janvier à Avril", de: "Januar bis April", es: "Enero a Abril", fa: "زمستان و بهار" },
+        img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "china",
+        country: { en: "China", fr: "Chine", de: "China", es: "China", fa: "چین" },
+        region: "high-peaks",
+        flag: "🇨🇳",
+        location: { en: "Xinjiang Pamir & Muztagh Ata", fr: "Pamir du Xinjiang & Muztagh Ata", de: "Xinjiang Pamir & Muztagh Ata", es: "Pamir de Xinjiang y Muztagh Ata", fa: "شین‌جیانگ و کوه موستاق آتا" },
+        title: { en: "Muztagh Ata 7,546m: The Ultimate 7,000m Ski", fr: "Muztagh Ata 7 546m : Le Roi du Ski à 7 000m", de: "Muztagh Ata 7.546m: Die Königsskitour über 7.000m", es: "Muztagh Ata 7.546m: El Descenso en Esquí Definitivo", fa: "صعود و فرود از موستاق آتا (Muztagh Ata)" },
+        desc: { en: "The world's highest accessible ski mountaineering expedition with ideal moderate glacial slopes above 7,500m.", fr: "Le sommet de 7 500m le plus emblématique au monde pour le ski de rando, avec d'immenses pentes glaciaires régulières.", de: "Die ultimative Skiexpedition auf über 7.500m Höhe mit idealen, gleichmäßigen Gletscherhängen.", es: "La expedición de esquí de montaña a más de 7.500m más idónea del mundo, con pendientes glaciares continuas.", fa: "ایده‌آل‌ترین قله ۷۵۰۰ متری جهان برای صعود و اسکی با شیب ملایم یخچالی و کمپ‌های سازمان‌یافته." },
+        altitude: "7,546m",
+        duration: { en: "21 Days", fr: "21 Jours", de: "21 Tage", es: "21 Días", fa: "۲۱ روزه" },
+        price: 4400,
+        currency: "$",
+        season: { en: "July & August (Summer)", fr: "Juillet & Août (Été)", de: "Juli & August (Sommer)", es: "Julio y Agosto (Verano)", fa: "تیر و مرداد" },
+        img: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "patagonia",
+        country: { en: "Argentina & Chile", fr: "Argentine & Chili", de: "Argentinien & Chile", es: "Argentina y Chile", fa: "آرژانتین و شیلی" },
+        region: "southern",
+        flag: "🇦🇷",
+        location: { en: "Patagonia & Bariloche Volcanoes", fr: "Patagonie & Volcans de Bariloche", de: "Patagonien & Vulkane Bariloche", es: "Patagonia y Volcanes de Bariloche", fa: "پاتاگونیا، باریلوچه و ویاریکا" },
+        title: { en: "Villarrica Active Volcano & Lake District", fr: "Volcan Actif Villarrica & District des Lacs", de: "Aktiver Vulkan Villarrica & Seengebiet", es: "Volcán Activo Villarrica y Región de los Lagos", fa: "صعود آتشفشان ویاریکا و باریلوچه" },
+        desc: { en: "Ski touring from active crater rims into ancient monkey-puzzle tree forests during our northern summer months.", fr: "Skiez depuis le cratère fumant de volcans actifs jusqu'aux forêts millénaires d'araucarias en plein mois d'août.", de: "Skitouren vom dampfenden Kraterrand aktiver Vulkane bis hinab in uralte Araukarienwälder im August.", es: "Esquí de travesía desde el cráter activo de volcanes hasta milenarios bosques de araucarias en agosto.", fa: "اسکی از دهانه آتشفشان فعال تا جنگل‌های کهن اراوکاریا در شیلی و آرژانتین در ماه‌های مرداد و شهریور." },
+        altitude: "2,847m",
+        duration: { en: "11 Days", fr: "11 Jours", de: "11 Tage", es: "11 Días", fa: "۱۱ روزه" },
+        price: 2850,
+        currency: "$",
+        season: { en: "August & September", fr: "Août & Septembre", de: "August & September", es: "Agosto y Septiembre", fa: "مرداد و شهریور" },
+        img: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    // Render Destination Cards
+    // Merged i18n data
+    const extraI18n = {"en": {"nav_gappa": "Gappa 2027", "gappa_tag": "Flagship Departure · Spring 2027", "gappa_title": "Gappa, Nagar Valley — Ski Touring in Pakistan", "gappa_sub": "Gappa is a magnificent, off-the-beaten-track corner of Gilgit-Baltistan in the heart of the Karakoram: pristine meadows, glacier panoramas and untouched ski terrain above our private expedition base camp.", "gappa_stat_dates": "Dates", "gappa_stat_dates_val": "3 – 16 Apr 2027", "gappa_stat_duration": "Duration", "gappa_stat_duration_val": "14 Days", "gappa_stat_ski": "Skiing", "gappa_stat_ski_val": "7–8 Days Ski Touring*", "gappa_stat_region": "Region", "gappa_stat_region_val": "Karakoram, Gilgit-Baltistan", "gappa_itin_title": "Day-by-Day Expedition Itinerary", "gappa_ski_note": "* The exact number of ski days depends on high-altitude weather and snowpack stability.", "gappa_inc_title": "Included in the Price", "gappa_exc_title": "Not Included", "gappa_price_label": "per athlete", "gappa_deposit_label": "Deposit at booking (50%)", "gappa_final_label": "Balance payment", "gappa_final_val": "4 weeks before departure", "gappa_pay_label": "Payment method", "gappa_pay_val": "Bank wire transfer · EUR (€)", "gappa_btn_book": "Book Gappa 2027 Expedition", "gappa_btn_terms": "Booking Terms & Cancellation", "gappa_leaders_title": "Your Expedition Leaders", "terms_title": "Booking Terms & Conditions (PDF Agreement)", "terms_close": "Close & Return", "card_btn_dossier": "View Dossier", "card_btn_apply": "Book Peak", "wa_float": "Chat with Guide", "wa_prefill": "Hello Yannick & Assima, I am interested in joining the KEBE expedition to"}, "fr": {"nav_gappa": "Gappa 2027", "gappa_tag": "Départ Phare · Printemps 2027", "gappa_title": "Gappa, Vallée de Nagar — Ski de Randonnée au Pakistan", "gappa_sub": "Gappa est un joyau préservé du Gilgit-Baltistan au cœur du Karakoram : alpages sauvages, panoramas glaciaires grandioses et lignes de ski vierges au-dessus de notre camp de base privé.", "gappa_stat_dates": "Dates", "gappa_stat_dates_val": "3 – 16 Avril 2027", "gappa_stat_duration": "Durée", "gappa_stat_duration_val": "14 Jours", "gappa_stat_ski": "Ski", "gappa_stat_ski_val": "7–8 Jours de Ski*", "gappa_stat_region": "Région", "gappa_stat_region_val": "Karakoram, Gilgit-Baltistan", "gappa_itin_title": "Itinéraire Jour par Jour", "gappa_ski_note": "* Le nombre exact de journées de ski dépend des conditions météo et de la nivologie en haute montagne.", "gappa_inc_title": "Prestations Incluses", "gappa_exc_title": "Non Inclus", "gappa_price_label": "par athlète", "gappa_deposit_label": "Acompte à l'inscription (50%)", "gappa_final_label": "Solde restant", "gappa_final_val": "4 semaines avant le départ", "gappa_pay_label": "Règlement", "gappa_pay_val": "Virement bancaire · EUR (€)", "gappa_btn_book": "Réserver Gappa 2027", "gappa_btn_terms": "Conditions d'inscription & Annulation", "gappa_leaders_title": "Vos Responsables d'Expédition", "terms_title": "Conditions Générales & Modalités (Contrat PDF)", "terms_close": "Fermer", "card_btn_dossier": "Voir le Dossier", "card_btn_apply": "Réserver", "wa_float": "Contacter un Guide", "wa_prefill": "Bonjour Yannick & Assima, je souhaite participer à l'expédition KEBE à"}, "de": {"nav_gappa": "Gappa 2027", "gappa_tag": "Flaggschiff-Expedition · Frühjahr 2027", "gappa_title": "Gappa, Nagar Valley — Skitouren in Pakistan", "gappa_sub": "Gappa ist ein abgelegenes Juwel in Gilgit-Baltistan im Herzen des Karakorum: unberührte Hänge, gewaltige Gletscherpanoramen und anspruchsvolle Abfahrten rund um unser Basislager.", "gappa_stat_dates": "Termin", "gappa_stat_dates_val": "3. – 16. April 2027", "gappa_stat_duration": "Dauer", "gappa_stat_duration_val": "14 Tage", "gappa_stat_ski": "Skitouren", "gappa_stat_ski_val": "7–8 Skitage*", "gappa_stat_region": "Region", "gappa_stat_region_val": "Karakorum, Gilgit-Baltistan", "gappa_itin_title": "Tagesablauf & Route", "gappa_ski_note": "* Genaue Anzahl der Skitage wetter- und lawinensituationabhängig.", "gappa_inc_title": "Im Preis inbegriffen", "gappa_exc_title": "Nicht inbegriffen", "gappa_price_label": "pro Person", "gappa_deposit_label": "Anzahlung bei Buchung (50%)", "gappa_final_label": "Restzahlung", "gappa_final_val": "4 Wochen vor Abreise", "gappa_pay_label": "Zahlung", "gappa_pay_val": "Banküberweisung · EUR (€)", "gappa_btn_book": "Gappa 2027 Buchen", "gappa_btn_terms": "Buchungs- & Stornobedingungen", "gappa_leaders_title": "Ihre Expeditionsleitung", "terms_title": "Allgemeine Buchungsbedingungen (PDF Vertrag)", "terms_close": "Schließen", "card_btn_dossier": "Dossier ansehen", "card_btn_apply": "Buchen", "wa_float": "Guide kontaktieren", "wa_prefill": "Hallo Yannick & Assima, ich interessiere mich für die KEBE-Expedition nach"}, "es": {"nav_gappa": "Gappa 2027", "gappa_tag": "Expedición Insignia · Primavera 2027", "gappa_title": "Gappa, Valle de Nagar — Esquí de Travesía en Pakistán", "gappa_sub": "Gappa es un rincón extraordinario de Gilgit-Baltistán en pleno Karakórum: praderas alpinas, panorámicas glaciares y terreno virgen de esquí de travesía.", "gappa_stat_dates": "Fechas", "gappa_stat_dates_val": "3 – 16 Abr 2027", "gappa_stat_duration": "Duración", "gappa_stat_duration_val": "14 Días", "gappa_stat_ski": "Esquí", "gappa_stat_ski_val": "7–8 Días de Esquí*", "gappa_stat_region": "Región", "gappa_stat_region_val": "Karakórum, Gilgit-Baltistán", "gappa_itin_title": "Itinerario Día a Día", "gappa_ski_note": "* El número exacto de días de esquí depende de las condiciones meteorológicas y nivológicas.", "gappa_inc_title": "Servicios Incluidos", "gappa_exc_title": "No Incluido", "gappa_price_label": "por atleta", "gappa_deposit_label": "Depósito de reserva (50%)", "gappa_final_label": "Pago final", "gappa_final_val": "4 semanas antes de la salida", "gappa_pay_label": "Método de pago", "gappa_pay_val": "Transferencia bancaria · EUR (€)", "gappa_btn_book": "Reservar Gappa 2027", "gappa_btn_terms": "Condiciones de Reserva & Cancelación", "gappa_leaders_title": "Líderes de Expedición", "terms_title": "Términos y Condiciones (Contrato PDF)", "terms_close": "Cerrar", "card_btn_dossier": "Ver Expediente", "card_btn_apply": "Reservar", "wa_float": "Contactar Guía", "wa_prefill": "Hola Yannick y Assima, me gustaría unirme a la expedición KEBE en"}, "fa": {"nav_gappa": "دره گپا ۲۰۲۷", "gappa_tag": "اکسپدیشن ویژه · بهار ۲۰۲۷", "gappa_title": "دره گپا، ناگار — اسکی تورینگ در قره‌قروم پاکستان", "gappa_sub": "دره گپا یکی از بکرترین و دست‌نخورده‌ترین مناطق گلگت-بلتستان در قلب رشته‌کوه قره‌قروم است: چشم‌انداز یخچال‌های باستانی، فرودهای اسکی بی‌نظیر و کمپ اختصاصی تیم.", "gappa_stat_dates": "تاریخ حرکت", "gappa_stat_dates_val": "۱۴ تا ۲۷ فروردین ۱۴۰۶ (۳–۱۶ آوریل ۲۰۲۷)", "gappa_stat_duration": "مدت زمان", "gappa_stat_duration_val": "۱۴ روز کامل", "gappa_stat_ski": "روزهای اسکی", "gappa_stat_ski_val": "۷ تا ۸ روز اسکی تورینگ*", "gappa_stat_region": "منطقه جغرافیایی", "gappa_stat_region_val": "قره‌قروم، گلگت-بلتستان", "gappa_itin_title": "برنامه روزشمار سفر", "gappa_ski_note": "* تعداد قطعی روزهای اسکی بر اساس شرایط ایمنی برف و تغییرات جوی ارتفاع بالا تعیین می‌شود.", "gappa_inc_title": "خدمات مشمول در هزینه", "gappa_exc_title": "خدمات غیرمشمول", "gappa_price_label": "به ازای هر ورزشکار", "gappa_deposit_label": "پیش‌پرداخت اولیه (۵۰٪)", "gappa_final_label": "تسویه نهایی حساب", "gappa_final_val": "۴ هفته قبل از تاریخ پرواز", "gappa_pay_label": "روش پرداخت", "gappa_pay_val": "حواله بانکی ارزی · یورو (€)", "gappa_btn_book": "ثبت‌نام در اکسپدیشن گپا ۲۰۲۷", "gappa_btn_terms": "قوانین رزرو، قرارداد و کنسلی", "gappa_leaders_title": "سرپرستان و لیدرهای اکسپدیشن", "terms_title": "شرایط قرارداد و استرداد وجه (مفاد رسمی PDF)", "terms_close": "بستن پنجره", "card_btn_dossier": "شناسنامه قله", "card_btn_apply": "ثبت نام قله", "wa_float": "ارتباط واتس‌اپ با راهنما", "wa_prefill": "سلام یانیک و آسیمای گرامی، من مایل به پیوستن به اکسپدیشن KEBE در منطقه"}};
+    for (const lang in extraI18n) {
+      if (i18nData[lang]) {
+        Object.assign(i18nData[lang], extraI18n[lang]);
+      }
+    }
+
+    // Gappa dataset
+    const gappaData = {"dest": {"id": "gappa", "country": {"en": "Pakistan (Karakoram)", "fr": "Pakistan (Karakoram)", "de": "Pakistan (Karakorum)", "es": "Pakistán (Karakórum)", "fa": "پاکستان (قره‌قروم)"}, "region": "high-peaks", "flag": "🇵🇰", "location": {"en": "Gappa, Nagar Valley, Gilgit-Baltistan", "fr": "Gappa, Vallée de Nagar, Gilgit-Baltistan", "de": "Gappa, Nagar Valley, Gilgit-Baltistan", "es": "Gappa, Valle de Nagar, Gilgit-Baltistán", "fa": "دره گپا، ناگار، گلگت-بلتستان"}, "title": {"en": "Gappa Glacier & Nagar Peaks Skitour (2027 Flagship)", "fr": "Gappa & Sommets de Nagar — Ski de Rando (Phare 2027)", "de": "Gappa Gletscher & Nagar Gipfel Skitour (2027 Flaggschiff)", "es": "Glaciar Gappa y Picos de Nagar (Insignia 2027)", "fa": "اسکی تورینگ یخچال گپا و قله‌های دره ناگار (برنامه ویژه ۲۰۲۷)"}, "desc": {"en": "Untouched Karakoram powder, private high-altitude base camp, Hunza heritage & Eagle's Nest panoramas.", "fr": "Poudreuse vierge du Karakoram, camp de base privé d'altitude, patrimoine de la Hunza et vue Eagle's Nest.", "de": "Unberührter Karakorum-Powder, privates Höhen-Basislager, Hunza-Kultur & Eagle's Nest Panorama.", "es": "Nieve virgen del Karakórum, campamento base privado de altura, patrimonio del valle de Hunza.", "fa": "برف بکر قره‌قروم، کمپینگ اختصاصی در کوهستان، فرهنگ دره هونزا و چشم‌انداز هتل ایگل نست."}, "altitude": "Karakoram", "duration": {"en": "14 Days", "fr": "14 Jours", "de": "14 Tage", "es": "14 Días", "fa": "۱۴ روز"}, "price": 3000, "currency": "€", "season": {"en": "April 3–16, 2027", "fr": "3–16 Avril 2027", "de": "3.–16. April 2027", "es": "3–16 Abril 2027", "fa": "۱۴ تا ۲۷ فروردین ۱۴۰۶"}, "img": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80"}, "itinerary": [{"day": "Day 1 · Apr 3", "fa_day": "روز ۱ · ۱۴ فروردین", "text": {"en": "Flight to Islamabad.", "fr": "Vol international vers Islamabad.", "de": "Flug nach Islamabad.", "es": "Vuelo a Islamabad.", "fa": "پرواز به اسلام‌آباد."}}, {"day": "Day 2 · Apr 4", "fa_day": "روز ۲ · ۱۵ فروردین", "text": {"en": "Arrival in Islamabad, domestic flight to Skardu, then scenic drive to Gilgit (hotel accommodation).", "fr": "Arrivée à Islamabad, vol vers Skardu puis transfert routier vers Gilgit (hôtel).", "de": "Ankunft in Islamabad, Weiterflug nach Skardu, Fahrt nach Gilgit (Hotel).", "es": "Llegada a Islamabad, vuelo a Skardu y traslado por carretera a Gilgit (hotel).", "fa": "ورود به اسلام‌آباد، پرواز داخلی به اسکاردو و سپس ترنسفر زمینی به گلگت (اقامت هتل)."}}, {"day": "Day 3 · Apr 5", "fa_day": "روز ۳ · ۱۶ فروردین", "text": {"en": "Free day in Gilgit for equipment checks and acclimatization (hotel accommodation).", "fr": "Journée libre à Gilgit pour vérification du matériel et acclimatation (hôtel).", "de": "Freier Tag in Gilgit zur Akklimatisation und Materialprüfung (Hotel).", "es": "Día libre en Gilgit para aclimatación y revisión de equipo (hotel).", "fa": "روز آزاد در گلگت جهت هم‌هوایی، بررسی تجهیزات و استراحت (اقامت هتل)."}}, {"day": "Day 4 · Apr 6", "fa_day": "روز ۴ · ۱۷ فروردین", "text": {"en": "4x4 drive to Gappa Chalt, then a 1–2 hour approach hike on skins to private Base Camp.", "fr": "Trajet 4x4 jusqu'à Gappa Chalt, puis 1 à 2 h de marche d'approche vers le camp de base privé.", "de": "4x4 Fahrt nach Gappa Chalt, 1–2 Std. Aufstieg zum privaten Basislager.", "es": "Traslado 4x4 a Gappa Chalt y marcha de aproximación de 1–2 horas al campamento base.", "fa": "انتقال آفرود با خودروهای دو دیفرانسیل به گاپا چالت و پیمایش ۱ تا ۲ ساعته تا بیس‌کمپ اختصاصی تیم."}}, {"day": "Days 5–9 · Apr 7–11", "fa_day": "روزهای ۵ تا ۹ · ۱۸ تا ۲۲ فروردین", "text": {"en": "SKI TOURING: 5 intense days of ski ascents and descents across untouched Nagar Valley glaciers.", "fr": "SKI DE RANDONNÉE : 5 journées complètes d'ascensions et descentes sur les glaciers sauvages de Nagar.", "de": "SKITOUREN: 5 Tage Skitouren auf unberührten Gletschern des Nagar-Tals.", "es": "ESQUÍ DE TRAVESÍA: 5 días completos de ascensiones y descensos en glaciares de Nagar.", "fa": "دوره اصلی اسکی تورینگ: ۵ روز کامل صعود و فرود بر روی یخچال‌های دست‌نخورده دره ناگار."}}, {"day": "Day 10 · Apr 12", "fa_day": "روز ۱۰ · ۲۳ فروردین", "text": {"en": "Descent on foot, drive to Karakoram Highway (KKH), continue to Karimabad-Duikar. Overnight at Eagle's Nest Hotel.", "fr": "Descente à pied, route KKH vers Karimabad-Duikar. Nuit au mythique hôtel Eagle's Nest.", "de": "Abstieg, Fahrt auf dem Karakorum Highway nach Karimabad-Duikar. Übernachtung im Eagle's Nest Hotel.", "es": "Descenso a pie, traslado por la KKH a Karimabad-Duikar. Noche en el Hotel Eagle's Nest.", "fa": "فرود پیاده، حرکت در امتداد بزرگراه قره‌قروم به سمت کریم‌آباد-دویکار. اقامت شبانه در هتل دیدنی ایگلز نست."}}, {"day": "Day 11 · Apr 13", "fa_day": "روز ۱۱ · ۲۴ فروردین", "text": {"en": "Visit historic Altit & Baltit Forts in Hunza Valley, then scenic drive back to Gilgit (hotel accommodation).", "fr": "Visite des forts historiques d'Altit et Baltit dans la vallée de Hunza, route retour vers Gilgit (hôtel).", "de": "Besuch der historischen Festungen Altit & Baltit im Hunza-Tal, Rückfahrt nach Gilgit (Hotel).", "es": "Visita a los fuertes históricos de Altit y Baltit en el valle de Hunza, regreso a Gilgit (hotel).", "fa": "بازدید از قلعه‌های تاریخی آلتین و بالتین در دره هونزا، بازگشت به گلگت (اقامت هتل)."}}, {"day": "Day 12 · Apr 14", "fa_day": "روز ۱۲ · ۲۵ فروردین", "text": {"en": "Scenic mountain drive returning from Gilgit to Islamabad along the Indus River corridor.", "fr": "Route panoramique retour de Gilgit à Islamabad le long du fleuve Indus.", "de": "Panoramafahrt von Gilgit zurück nach Islamabad entlang des Indus.", "es": "Viaje panorámico de regreso de Gilgit a Islamabad siguiendo el río Indo.", "fa": "ترنسفر زمینی و مناظر تماشایی مسیر بازگشت از گلگت به پایتخت (اسلام‌آباد)."}}, {"day": "Day 13 · Apr 15", "fa_day": "روز ۱۳ · ۲۶ فروردین", "text": {"en": "Free relaxation day in Islamabad, team celebratory dinner.", "fr": "Journée libre et repos à Islamabad, dîner de clôture de l'expédition.", "de": "Freier Tag in Islamabad, gemeinsames Abschlussessen.", "es": "Día libre en Islamabad, cena de celebración del equipo.", "fa": "روز استراحت آزاد در اسلام‌آباد، خرید سوغات و ضیافت شام اختتامیه تیم."}}, {"day": "Day 14 · Apr 16", "fa_day": "روز ۱۴ · ۲۷ فروردین", "text": {"en": "International flight departure from Islamabad.", "fr": "Départ de l'aéroport d'Islamabad, retour international.", "de": "Abreise vom Flughafen Islamabad, Heimflug.", "es": "Vuelo internacional de salida desde Islamabad.", "fa": "ترنسفر فرودگاهی و پرواز بازگشت بین‌المللی از اسلام‌آباد."}}], "included": [{"en": "Double room hotel accommodation & all meals (breakfast, lunch, dinner, mineral water)", "fa": "اقامت هتل اتاق دو تخته و کلیه وعده‌های غذایی (صبحانه، ناهار، شام، آب معدنی)"}, {"en": "Outbound domestic flight Islamabad → Skardu & return road transfer Gilgit → Islamabad", "fa": "پرواز داخلی رفت اسلام‌آباد به اسکاردو و ترنسفر زمینی برگشت گلگت به اسلام‌آباد"}, {"en": "Private Grand Cabin (13-seater) transportation across all valley sectors", "fa": "حمل‌ونقل اختصاصی گرند کبین (۱۳ نفره) در کلیه مسیرهای زمینی"}, {"en": "7 or 8 days of high-mountain ski touring (weather & conditions dependent)", "fa": "۷ الی ۸ روز اسکی تورینگ در کوهستان (بسته به شرایط جوی و پایداری برف)"}, {"en": "Certified UIAGM / IFMGA mountain leadership + professional local mountain guides", "fa": "هدایت مربی و لیدرهای فنی با همراهی راهنماهای بومی کوهستان"}, {"en": "Full Base Camp catering: dedicated cook, stove, cooking fuels, dishes & fresh meals", "fa": "خدمات کامل آشپزی در کمپ: آشپز اختصاصی، اجاق، سوخت و سه وعده غذای گرم"}, {"en": "High-altitude camping setup: 2-person expedition tents, mess tent, mattresses, tables & chairs", "fa": "تجهیزات بیس‌کمپ: چادرهای دونفره استاندارد، چادر غذاخوری، زیرانداز، میز و صندلی"}, {"en": "Base Camp solar charging panel for communication & camera batteries", "fa": "پنل خورشیدی در بیس‌کمپ جهت شارژ باتری دوربین‌ها و بی‌سیم‌ها"}, {"en": "Base Camp satellite emergency telephone (unit-based usage billing)", "fa": "تلفن ماهواره‌ای اضطراری در بیس‌کمپ (هزینه تماس‌ها به ازای مصرف)"}, {"en": "All official Government NOCs, mountaineering permits, camping fees & toll taxes", "fa": "اخذ کلیه مجوزهای دولتی، NOC، عوارض جاده‌ای و مالیات‌های کمپینگ"}, {"en": "Official Visa Authorization Letter & documentation for Pakistan visa issuance", "fa": "ارائه دعوت‌نامه رسمی و مدارک تاییدیه ویزای پاکستان"}, {"en": "Porter luggage transport: 30 kg personal baggage per person to/from Base Camp", "fa": "حقوق باربران برای حمل ۳۰ کیلوگرم بار شخصی هر نفر رفت و برگشت به بیس‌کمپ"}, {"en": "USD $5,000 Advance Rescue Helicopter deposit coverage on team account", "fa": "تودیع سپرده ۵,۰۰۰ دلاری پیش‌پرداخت هلیکوپتر امداد در حساب اکسپدیشن"}], "excluded": [{"en": "International airfare to/from Islamabad", "fa": "بلیط پرواز بین‌المللی رفت و برگشت به اسلام‌آباد"}, {"en": "Personal mountaineering, medical & rescue evacuation insurance", "fa": "بیمه شخصی پزشکی، حوادث کوهستان و امداد و نجات"}, {"en": "Personal medical kit & personal ski touring gear", "fa": "کیت امداد انفرادی و تجهیزات اختصاصی اسکی تورینگ"}, {"en": "Individual helicopter rescue flight execution expenses (if dispatched)", "fa": "هزینه‌های پرواز امداد هلیکوپتر انفرادی (فراتر از ودیعه تضمین اولیه)"}]};
+
+    // Add Gappa to destinationData if not present
+    if (!destinationData.some(d => d.id === 'gappa')) {
+      destinationData.unshift(gappaData.dest);
+    }
+
+    // Leaders data
+    const expeditionLeaders = [
+      {
+        name: "Yannick Besançon",
+        role: { en: "High Mountain Guide (IFMGA / UIAGM)", fr: "Guide de Haute Montagne UIAGM", de: "IFMGA / UIAGM Bergführer", es: "Guía de Alta Montaña IFMGA", fa: "راهنمای ارشد کوهستان IFMGA / UIAGM" },
+        phone: "+33 7 84 38 95 48",
+        email: "yanouchki74@gmail.com",
+        wa: "33784389548"
+      },
+      {
+        name: "Assima Besançon",
+        role: { en: "Expedition Logistics & Base Camp Director", fr: "Direction Logistique & Camp de Base", de: "Logistik & Basislager Leitung", es: "Directora de Logística y Campamento", fa: "مدیر پشتیبانی و لجستیک کمپ اصلی" },
+        phone: "+7 701 557 3000",
+        email: "assima.mail@gmail.com",
+        wa: "77015573000"
+      }
+    ];
+
+    // Render Flagship Gappa Section
+    function renderGappa() {
+      const itinEl = document.getElementById('gappaItinerary');
+      if (itinEl) {
+        itinEl.innerHTML = gappaData.itinerary.map(item => `
+          <li class="mb-5 ms-6 relative">
+            <span class="absolute flex items-center justify-center w-5 h-5 bg-brand-charcoal rounded-full -start-8 ring-4 ring-brand-panel border border-brand-orange text-[9px] text-brand-orange font-mono">
+              <i class="fa-solid fa-person-skiing"></i>
+            </span>
+            <div class="flex items-baseline gap-2 mb-1">
+              <span class="text-xs font-mono font-bold text-brand-orange">${currentLang === 'fa' ? item.fa_day : item.day}</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">${item.text[currentLang] || item.text['en']}</p>
+          </li>
+        `).join('');
+      }
+
+      const incEl = document.getElementById('gappaIncluded');
+      if (incEl) {
+        incEl.innerHTML = gappaData.included.map(item => `
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs"></i>
+            <span>${currentLang === 'fa' ? item.fa : item.en}</span>
+          </li>
+        `).join('');
+      }
+
+      const excEl = document.getElementById('gappaExcluded');
+      if (excEl) {
+        excEl.innerHTML = gappaData.excluded.map(item => `
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-xmark text-rose-400 mt-0.5 text-xs"></i>
+            <span>${currentLang === 'fa' ? item.fa : item.en}</span>
+          </li>
+        `).join('');
+      }
+
+      const leadersEl = document.getElementById('gappaLeaders');
+      if (leadersEl) {
+        leadersEl.innerHTML = expeditionLeaders.map(l => `
+          <div class="p-3.5 rounded-2xl bg-brand-charcoal/80 border border-brand-border flex items-center justify-between gap-3">
+            <div>
+              <div class="text-sm font-bold text-white">${l.name}</div>
+              <div class="text-[11px] text-slate-400">${l.role[currentLang] || l.role['en']}</div>
+              <div class="flex items-center gap-3 mt-1.5 text-xs">
+                <a href="https://wa.me/${l.wa}" target="_blank" class="text-emerald-400 hover:underline flex items-center gap-1 font-mono">
+                  <i class="fa-brands fa-whatsapp"></i> ${l.phone}
+                </a>
+              </div>
+            </div>
+            <a href="mailto:${l.email}" class="w-8 h-8 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-slate-300 hover:text-white" title="${l.email}">
+              <i class="fa-solid fa-envelope text-xs"></i>
+            </a>
+          </div>
+        `).join('');
+      }
+
+      // Floating WhatsApp update
+      const waFloat = document.getElementById('waFloat');
+      if (waFloat) {
+        const text = encodeURIComponent((i18nData[currentLang].wa_prefill || "Hello Yannick & Assima, I am interested in KEBE expedition") + " Gappa 2027");
+        waFloat.href = `https://wa.me/33784389548?text=${text}`;
+      }
+    }
+
+    // Render Booking Terms modal
+    function renderTerms() {
+      const body = document.getElementById('termsBody');
+      if (!body) return;
+
+      const terms = {
+        en: [
+          { title: "1. Deposit Policy", text: "A deposit of 50% of the trip cost is required on a per person basis at the time of booking (and 50% for all private groups). The initial deposit confirms your acceptance of terms and conditions. This deposit constitutes a tentative reservation, confirmed only upon receipt of full payment due 4 weeks prior to departure." },
+          { title: "2. Final Payments & Banking", text: "Full payment is due 4 weeks prior to the first day of your scheduled trip via Bank Wire Transfer in Euros (€). Please identify payments clearly with athlete name, address, trip date, and group name. Unpaid reservations may be cancelled. Last-minute clients booking 6 weeks or less prior must pay in full upon reservation." },
+          { title: "3. Cancellation Schedule", text: "Written notice required. Cancellation received less than two months prior to journey: 30% deposit is non-refundable. Cancellation received less than 8 weeks prior to skiing date: 100% of monies paid are non-refundable. Monies on deposit will not be carried forward to future seasons." },
+          { title: "4. Mountain Rescue & Helicopter Deposit", text: "An advance deposit of 5,000 USD is pre-placed on team account for rescue helicopter dispatch guarantees in Pakistan. Personal high-altitude medical, evacuation and search-and-rescue insurance remains mandatory for all participants." }
+        ],
+        fa: [
+          { title: "۱. شرایط پیش‌پرداخت", text: "پیش‌پرداخت اولیه معادل ۵۰٪ هزینه کل سفر در هنگام ثبت‌نام برای هر نفر (یا ۵۰٪ برای گروه‌های خصوصی) الزامی است. این پیش‌پرداخت به منزله پذیرش رسمی قوانین سفر بوده و رزرو موقت تا زمان تسویه کامل در ۴ هفته پیش از حرکت معتبر است." },
+          { title: "۲. تسویه نهایی و حواله بانکی", text: "تسویه کامل مانده حساب دقیقاً ۴ هفته پیش از تاریخ شروع سفر از طریق حواله بانکی (یورو €) الزامی است. رزروهای تسویه نشده لغو خواهند شد. متقاضیان لحظه آخری (۶ هفته یا کمتر تا حرکت) موظف به پرداخت ۱۰۰٪ کل هزینه در زمان ثبت‌نام هستند." },
+          { title: "۳. جدول جریمه کنسلی", text: "درخواست کنسلی باید کتبی ارائه شود. کنسلی کمتر از ۲ ماه تا تاریخ سفر: ۳۰٪ مبلغ پیش‌پرداخت غیرقابل استرداد است. کنسلی کمتر از ۸ هفته تا تاریخ اسکی: ۱۰۰٪ کلیه وجوه پرداختی غیرقابل استرداد می‌باشد و به فصل‌های بعد منتقل نمی‌گردد." },
+          { title: "۴. ودیعه هلیکوپتر امداد و نجات", text: "مبلغ ۵,۰۰۰ دلار آمریکا به عنوان ودیعه پیش‌پرداخت پرواز هلیکوپتر امداد در حساب اکسپدیشن تودیع شده است. داشتن بیمه معتبر بین‌المللی حوادث و امداد کوهستان برای کلیه شرکت‌کنندگان الزامی است." }
+        ]
+      };
+
+      const list = terms[currentLang] || terms['en'];
+      body.innerHTML = list.map(t => `
+        <div class="p-5 rounded-2xl bg-brand-charcoal/70 border border-brand-border">
+          <h4 class="text-sm font-bold text-brand-orange mb-2">${t.title}</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">${t.text}</p>
+        </div>
+      `).join('');
+    }
+
+    // Render Destination Cards
+    function renderDestinations(filter = 'all') {
+      const grid = document.getElementById('destinationsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      destinationData.forEach(dest => {
+        if (filter !== 'all' && dest.region !== filter) return;
+
+        const card = document.createElement('div');
+        card.className = "destination-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between group";
+
+        const dossierBtnText = (i18nData[currentLang] && i18nData[currentLang].card_btn_dossier) || "View Dossier";
+        const bookBtnText = (i18nData[currentLang] && i18nData[currentLang].card_btn_apply) || "Book Peak";
+
+        card.innerHTML = `
+          <div>
+            <div class="relative h-60 overflow-hidden">
+              <img src="${dest.img}" 
+                   alt="${dest.country[currentLang] || dest.country['en']} ${dest.title[currentLang] || dest.title['en']}" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter brightness-90">
+              <div class="absolute top-4 ${currentLang === 'fa' ? 'right-4' : 'left-4'} bg-brand-charcoal/85 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10 flex items-center gap-2">
+                <span>${dest.flag}</span>
+                <span>${dest.country[currentLang] || dest.country['en']}</span>
+              </div>
+              <div class="absolute bottom-4 ${currentLang === 'fa' ? 'left-4' : 'right-4'} bg-brand-surface/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-medium text-brand-orange border border-brand-orange/30">
+                ${dest.season[currentLang] || dest.season['en']}
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-[11px] font-mono text-brand-glacier mb-1 uppercase font-semibold">${dest.location[currentLang] || dest.location['en']}</div>
+              <h3 class="text-xl font-bold text-white mb-2 leading-snug">${dest.title[currentLang] || dest.title['en']}</h3>
+              <p class="text-slate-400 text-xs leading-relaxed mb-4">${dest.desc[currentLang] || dest.desc['en']}</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <div class="flex items-center justify-between text-xs text-slate-300 pt-4 border-t border-brand-border">
+              <span><i class="fa-solid fa-mountain text-brand-orange ${currentLang === 'fa' ? 'ml-1' : 'mr-1'}"></i> ${dest.altitude}</span>
+              <span><i class="fa-solid fa-clock text-slate-400 ${currentLang === 'fa' ? 'ml-1' : 'mr-1'}"></i> ${dest.duration[currentLang] || dest.duration['en']}</span>
+              <span class="font-mono font-bold text-brand-orange text-sm">${dest.currency}${dest.price.toLocaleString()}</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-4">
+              <button onclick="showDestDossier('${dest.id}')" class="py-2.5 px-3 rounded-xl bg-brand-surface hover:bg-brand-charcoal border border-brand-border hover:border-brand-orange text-slate-200 text-xs font-bold transition-all text-center">
+                ${dossierBtnText}
+              </button>
+              <button onclick="applyFor('${dest.id}')" class="py-2.5 px-3 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold transition-all text-center shadow-md shadow-orange-500/20">
+                ${bookBtnText}
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Show Destination Dossier Modal
+    function showDestDossier(destId) {
+      const dest = destinationData.find(d => d.id === destId);
+      if (!dest) return;
+
+      const body = document.getElementById('destModalBody');
+      if (!body) return;
+
+      body.innerHTML = `
+        <div class="relative h-64 sm:h-72 overflow-hidden">
+          <img src="${dest.img}" alt="${dest.title['en']}" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-surface via-brand-surface/40 to-transparent"></div>
+          <div class="absolute bottom-6 inset-x-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">${dest.flag}</span>
+              <span class="text-xs uppercase font-mono tracking-wider text-brand-orange font-bold">${dest.country[currentLang] || dest.country['en']}</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black text-white leading-tight">${dest.title[currentLang] || dest.title['en']}</h3>
+          </div>
+        </div>
+        <div class="p-6 sm:p-8 space-y-6 text-sm text-slate-300">
+          <div class="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-brand-charcoal border border-brand-border text-center">
+            <div>
+              <div class="text-[10px] uppercase font-mono text-slate-500">Max Altitude</div>
+              <div class="text-base font-bold text-white mt-1">${dest.altitude}</div>
+            </div>
+            <div>
+              <div class="text-[10px] uppercase font-mono text-slate-500">Duration</div>
+              <div class="text-base font-bold text-white mt-1">${dest.duration[currentLang] || dest.duration['en']}</div>
+            </div>
+            <div>
+              <div class="text-[10px] uppercase font-mono text-slate-500">Standard Tier</div>
+              <div class="text-base font-bold font-mono text-brand-orange mt-1">${dest.currency}${dest.price.toLocaleString()}</div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white mb-2">Expedition Summary</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">${dest.desc[currentLang] || dest.desc['en']}</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white mb-2">Optimal Window</h4>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-panel border border-brand-border text-xs text-brand-glacier font-mono">
+              <i class="fa-regular fa-calendar-check"></i> ${dest.season[currentLang] || dest.season['en']}
+            </div>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between gap-4">
+            <button onclick="closeModal('destModal')" class="px-5 py-2.5 rounded-xl bg-brand-charcoal border border-brand-border text-slate-300 hover:text-white text-xs font-bold">Close</button>
+            <button onclick="closeModal('destModal'); applyFor('${dest.id}')" class="px-6 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold transition-all shadow-lg shadow-orange-500/20">Book This Peak</button>
+          </div>
+        </div>
+      `;
+      openModal('destModal');
+    }
+
+    // Generic Modal Open/Close
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Apply for peak shortcut
+    function applyFor(destId) {
+      const calcSelect = document.getElementById('calcCountry');
+      const formSelect = document.getElementById('formCountrySelect');
+      if (calcSelect) {
+        calcSelect.value = destId;
+        calculateExpeditionPrice();
+      }
+      if (formSelect) {
+        formSelect.value = destId;
+      }
+      const screenSection = document.getElementById('screening');
+      if (screenSection) {
+        screenSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Populate dropdowns in calculator & screening
+    function populateDropdowns() {
+      const calcSelect = document.getElementById('calcCountry');
+      const formSelect = document.getElementById('formCountrySelect');
+      if (!calcSelect || !formSelect) return;
+
+      const currentCalcVal = calcSelect.value;
+      calcSelect.innerHTML = '';
+      formSelect.innerHTML = '';
+
+      destinationData.forEach(dest => {
+        const name = (dest.country[currentLang] || dest.country['en']) + ' — ' + (dest.title[currentLang] || dest.title['en']);
+        
+        const opt1 = document.createElement('option');
+        opt1.value = dest.id;
+        opt1.textContent = `${dest.flag} ${name} (${dest.currency}${dest.price.toLocaleString()})`;
+        calcSelect.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = dest.id;
+        opt2.textContent = `${dest.flag} ${name}`;
+        formSelect.appendChild(opt2);
+      });
+
+      if (currentCalcVal) calcSelect.value = currentCalcVal;
+    }
+
+    // Calculate expedition price
+    function calculateExpeditionPrice() {
+      const calcSelect = document.getElementById('calcCountry');
+      const discSelect = document.getElementById('calcDiscipline');
+      const tierSelect = document.getElementById('calcTier');
+      if (!calcSelect || !discSelect || !tierSelect) return;
+
+      const dest = destinationData.find(d => d.id === calcSelect.value) || destinationData[0];
+      const discMultiplier = parseFloat(discSelect.value) || 1.0;
+      const tierMultiplier = parseFloat(tierSelect.value) || 1.0;
+
+      const basePrice = dest.price;
+      const totalPrice = Math.round(basePrice * discMultiplier * tierMultiplier);
+      const depositPrice = Math.round(totalPrice * 0.5);
+
+      const baseEl = document.getElementById('calcBasePrice');
+      const multEl = document.getElementById('calcMultiplier');
+      const totalEl = document.getElementById('calcTotalPrice');
+
+      if (baseEl) baseEl.textContent = `${dest.currency}${basePrice.toLocaleString()}`;
+      if (multEl) multEl.textContent = `${(discMultiplier * tierMultiplier).toFixed(2)}x`;
+      if (totalEl) {
+        totalEl.innerHTML = `
+          <span>${dest.currency}${totalPrice.toLocaleString()}</span>
+          <div class="text-xs text-brand-orange mt-1 font-normal font-sans">
+            <span data-i18n="gappa_deposit_label">50% Deposit due</span>: <strong class="font-mono text-white">${dest.currency}${depositPrice.toLocaleString()}</strong>
+          </div>
+        `;
+      }
+    }
+
+    // Form Submission: builds prefilled WhatsApp message to guide
+    function handleFormSubmission(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.athlete_name ? form.athlete_name.value : 'Athlete';
+      const email = form.athlete_email ? form.athlete_email.value : '';
+      const phone = form.athlete_phone ? form.athlete_phone.value : '';
+      const country = form.target_country ? form.target_country.value : 'Gappa 2027';
+      const exp = form.exp_level ? form.exp_level.value : '';
+
+      const text = encodeURIComponent(
+        `*KEBE EXPEDITION APPLICATION*\n` +
+        `• Athlete: ${name}\n` +
+        `• Contact: ${phone} / ${email}\n` +
+        `• Target Expedition: ${country}\n` +
+        `• Experience Tier: ${exp}\n` +
+        `• Deposit Terms: 50% wire transfer acknowledged`
+      );
+
+      // Open WhatsApp to Guide Yannick Besançon
+      window.open(`https://wa.me/33784389548?text=${text}`, '_blank');
+
+      const statusBox = document.getElementById('formStatus');
+      if (statusBox) {
+        statusBox.className = 'p-4 rounded-xl text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+        statusBox.innerHTML = `<i class="fa-solid fa-circle-check ml-2 mr-2"></i> Application prepared. Opening WhatsApp direct chat with Guide Yannick Besançon (+33 7 84 38 95 48).`;
+        statusBox.classList.remove('hidden');
+      }
+    }
+
+    // Language switcher
+    function setLanguage(lang) {
+      currentLang = lang;
+      const htmlEl = document.documentElement;
+      
+      if (lang === 'fa') {
+        htmlEl.setAttribute('dir', 'rtl');
+        htmlEl.setAttribute('lang', 'fa');
+        document.body.style.fontFamily = "'Vazirmatn', system-ui, sans-serif";
+      } else {
+        htmlEl.setAttribute('dir', 'ltr');
+        htmlEl.setAttribute('lang', lang);
+        document.body.style.fontFamily = "'Inter', system-ui, sans-serif";
+      }
+
+      // Update text nodes with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18nData[lang] && i18nData[lang][key]) {
+          el.innerHTML = i18nData[lang][key];
+        }
+      });
+
+      // Update active button indicator
+      const currentFlag = document.getElementById('currentFlag');
+      const currentLangCode = document.getElementById('currentLangCode');
+      const flags = { en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', fa: '🇮🇷' };
+      if (currentFlag) currentFlag.textContent = flags[lang] || '🌐';
+      if (currentLangCode) currentLangCode.textContent = lang.toUpperCase();
+
+      populateDropdowns();
+      renderDestinations('all');
+      renderGappa();
+      renderTerms();
+      calculateExpeditionPrice();
+
+      const langDropdown = document.getElementById('langDropdown');
+      if (langDropdown) langDropdown.classList.add('hidden');
+    }
+
+    function toggleLangDropdown() {
+      const d = document.getElementById('langDropdown');
+      if (d) d.classList.toggle('hidden');
+    }
+
+    function toggleMobileMenu() {
+      const m = document.getElementById('mobileMenu');
+      if (m) m.classList.toggle('hidden');
+    }
+
+    function toggleDossierModal() {
+      const m = document.getElementById('dossierModal');
+      if (m) m.classList.toggle('hidden');
+    }
+
+    function filterDestinations(f) {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-brand-orange', 'text-white', 'border-brand-orange');
+        b.classList.add('bg-brand-surface', 'text-slate-300', 'border-brand-border');
+      });
+      if (event && event.target) {
+        event.target.classList.add('bg-brand-orange', 'text-white', 'border-brand-orange');
+        event.target.classList.remove('bg-brand-surface', 'text-slate-300', 'border-brand-border');
+      }
+      renderDestinations(f);
+    }
+
+    // Global listener for closing dropdown on outside click
+    window.addEventListener('click', (e) => {
+      const btn = document.getElementById('langBtn');
+      const drop = document.getElementById('langDropdown');
+      if (btn && drop && !btn.contains(e.target) && !drop.contains(e.target)) {
+        drop.classList.add('hidden');
+      }
+    });
+
+    // Initialize application
+    window.addEventListener('DOMContentLoaded', () => {
+      setLanguage('en');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Temporary and scratch files
+*.py
+*.txt
+*.json
+prototype-original.html
+site/
+jev_mcp/
+.agents/
