@@ -2,6 +2,12 @@
 <html lang="en" dir="ltr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
+  <!-- Force HTTPS Redirection -->
+  <script>
+    if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KEBE Alpine Ski Touring & Expeditions | Karakoram • Alps • Tian Shan</title>
   <meta name="description" content="Official platform for KEBE Alpine Ski Touring & High-Altitude Expeditions. Flagship Gappa 2027 Karakoram departure, certified IFMGA/UIAGM mountain guides, and bespoke alpine adventures worldwide.">
@@ -116,6 +122,48 @@
     .animate-pulse-gentle {
       animation: pulse-gentle 7s infinite ease-in-out;
     }
+  
+    /* Theme Toggle Styles */
+    html.theme-light {
+      color-scheme: light;
+    }
+    html.theme-light body {
+      background-color: #F8FAFC !important;
+      color: #0F172A !important;
+    }
+    html.theme-light .bg-brand-charcoal {
+      background-color: #FFFFFF !important;
+    }
+    html.theme-light .bg-brand-surface {
+      background-color: #F1F5F9 !important;
+    }
+    html.theme-light .bg-brand-panel {
+      background-color: #E2E8F0 !important;
+    }
+    html.theme-light .border-brand-border {
+      border-color: #CBD5E1 !important;
+    }
+    html.theme-light .text-white {
+      color: #0F172A !important;
+    }
+    html.theme-light .text-slate-200,
+    html.theme-light .text-slate-300 {
+      color: #334155 !important;
+    }
+    html.theme-light .text-slate-400 {
+      color: #64748B !important;
+    }
+    html.theme-light .glass-card {
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-color: rgba(203, 213, 225, 0.8) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+    }
+    html.theme-light .topo-bg {
+      background-color: #F8FAFC !important;
+      background-image: radial-gradient(#CBD5E1 1px, transparent 1px) !important;
+      background-size: 24px 24px !important;
+    }
+
   </style>
 
   <!-- Privacy-friendly Web Analytics & Telemetry -->
@@ -201,6 +249,10 @@
 
         <!-- Right Side: 5-Language Switcher & Quick CTA -->
         <div class="flex items-center gap-3">
+          <!-- Theme Toggle (Light / Dark) -->
+          <button onclick="toggleTheme()" id="themeToggleBtn" class="w-9 h-9 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-orange text-slate-300 hover:text-brand-orange flex items-center justify-center transition-all" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+            <i id="themeIcon" class="fa-solid fa-moon text-xs"></i>
+          </button>
           <div class="relative">
             <button id="langBtn" onclick="toggleLangDropdown()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs font-bold text-slate-200 hover:border-brand-orange transition-colors">
               <i class="fa-solid fa-globe text-brand-orange"></i>
@@ -222,6 +274,9 @@
               </button>
               <button onclick="setLanguage('fa')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200 border-t border-brand-border">
                 <span>فارسی</span> <span class="text-brand-orange font-mono text-[10px]">FA</span>
+              </button>
+              <button onclick="setLanguage('ja')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200 border-t border-brand-border">
+                <span>日本語</span> <span class="text-slate-400 font-mono text-[10px]">JA</span>
               </button>
             </div>
           </div>
@@ -320,7 +375,163 @@
     </div>
   </section>
 
-    <!-- Flagship Departure: Gappa, Nagar Valley 2027 (from PDF proposal) -->
+    
+  <!-- Categories & Operational Pillars -->
+  <section id="categories" class="py-24 bg-brand-surface border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-[0.25em] text-brand-orange font-bold mb-3" data-i18n="cat_tagline">Core Operational Pillars</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="cat_title">Why Ski Touring & Summer Alpinism are Our First Priority</p>
+        <p class="text-slate-400 mt-4 leading-relaxed" data-i18n="cat_desc">
+          We reject mass tourism. All KEBE expeditions are engineered around fast-and-light alpine style, skinning up perpetual glaciers, and dropping technical lines with verified snowpack stability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Discipline 1: High-Altitude Ski Touring -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6">
+              <i class="fa-solid fa-person-skiing"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_1_title">Ski Mountaineering & Touring</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_1_desc">
+              Ascend active glaciers with technical skins, explore untracked powder basins in Norway, Kyrgyzstan, and Nagano without relying on mechanical ski lifts.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_1">Crevasse rescue training & roped glacier travel</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_2">Barryvox 3-antenna beacons, carbon shovels & probes</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_3">Technical descent corridors (35° to 50° sustained)</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border">
+            <span class="text-xs font-mono text-brand-orange uppercase font-bold" data-i18n="disc_1_focus">Focus: Glacier Traverses & Wild Powder</span>
+          </div>
+        </div>
+
+        <!-- Discipline 2: Summer Alpinism on Glaciers -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brand-glacier/10 border border-brand-glacier/30 flex items-center justify-center text-brand-glacier text-2xl mb-6">
+              <i class="fa-solid fa-mountain"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_2_title">Summer Alpinism & Glaciers</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_2_desc">
+              June through September ascents across European Alps, Caucasus, and Tien Shan. Granite ridge traverses paired with icy couloirs during prime stable weather.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_1">Ascents of 4,000m summits (Breithorn, Mont Blanc, Kazbek)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_2">High-altitude alpine hut staging (Monte Rosa, Rifugio Torino)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_3">Advanced crampon & ice axe progression on steep terrain</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border">
+            <span class="text-xs font-mono text-brand-glacier uppercase font-bold" data-i18n="disc_2_focus">Focus: High Ridges & Alpine Huts</span>
+          </div>
+        </div>
+
+        <!-- Discipline 3: Southern Hemisphere Reverse Season -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-6">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_3_title">Reverse Season (Southern Winter)</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_3_desc">
+              When summer strikes the Northern Hemisphere, we chase true mid-winter powder in the Southern Alps of New Zealand and the volcanoes of Patagonia (Chile & Argentina).
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_1">Heli-assisted glacier touring in July & August</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_2">Andes volcanic summits & pristine beech forest lines</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_3">365-day endless winter operational calendar</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-brand-border">
+            <span class="text-xs font-mono text-amber-400 uppercase font-bold" data-i18n="disc_3_focus">Focus: 365 Days of Ski Touring</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Brand Identity & Field Gear Mockups Showcase -->
+  <section id="mockups" class="py-20 bg-brand-surface/70 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-shapes"></i> <span data-i18n="mockup_tag">Engineered Equipment &amp; Identity</span>
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4" data-i18n="mockup_title">Official Field Gear &amp; Athlete Mockups</h2>
+        <p class="text-slate-400 mt-3 text-sm leading-relaxed" data-i18n="mockup_sub">Engineered for extreme high-altitude alpine performance, zero-fail reliability, and enduring family heritage.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Main Mockup Image Display -->
+        <div class="lg:col-span-7">
+          <div class="relative rounded-3xl overflow-hidden border border-brand-border shadow-2xl group">
+            <img src="assets/brand-mockups.jpg" alt="KEBE Alpine Ski Touring &amp; Field Gear Mockups" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/90 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 inset-x-6">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange font-bold">OFFICIAL SPECIFICATION</span>
+              <h3 class="text-xl font-bold text-white mt-1">KEBE High-Altitude Equipment Collection</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spec Breakdown Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="glass-card p-5 rounded-2xl border border-brand-border flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-lg shrink-0">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white" data-i18n="mockup_spec1_title">Athlete Field Passport &amp; Route Cards</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed" data-i18n="mockup_spec1_desc">Waterproof, debossed technical credentials certifying IFMGA summit screening, satellite emergency radio frequencies, and personal route logs.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-brand-border flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-glacier/15 border border-brand-glacier/30 flex items-center justify-center text-brand-glacier text-lg shrink-0">
+              <i class="fa-solid fa-person-skiing"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white" data-i18n="mockup_spec2_title">Carbon Ski Touring Fleet &amp; Bindings</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed" data-i18n="mockup_spec2_desc">Ultra-light carbon weave touring skis engineered for 40° hardpack stability, crevasse agility, and high-altitude endurance.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-brand-border flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg shrink-0">
+              <i class="fa-solid fa-vest"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white" data-i18n="mockup_spec3_title">Technical Hardshells &amp; Down Parkas</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed" data-i18n="mockup_spec3_desc">3-Layer storm armor with signature blaze orange alpine visibility, heat-sealed seams, and chiseled KB monogram emblem.</p>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-brand-border flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg shrink-0">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white" data-i18n="mockup_spec4_title">Hardcover Expedition Journals</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed" data-i18n="mockup_spec4_desc">Faceted debossed hardcover journals provided to every athlete for telemetry logs, route sketches, and summit validation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Flagship Departure: Gappa, Nagar Valley 2027 (from PDF proposal) -->
   <section id="gappa" class="py-24 relative overflow-hidden border-b border-brand-border topo-bg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
@@ -426,86 +637,7 @@
 
 
 
-  <!-- Categories & Operational Pillars -->
-  <section id="categories" class="py-24 bg-brand-surface border-y border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs uppercase tracking-[0.25em] text-brand-orange font-bold mb-3" data-i18n="cat_tagline">Core Operational Pillars</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="cat_title">Why Ski Touring & Summer Alpinism are Our First Priority</p>
-        <p class="text-slate-400 mt-4 leading-relaxed" data-i18n="cat_desc">
-          We reject mass tourism. All KEBE expeditions are engineered around fast-and-light alpine style, skinning up perpetual glaciers, and dropping technical lines with verified snowpack stability.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Discipline 1: High-Altitude Ski Touring -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6">
-              <i class="fa-solid fa-person-skiing"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_1_title">Ski Mountaineering & Touring</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_1_desc">
-              Ascend active glaciers with technical skins, explore untracked powder basins in Norway, Kyrgyzstan, and Nagano without relying on mechanical ski lifts.
-            </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_1">Crevasse rescue training & roped glacier travel</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_2">Barryvox 3-antenna beacons, carbon shovels & probes</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> <span data-i18n="disc_1_bullet_3">Technical descent corridors (35° to 50° sustained)</span></li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-6 border-t border-brand-border">
-            <span class="text-xs font-mono text-brand-orange uppercase font-bold" data-i18n="disc_1_focus">Focus: Glacier Traverses & Wild Powder</span>
-          </div>
-        </div>
-
-        <!-- Discipline 2: Summer Alpinism on Glaciers -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-brand-glacier/10 border border-brand-glacier/30 flex items-center justify-center text-brand-glacier text-2xl mb-6">
-              <i class="fa-solid fa-mountain"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_2_title">Summer Alpinism & Glaciers</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_2_desc">
-              June through September ascents across European Alps, Caucasus, and Tien Shan. Granite ridge traverses paired with icy couloirs during prime stable weather.
-            </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_1">Ascents of 4,000m summits (Breithorn, Mont Blanc, Kazbek)</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_2">High-altitude alpine hut staging (Monte Rosa, Rifugio Torino)</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-glacier"></i> <span data-i18n="disc_2_bullet_3">Advanced crampon & ice axe progression on steep terrain</span></li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-6 border-t border-brand-border">
-            <span class="text-xs font-mono text-brand-glacier uppercase font-bold" data-i18n="disc_2_focus">Focus: High Ridges & Alpine Huts</span>
-          </div>
-        </div>
-
-        <!-- Discipline 3: Southern Hemisphere Reverse Season -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-6">
-              <i class="fa-solid fa-earth-americas"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-3" data-i18n="disc_3_title">Reverse Season (Southern Winter)</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6" data-i18n="disc_3_desc">
-              When summer strikes the Northern Hemisphere, we chase true mid-winter powder in the Southern Alps of New Zealand and the volcanoes of Patagonia (Chile & Argentina).
-            </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_1">Heli-assisted glacier touring in July & August</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_2">Andes volcanic summits & pristine beech forest lines</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> <span data-i18n="disc_3_bullet_3">365-day endless winter operational calendar</span></li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-6 border-t border-brand-border">
-            <span class="text-xs font-mono text-amber-400 uppercase font-bold" data-i18n="disc_3_focus">Focus: 365 Days of Ski Touring</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Destinations Section -->
   <section id="destinations" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -838,21 +970,41 @@
         
         <!-- 1. Executive Summary & Brand Genesis -->
         <section class="border-b border-brand-border pb-8">
-          <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-            <i class="fa-solid fa-shield-halved text-brand-orange"></i>
-            <span>1. Identity, Brand Genesis & Anti-K2/K3 Differentiation</span>
-          </h4>
-          <p class="mb-4">
-            <strong>Brand Name:</strong> KEBE Alpine Ski Touring (Domain Target: <code class="text-brand-orange">kebealpine.com</code> / <code class="text-brand-orange">kebeexpeditions.com</code>). Inspired by the intimate phonetics of "Kebe", engineered for high-altitude ski touring and summer alpinism.
-          </p>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 text-lg">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-brand-orange font-bold">BRAND GENESIS &amp; HERITAGE</span>
+              <h4 class="text-xl font-black text-white">The "KEBE" Story — Familial Love &amp; Alpine Guardianship</h4>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-brand-charcoal/90 border border-brand-border space-y-4 text-xs leading-relaxed mb-6">
+            <div class="p-3.5 rounded-xl bg-brand-orange/10 border border-brand-orange/30 text-brand-orange font-bold text-sm">
+              <i class="fa-solid fa-quote-left mr-2"></i>
+              "KEBE is born from pure familial warmth: it is the joyous, tender nickname with which Zohre's daughter's grandchildren affectionately call her — KEBEEE!"
+            </div>
+            <p class="text-slate-300">
+              Where typical commercial mountaineering companies choose cold, aggressive, or corporate monikers, our expedition house was named deliberately in celebration of maternal warmth, family shelter, and generational love.
+            </p>
+            <p class="text-slate-300">
+              In high-altitude mountaineering and the wild expanses of the Karakoram, the Alps, and Central Asia—surrounded by 7,000m summits and perpetual glaciers—leadership is never about conquering nature. It is about <strong>uncompromising guardianship of human life</strong>: the maternal instinct to protect, shelter, and guide athletes safely across extreme mountain terrain and ensure every single climber returns safely home to their families.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2 text-[11px] text-slate-400">
+              <span><strong>Official Domains:</strong> <code class="text-brand-orange font-mono">kebealpine.com</code> / <code class="text-slate-300 font-mono">kebeexpeditions.com</code></span>
+              <span><strong>Operations Director:</strong> Zohre Ofoghi</span>
+            </div>
+          </div>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-brand-charcoal p-5 rounded-2xl border border-brand-border text-xs">
             <div>
               <span class="font-bold text-brand-orange block mb-1">Geometric Monogram Architecture:</span>
-              <p>Combined <strong>K</strong> (switchback ski-skin tracks on steep terrain) and <strong>B</strong> (chiseled, enclosed faceted loops). Crafted with fine monoline precision and Swiss alpine styling.</p>
+              <p class="text-slate-300">Combined <strong>K</strong> (switchback ski-touring tracks ascending extreme couloirs) and <strong>B</strong> (chiseled, crystalline mountain facets), drafted with fine Swiss monoline precision.</p>
             </div>
             <div>
-              <span class="font-bold text-brand-glacier block mb-1">Strict Differentiation from K2 & K3:</span>
-              <p>Completely avoids blocky 90s graffiti aesthetics, hollow rounded loops, or open numerals. The enclosed rectangular facets strictly enforce the letter 'B' (not the number '3') with zero trademark overlap.</p>
+              <span class="font-bold text-brand-glacier block mb-1">Uncompromising Safety Standard:</span>
+              <p class="text-slate-300">Every single expedition is led by certified UIAGM/IFMGA mountain guides with satellite communication and dedicated high-altitude medical protocols.</p>
             </div>
           </div>
         </section>
@@ -1850,6 +2002,11 @@
     ];
 
     // Render Destination Cards
+    
+    // Japanese Localization Dataset
+    if (!i18nData['ja']) i18nData['ja'] = {};
+    Object.assign(i18nData['ja'], {"nav_destinations": "遠征エリア一覧", "nav_disciplines": "アルピニズム使命", "nav_safety": "IFMGA安全基準", "nav_calculator": "費用計算", "nav_screening": "技術審査・応募", "nav_dossier": "経営計画書", "nav_apply_cta": "遠征に参加する", "nav_gappa": "ガッパ 2027", "hero_badge": "高所スキーツーリング＆先鋭的アルピニズム", "hero_title_1": "手つかずの氷河を登高し、", "hero_title_2": "至高のアルパインラインを刻む", "hero_subtitle": "KEBEはカラコルム、スイスアルプス、天山山脈において、国際山岳ガイド連盟（IFMGA/UIAGM）公認ガイド指揮による最高水準のスキーツーリングとアルピニズム遠征を運営しています。", "hero_btn_destinations": "世界12エリアの遠征を見る", "hero_btn_screening": "技術審査を申し込む", "metric_countries": "現地支局を持つ国", "metric_guides": "IFMGA認定ガイド", "metric_peak": "最高滑降高度 (ムスターグ・アタ)", "metric_sat": "24時間衛星監視＆航空救助", "cat_tagline": "最優先の使命と哲学", "cat_title": "なぜ先鋭的アルピニズムが私たちの原点なのか", "cat_desc": "マスツーリズムの時代は終わりました。KEBEのすべての遠征は、高所氷河の登攀、自立したロープワーク、そして完全な安全管理のもとに設計されています。", "disc_1_title": "高所スキーツーリング", "disc_1_desc": "シール登高で活発な氷河を越え、未踏の斜面を滑降。すべてのルートはUIAGM認定ガイドが先導します。", "disc_1_bullet_1": "クレバス救助訓練と氷河アンザイレン登高", "disc_1_bullet_2": "40度以上の急斜面での確実な滑降技術", "disc_1_bullet_3": "高所高山病予防と計画的順応プロトコル", "disc_2_title": "夏季アルピニズム＆氷壁登攀", "disc_2_desc": "夏期はヨーロッパアルプスと天山山脈の4,000m〜7,000m峰において、ミックス岩稜登攀と氷壁登攀に挑みます。", "disc_2_bullet_1": "アイゼン＆アックスによる急峻なリッジ走破", "disc_2_bullet_2": "岩と氷のミックスクライミング技術", "disc_2_bullet_3": "国際規格の山小屋および高所キャンプ設営", "disc_3_title": "IFMGA厳格安全基準", "disc_3_desc": "世界最高峰の山岳ガイド資格であるIFMGA/UIAGMガイドのみが率い、専属の救助プロトコルを敷いています。", "disc_3_bullet_1": "ガイド1名に対して参加者最大4名の厳格比率", "disc_3_bullet_2": "イリジウム衛星電話＆GPSリアルタイム追跡", "disc_3_bullet_3": "高所ヘリコプター救助の事前手配保証", "gappa_tag": "特別旗艦遠征 · 2027年春", "gappa_title": "パキスタン・ナガール渓谷 ガッパ スキーツーリング", "gappa_sub": "ガッパはギルギット・バルティスタン州カラコルム山脈の奥深くに位置する秘境です。専用ベースキャンプを拠点に、手つかずの雪山と氷河パノラマを滑降します。", "gappa_stat_dates": "日程", "gappa_stat_dates_val": "2027年4月3日〜16日", "gappa_stat_duration": "期間", "gappa_stat_duration_val": "14日間", "gappa_stat_ski": "スキー日数", "gappa_stat_ski_val": "7〜8日間*", "gappa_stat_region": "地域", "gappa_stat_region_val": "カラコルム、ギルギット・バルティスタン", "gappa_itin_title": "日別遠征スケジュール", "gappa_ski_note": "* 実際のスキー日数は現地の天候および積雪の安定度により変動します。", "gappa_inc_title": "費用に含まれるもの", "gappa_exc_title": "費用に含まれないもの", "gappa_price_label": "お一人様", "gappa_deposit_label": "予約時内金（50％）", "gappa_final_label": "残金お支払い期日", "gappa_final_val": "出発の4週間前まで", "gappa_pay_label": "お支払い方法", "gappa_pay_val": "銀行海外送金 · ユーロ（€）", "gappa_btn_book": "ガッパ2027遠征に申し込む", "gappa_btn_terms": "予約規約・キャンセル規定", "gappa_leaders_title": "遠征リーダー紹介", "mockup_tag": "専用装備＆ブランドアイデンティティ", "mockup_title": "公式遠征装備＆アスリート仕様モックアップ", "mockup_sub": "過酷な高所環境に耐えうる信頼性と、世代を超える家族の温もりを体現したギアデザイン。", "mockup_spec1_title": "アスリート用高所パスポート＆登山許可カード", "mockup_spec1_desc": "防水・耐寒仕様。IFMGA技術審査証明、衛星非常通信周波数、日別登攀記録を刻印。", "mockup_spec2_title": "カーボン製ツアースキー＆ビンディング", "mockup_spec2_desc": "40度のクラスト雪面でも確実なエッジホールドを発揮する軽量カーボンファイバー構造。", "mockup_spec3_title": "高所防寒ハードシェル＆ダウンパーカ", "mockup_spec3_desc": "過酷な吹雪に耐える3層ゴアテックス構造。高視認性ブレイズオレンジとKBモノグラム。", "mockup_spec4_title": "ハードカバー公式遠征日誌", "mockup_spec4_desc": "遠征参加者全員に授与される型押しハードカバー日誌。高度記録と登頂証明用。", "terms_title": "公式予約規約および送金規定（PDF契約書準拠）", "terms_close": "閉じる", "card_btn_dossier": "詳細情報", "card_btn_apply": "予約する", "wa_float": "ガイドに相談", "wa_prefill": "ヤニック＆アシマ様、KEBE遠征について相談したいです: "});
+
     // Merged i18n data
     const extraI18n = {"en": {"nav_gappa": "Gappa 2027", "gappa_tag": "Flagship Departure · Spring 2027", "gappa_title": "Gappa, Nagar Valley — Ski Touring in Pakistan", "gappa_sub": "Gappa is a magnificent, off-the-beaten-track corner of Gilgit-Baltistan in the heart of the Karakoram: pristine meadows, glacier panoramas and untouched ski terrain above our private expedition base camp.", "gappa_stat_dates": "Dates", "gappa_stat_dates_val": "3 – 16 Apr 2027", "gappa_stat_duration": "Duration", "gappa_stat_duration_val": "14 Days", "gappa_stat_ski": "Skiing", "gappa_stat_ski_val": "7–8 Days Ski Touring*", "gappa_stat_region": "Region", "gappa_stat_region_val": "Karakoram, Gilgit-Baltistan", "gappa_itin_title": "Day-by-Day Expedition Itinerary", "gappa_ski_note": "* The exact number of ski days depends on high-altitude weather and snowpack stability.", "gappa_inc_title": "Included in the Price", "gappa_exc_title": "Not Included", "gappa_price_label": "per athlete", "gappa_deposit_label": "Deposit at booking (50%)", "gappa_final_label": "Balance payment", "gappa_final_val": "4 weeks before departure", "gappa_pay_label": "Payment method", "gappa_pay_val": "Bank wire transfer · EUR (€)", "gappa_btn_book": "Book Gappa 2027 Expedition", "gappa_btn_terms": "Booking Terms & Cancellation", "gappa_leaders_title": "Your Expedition Leaders", "terms_title": "Booking Terms & Conditions (PDF Agreement)", "terms_close": "Close & Return", "card_btn_dossier": "View Dossier", "card_btn_apply": "Book Peak", "wa_float": "Chat with Guide", "wa_prefill": "Hello Yannick & Assima, I am interested in joining the KEBE expedition to"}, "fr": {"nav_gappa": "Gappa 2027", "gappa_tag": "Départ Phare · Printemps 2027", "gappa_title": "Gappa, Vallée de Nagar — Ski de Randonnée au Pakistan", "gappa_sub": "Gappa est un joyau préservé du Gilgit-Baltistan au cœur du Karakoram : alpages sauvages, panoramas glaciaires grandioses et lignes de ski vierges au-dessus de notre camp de base privé.", "gappa_stat_dates": "Dates", "gappa_stat_dates_val": "3 – 16 Avril 2027", "gappa_stat_duration": "Durée", "gappa_stat_duration_val": "14 Jours", "gappa_stat_ski": "Ski", "gappa_stat_ski_val": "7–8 Jours de Ski*", "gappa_stat_region": "Région", "gappa_stat_region_val": "Karakoram, Gilgit-Baltistan", "gappa_itin_title": "Itinéraire Jour par Jour", "gappa_ski_note": "* Le nombre exact de journées de ski dépend des conditions météo et de la nivologie en haute montagne.", "gappa_inc_title": "Prestations Incluses", "gappa_exc_title": "Non Inclus", "gappa_price_label": "par athlète", "gappa_deposit_label": "Acompte à l'inscription (50%)", "gappa_final_label": "Solde restant", "gappa_final_val": "4 semaines avant le départ", "gappa_pay_label": "Règlement", "gappa_pay_val": "Virement bancaire · EUR (€)", "gappa_btn_book": "Réserver Gappa 2027", "gappa_btn_terms": "Conditions d'inscription & Annulation", "gappa_leaders_title": "Vos Responsables d'Expédition", "terms_title": "Conditions Générales & Modalités (Contrat PDF)", "terms_close": "Fermer", "card_btn_dossier": "Voir le Dossier", "card_btn_apply": "Réserver", "wa_float": "Contacter un Guide", "wa_prefill": "Bonjour Yannick & Assima, je souhaite participer à l'expédition KEBE à"}, "de": {"nav_gappa": "Gappa 2027", "gappa_tag": "Flaggschiff-Expedition · Frühjahr 2027", "gappa_title": "Gappa, Nagar Valley — Skitouren in Pakistan", "gappa_sub": "Gappa ist ein abgelegenes Juwel in Gilgit-Baltistan im Herzen des Karakorum: unberührte Hänge, gewaltige Gletscherpanoramen und anspruchsvolle Abfahrten rund um unser Basislager.", "gappa_stat_dates": "Termin", "gappa_stat_dates_val": "3. – 16. April 2027", "gappa_stat_duration": "Dauer", "gappa_stat_duration_val": "14 Tage", "gappa_stat_ski": "Skitouren", "gappa_stat_ski_val": "7–8 Skitage*", "gappa_stat_region": "Region", "gappa_stat_region_val": "Karakorum, Gilgit-Baltistan", "gappa_itin_title": "Tagesablauf & Route", "gappa_ski_note": "* Genaue Anzahl der Skitage wetter- und lawinensituationabhängig.", "gappa_inc_title": "Im Preis inbegriffen", "gappa_exc_title": "Nicht inbegriffen", "gappa_price_label": "pro Person", "gappa_deposit_label": "Anzahlung bei Buchung (50%)", "gappa_final_label": "Restzahlung", "gappa_final_val": "4 Wochen vor Abreise", "gappa_pay_label": "Zahlung", "gappa_pay_val": "Banküberweisung · EUR (€)", "gappa_btn_book": "Gappa 2027 Buchen", "gappa_btn_terms": "Buchungs- & Stornobedingungen", "gappa_leaders_title": "Ihre Expeditionsleitung", "terms_title": "Allgemeine Buchungsbedingungen (PDF Vertrag)", "terms_close": "Schließen", "card_btn_dossier": "Dossier ansehen", "card_btn_apply": "Buchen", "wa_float": "Guide kontaktieren", "wa_prefill": "Hallo Yannick & Assima, ich interessiere mich für die KEBE-Expedition nach"}, "es": {"nav_gappa": "Gappa 2027", "gappa_tag": "Expedición Insignia · Primavera 2027", "gappa_title": "Gappa, Valle de Nagar — Esquí de Travesía en Pakistán", "gappa_sub": "Gappa es un rincón extraordinario de Gilgit-Baltistán en pleno Karakórum: praderas alpinas, panorámicas glaciares y terreno virgen de esquí de travesía.", "gappa_stat_dates": "Fechas", "gappa_stat_dates_val": "3 – 16 Abr 2027", "gappa_stat_duration": "Duración", "gappa_stat_duration_val": "14 Días", "gappa_stat_ski": "Esquí", "gappa_stat_ski_val": "7–8 Días de Esquí*", "gappa_stat_region": "Región", "gappa_stat_region_val": "Karakórum, Gilgit-Baltistán", "gappa_itin_title": "Itinerario Día a Día", "gappa_ski_note": "* El número exacto de días de esquí depende de las condiciones meteorológicas y nivológicas.", "gappa_inc_title": "Servicios Incluidos", "gappa_exc_title": "No Incluido", "gappa_price_label": "por atleta", "gappa_deposit_label": "Depósito de reserva (50%)", "gappa_final_label": "Pago final", "gappa_final_val": "4 semanas antes de la salida", "gappa_pay_label": "Método de pago", "gappa_pay_val": "Transferencia bancaria · EUR (€)", "gappa_btn_book": "Reservar Gappa 2027", "gappa_btn_terms": "Condiciones de Reserva & Cancelación", "gappa_leaders_title": "Líderes de Expedición", "terms_title": "Términos y Condiciones (Contrato PDF)", "terms_close": "Cerrar", "card_btn_dossier": "Ver Expediente", "card_btn_apply": "Reservar", "wa_float": "Contactar Guía", "wa_prefill": "Hola Yannick y Assima, me gustaría unirme a la expedición KEBE en"}, "fa": {"nav_gappa": "دره گپا ۲۰۲۷", "gappa_tag": "اکسپدیشن ویژه · بهار ۲۰۲۷", "gappa_title": "دره گپا، ناگار — اسکی تورینگ در قره‌قروم پاکستان", "gappa_sub": "دره گپا یکی از بکرترین و دست‌نخورده‌ترین مناطق گلگت-بلتستان در قلب رشته‌کوه قره‌قروم است: چشم‌انداز یخچال‌های باستانی، فرودهای اسکی بی‌نظیر و کمپ اختصاصی تیم.", "gappa_stat_dates": "تاریخ حرکت", "gappa_stat_dates_val": "۱۴ تا ۲۷ فروردین ۱۴۰۶ (۳–۱۶ آوریل ۲۰۲۷)", "gappa_stat_duration": "مدت زمان", "gappa_stat_duration_val": "۱۴ روز کامل", "gappa_stat_ski": "روزهای اسکی", "gappa_stat_ski_val": "۷ تا ۸ روز اسکی تورینگ*", "gappa_stat_region": "منطقه جغرافیایی", "gappa_stat_region_val": "قره‌قروم، گلگت-بلتستان", "gappa_itin_title": "برنامه روزشمار سفر", "gappa_ski_note": "* تعداد قطعی روزهای اسکی بر اساس شرایط ایمنی برف و تغییرات جوی ارتفاع بالا تعیین می‌شود.", "gappa_inc_title": "خدمات مشمول در هزینه", "gappa_exc_title": "خدمات غیرمشمول", "gappa_price_label": "به ازای هر ورزشکار", "gappa_deposit_label": "پیش‌پرداخت اولیه (۵۰٪)", "gappa_final_label": "تسویه نهایی حساب", "gappa_final_val": "۴ هفته قبل از تاریخ پرواز", "gappa_pay_label": "روش پرداخت", "gappa_pay_val": "حواله بانکی ارزی · یورو (€)", "gappa_btn_book": "ثبت‌نام در اکسپدیشن گپا ۲۰۲۷", "gappa_btn_terms": "قوانین رزرو، قرارداد و کنسلی", "gappa_leaders_title": "سرپرستان و لیدرهای اکسپدیشن", "terms_title": "شرایط قرارداد و استرداد وجه (مفاد رسمی PDF)", "terms_close": "بستن پنجره", "card_btn_dossier": "شناسنامه قله", "card_btn_apply": "ثبت نام قله", "wa_float": "ارتباط واتس‌اپ با راهنما", "wa_prefill": "سلام یانیک و آسیمای گرامی، من مایل به پیوستن به اکسپدیشن KEBE در منطقه"}};
     for (const lang in extraI18n) {
@@ -2251,7 +2408,7 @@
       // Update active button indicator
       const currentFlag = document.getElementById('currentFlag');
       const currentLangCode = document.getElementById('currentLangCode');
-      const flags = { en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', fa: '🇮🇷' };
+      const flags = { en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', fa: '🇮🇷', ja: '🇯🇵' };
       if (currentFlag) currentFlag.textContent = flags[lang] || '🌐';
       if (currentLangCode) currentLangCode.textContent = lang.toUpperCase();
 
@@ -2302,7 +2459,37 @@
     });
 
     // Initialize application
+    
+    // Theme Toggle Functionality
+    function initTheme() {
+      const saved = localStorage.getItem('kebe_theme') || 'dark';
+      applyTheme(saved);
+    }
+    function toggleTheme() {
+      const current = document.documentElement.classList.contains('theme-light') ? 'light' : 'dark';
+      const target = current === 'dark' ? 'light' : 'dark';
+      applyTheme(target);
+    }
+    function applyTheme(t) {
+      const icon = document.getElementById('themeIcon');
+      if (t === 'light') {
+        document.documentElement.classList.add('theme-light');
+        document.documentElement.classList.remove('theme-dark');
+        if (icon) {
+          icon.className = 'fa-solid fa-sun text-xs text-amber-500';
+        }
+      } else {
+        document.documentElement.classList.remove('theme-light');
+        document.documentElement.classList.add('theme-dark');
+        if (icon) {
+          icon.className = 'fa-solid fa-moon text-xs';
+        }
+      }
+      localStorage.setItem('kebe_theme', t);
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
       setLanguage('en');
     });
   </script>
