@@ -117,6 +117,26 @@
       animation: pulse-gentle 7s infinite ease-in-out;
     }
   </style>
+
+  <!-- Privacy-friendly Web Analytics & Telemetry -->
+  <script>
+    window.KEBE_ANALYTICS = {
+      trackEvent: function(category, action, label) {
+        try {
+          const events = JSON.parse(localStorage.getItem('kebe_analytics_events') || '[]');
+          events.push({ time: new Date().toISOString(), category, action, label });
+          if (events.length > 50) events.shift();
+          localStorage.setItem('kebe_analytics_events', JSON.stringify(events));
+        } catch(e) {}
+        if (window.gtag) {
+          window.gtag('event', action, { event_category: category, event_label: label });
+        }
+      }
+    };
+    // Track pageview
+    window.KEBE_ANALYTICS.trackEvent('Navigation', 'pageview', window.location.pathname);
+  </script>
+
 </head>
 
 <body class="bg-brand-charcoal text-slate-100 selection:bg-brand-orange selection:text-white antialiased overflow-x-hidden">
@@ -1014,7 +1034,38 @@
 
       </div>
 
-      <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+      
+        <!-- Social Channels & Community -->
+        <div class="pt-8 border-t border-brand-border/60 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Connect:</span>
+            <a href="https://wa.me/989123678630" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-brand-charcoal border border-brand-border hover:border-emerald-500 hover:text-emerald-400 flex items-center justify-center text-slate-300 transition-all" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="https://t.me/+989123678630" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-brand-charcoal border border-brand-border hover:border-sky-500 hover:text-sky-400 flex items-center justify-center text-slate-300 transition-all" title="Telegram">
+              <i class="fa-brands fa-telegram text-sm"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/kebe-alpine" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-brand-charcoal border border-brand-border hover:border-blue-500 hover:text-blue-400 flex items-center justify-center text-slate-300 transition-all" title="LinkedIn">
+              <i class="fa-brands fa-linkedin text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Share Platform Pill -->
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <span class="uppercase tracking-wider font-semibold">Share:</span>
+            <a href="https://api.whatsapp.com/send?text=KEBE%20Alpine%20Ski%20Touring%20%26%20Expeditions%20-%20https%3A%2F%2Fkebeonline.com" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-brand-charcoal hover:bg-brand-surface border border-brand-border text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5 font-medium">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fkebeonline.com&text=KEBE%20Alpine%20Ski%20Touring%20%26%20Expeditions" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-brand-charcoal hover:bg-brand-surface border border-brand-border text-slate-300 hover:text-sky-400 transition-colors flex items-center gap-1.5 font-medium">
+              <i class="fa-brands fa-telegram"></i> Telegram
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkebeonline.com" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-brand-charcoal hover:bg-brand-surface border border-brand-border text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1.5 font-medium">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
         <p>© 2026 KEBE Alpine Ski Touring. All rights reserved.</p>
         <div class="flex gap-4 mt-4 sm:mt-0">
           <button onclick="toggleDossierModal()" class="text-amber-400 hover:text-amber-300 font-mono font-bold">Inspect Master Blueprint</button>
