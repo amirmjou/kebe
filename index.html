@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KEBE Alpine Ski Touring & Expeditions | Karakoram • Alps • Tian Shan</title>
   <meta name="description" content="Official platform for KEBE Alpine Ski Touring & High-Altitude Expeditions. Flagship Gappa 2027 Karakoram departure, certified IFMGA/UIAGM mountain guides, and bespoke alpine adventures worldwide.">
-  <link rel="icon" type="image/jpeg" href="assets/logo-brand.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/logo-brand.jpg">
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kebeonline.com/">
+  <meta property="og:title" content="KEBE Alpine Ski Touring & Expeditions | Karakoram • Alps • Tian Shan">
+  <meta property="og:description" content="Premier high-altitude ski touring expeditions. Flagship Gappa 2027 Karakoram departure, certified IFMGA guides, and bespoke alpine adventures worldwide.">
+  <meta property="og:image" content="https://kebeonline.com/assets/logo-brand.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://kebeonline.com/assets/logo-brand.jpg">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -2138,13 +2146,30 @@
         `• Deposit Terms: 50% wire transfer acknowledged`
       );
 
-      // Open WhatsApp to Guide Yannick Besançon
+      // 1. Dispatch lead notification directly to email inbox (zohre.ofoghi@gmail.com)
+      fetch('https://formsubmit.co/ajax/zohre.ofoghi@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          Athlete_Name: name,
+          Email: email,
+          Phone: phone,
+          Target_Expedition: country,
+          Experience_Tier: exp,
+          _subject: `New KEBE Expedition Application: ${name} (${country})`,
+          _template: 'table',
+          _cc: 'yanouchki74@gmail.com,assima.mail@gmail.com'
+        })
+      }).catch(err => console.log('Email delivery status:', err));
+
+      // 2. Open WhatsApp direct chat
       window.open(`https://wa.me/33784389548?text=${text}`, '_blank');
 
+      // 3. Status confirmation
       const statusBox = document.getElementById('formStatus');
       if (statusBox) {
         statusBox.className = 'p-4 rounded-xl text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
-        statusBox.innerHTML = `<i class="fa-solid fa-circle-check ml-2 mr-2"></i> Application prepared. Opening WhatsApp direct chat with Guide Yannick Besançon (+33 7 84 38 95 48).`;
+        statusBox.innerHTML = `<i class="fa-solid fa-circle-check ml-2 mr-2"></i> Application received! Dispatched to <strong>zohre.ofoghi@gmail.com</strong> and opening direct WhatsApp with Guide Yannick Besançon.`;
         statusBox.classList.remove('hidden');
       }
     }
