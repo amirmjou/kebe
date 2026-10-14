@@ -124,46 +124,81 @@
     }
   
     /* Theme Toggle Styles */
+    :root {
+      --bg-main: #0B0D10;
+      --bg-surface: #13171C;
+      --bg-panel: #1A2028;
+      --border-color: #242C38;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --card-bg: rgba(19, 23, 28, 0.88);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --nav-bg: rgba(11, 13, 16, 0.92);
+    }
+
     html.theme-light {
-      color-scheme: light;
+      --bg-main: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --bg-panel: #F1F5F9;
+      --border-color: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(226, 232, 240, 0.9);
+      --nav-bg: rgba(255, 255, 255, 0.94);
     }
+
     html.theme-light body {
-      background-color: #F8FAFC !important;
-      color: #0F172A !important;
+      background-color: var(--bg-main) !important;
+      color: var(--text-main) !important;
     }
+
     html.theme-light .bg-brand-charcoal {
-      background-color: #FFFFFF !important;
+      background-color: var(--bg-main) !important;
     }
+
     html.theme-light .bg-brand-surface {
-      background-color: #F1F5F9 !important;
+      background-color: var(--bg-surface) !important;
     }
+
     html.theme-light .bg-brand-panel {
-      background-color: #E2E8F0 !important;
+      background-color: var(--bg-panel) !important;
     }
+
     html.theme-light .border-brand-border {
-      border-color: #CBD5E1 !important;
+      border-color: var(--border-color) !important;
     }
+
+    html.theme-light .glass-nav {
+      background: var(--nav-bg) !important;
+      border-bottom-color: var(--border-color) !important;
+    }
+
+    html.theme-light .glass-card {
+      background: var(--card-bg) !important;
+      border-color: var(--card-border) !important;
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08) !important;
+    }
+
     html.theme-light .text-white {
-      color: #0F172A !important;
+      color: var(--text-main) !important;
     }
+
+    html.theme-light .text-slate-100,
     html.theme-light .text-slate-200,
     html.theme-light .text-slate-300 {
-      color: #334155 !important;
+      color: #1E293B !important;
     }
+
     html.theme-light .text-slate-400 {
-      color: #64748B !important;
+      color: var(--text-muted) !important;
     }
-    html.theme-light .glass-card {
-      background: rgba(255, 255, 255, 0.9) !important;
-      border-color: rgba(203, 213, 225, 0.8) !important;
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
-    }
+
     html.theme-light .topo-bg {
-      background-color: #F8FAFC !important;
+      background-color: var(--bg-main) !important;
       background-image: radial-gradient(#CBD5E1 1px, transparent 1px) !important;
       background-size: 24px 24px !important;
     }
-
   </style>
 
   <!-- Privacy-friendly Web Analytics & Telemetry -->
@@ -237,6 +272,7 @@
         <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-300">
           <a href="#destinations" class="hover:text-brand-orange transition-colors" data-i18n="nav_destinations">Destinations</a>
           <a href="#categories" class="hover:text-brand-orange transition-colors" data-i18n="nav_disciplines">Disciplines</a>
+          <a href="#about" class="hover:text-brand-orange transition-colors" data-i18n="nav_about">About Zohre</a>
           <a href="#safety" class="hover:text-brand-orange transition-colors" data-i18n="nav_safety">IFMGA Safety</a>
           <a href="#calculator" class="hover:text-brand-orange transition-colors" data-i18n="nav_calculator">Estimator</a>
           <a href="#screening" class="hover:text-brand-orange transition-colors" data-i18n="nav_screening">Technical Screening</a>
@@ -278,6 +314,9 @@
               <button onclick="setLanguage('ja')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200 border-t border-brand-border">
                 <span>日本語</span> <span class="text-slate-400 font-mono text-[10px]">JA</span>
               </button>
+              <button onclick="setLanguage('ar')" class="w-full text-left px-3 py-2 text-xs hover:bg-brand-panel flex items-center justify-between text-slate-200 border-t border-brand-border">
+                <span>العربية</span> <span class="text-brand-orange font-mono text-[10px]">AR</span>
+              </button>
             </div>
           </div>
 
@@ -302,6 +341,7 @@
         </a>
         <a href="#destinations" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_destinations">Destinations</a>
         <a href="#categories" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_disciplines">Disciplines</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_about">About Zohre</a>
         <a href="#safety" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_safety">Safety Standards</a>
         <a href="#calculator" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-300 hover:text-brand-orange text-sm font-semibold" data-i18n="nav_calculator">Cost Estimator</a>
         <a href="#screening" onclick="toggleMobileMenu()" class="block px-3 py-2 text-brand-orange font-bold text-sm" data-i18n="nav_screening">Technical Screening</a>
@@ -660,6 +700,183 @@
     <!-- Destinations Grid: Injected dynamically via JS for instant translations -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="destinationsGrid">
       <!-- Destination cards injected via JavaScript -->
+    </div>
+  </section>
+
+  
+  <!-- About Zohre Ofoghi Section -->
+  <section id="about" class="py-24 relative overflow-hidden border-b border-brand-border bg-brand-charcoal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div class="max-w-3xl mb-14">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-award"></i> <span data-i18n="about_tag">Pioneering Mountain Guide</span>
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 leading-tight" data-i18n="about_title">About Zohre Ofoghi</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 leading-relaxed" data-i18n="about_sub">
+          International IFMGA Mountain Guide, extreme sports athlete, and a historic pioneer for women in high-altitude mountaineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+        <!-- Left Column: Visual Showcase with Clean Photos -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="relative rounded-3xl overflow-hidden border border-brand-border shadow-2xl group bg-brand-surface">
+            <img src="assets/zohre-action-climbing.jpg" 
+                 alt="Zohre Ofoghi - IFMGA Mountain Guide" 
+                 class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/20 to-transparent"></div>
+            <div class="absolute bottom-6 inset-x-6 flex items-end justify-between">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-brand-orange text-white text-[10px] font-bold uppercase tracking-wider shadow">
+                  <i class="fa-solid fa-mountain"></i> IFMGA Certified
+                </span>
+                <h3 class="text-xl font-black text-white mt-2">Zohre Ofoghi</h3>
+                <p class="text-xs text-brand-orangeLight font-mono">Tehran (IR) · Chamonix (FR)</p>
+              </div>
+              <a href="https://www.instagram.com/zohreh.ofoghi/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 transition-transform" 
+                 title="Follow My Journey on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Secondary Clean Portrait Card -->
+          <div class="glass-card p-5 rounded-3xl border border-brand-border flex items-center gap-5">
+            <div class="w-20 h-20 rounded-2xl overflow-hidden border border-brand-orange/40 shrink-0">
+              <img src="assets/zohre-ofoghi-portrait.jpg" 
+                   alt="Zohre Ofoghi Portrait" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-brand-orange font-bold">15+ Years Expedition Leadership</div>
+              <h4 class="text-sm font-bold text-white mt-1" data-i18n="about_side_title">Mentorship &amp; Elite Guidance</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed" data-i18n="about_side_desc">Empowering climbers worldwide with safe, transformative alpine experiences.</p>
+            </div>
+          </div>
+
+          <!-- CTA Buttons Box -->
+          <div class="p-6 rounded-3xl bg-brand-surface border border-brand-orange/30 shadow-xl space-y-3">
+            <div class="text-sm font-black text-white flex items-center gap-2">
+              <i class="fa-solid fa-compass text-brand-orange"></i>
+              <span data-i18n="about_cta_heading">🧗 Guide with Zohre</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="about_cta_text">
+              Are you ready to plan your next alpine expedition, rock climbing course, or backcountry ski tour?
+            </p>
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+              <a href="#screening" class="flex-1 py-3 px-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold text-center transition-all shadow-lg shadow-orange-500/20">
+                <span data-i18n="about_btn_contact">Contact for Guiding &amp; Bookings</span>
+              </a>
+              <a href="https://www.instagram.com/zohreh.ofoghi/" target="_blank" rel="noopener" class="py-3 px-4 rounded-xl bg-brand-charcoal hover:bg-brand-panel border border-brand-border text-slate-200 text-xs font-bold text-center transition-colors flex items-center justify-center gap-2">
+                <i class="fa-brands fa-instagram text-rose-400"></i> <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Biography & Historic Milestones -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Bio Intro -->
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-brand-border space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p class="text-sm sm:text-base text-white font-semibold leading-relaxed" data-i18n="about_p1">
+              Zohre Ofoghi is an international mountain guide, extreme sports athlete, and a true pioneer for women in the outdoor industry.
+            </p>
+            <p class="text-slate-400" data-i18n="about_p2">
+              Breaking through strict cultural and societal boundaries from an early age, Zohre has spent over 15 years transforming her passion for the wilderness into a historic career. Driven by an unstoppable spirit of adventure and a deep respect for the mountains, she has dedicated her life to guiding, competing, and pushing the limits of what is possible.
+            </p>
+          </div>
+
+          <!-- Historic Milestones -->
+          <div class="space-y-4">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-flag-checkered text-brand-orange"></i>
+              <span data-i18n="about_milestones_title">Pushing Boundaries: Historic Milestones</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="glass-card p-5 rounded-2xl border border-brand-border">
+                <div class="w-8 h-8 rounded-lg bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xs font-bold mb-3">
+                  01
+                </div>
+                <h4 class="text-xs font-bold text-white mb-1.5" data-i18n="about_m1_title">Iran’s First Female IFMGA Guide</h4>
+                <p class="text-xs text-slate-400 leading-relaxed" data-i18n="about_m1_desc">
+                  In 2024, after years of grueling examinations across Asia and the Alps (Chamonix), Zohre became the first Iranian woman to earn the international certification from IFMGA/UIAGM.
+                </p>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-brand-border">
+                <div class="w-8 h-8 rounded-lg bg-brand-glacier/15 border border-brand-glacier/30 flex items-center justify-center text-brand-glacier text-xs font-bold mb-3">
+                  02
+                </div>
+                <h4 class="text-xs font-bold text-white mb-1.5" data-i18n="about_m2_title">The First Iranian Female B.A.S.E. Jumper</h4>
+                <p class="text-xs text-slate-400 leading-relaxed" data-i18n="about_m2_desc">
+                  An elite multi-discipline athlete, she shattered traditional expectations by becoming Iran's first female B.A.S.E. jumper, combining aerial precision with vertical big-walls.
+                </p>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-brand-border sm:col-span-2">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xs font-bold mb-3">
+                  03
+                </div>
+                <h4 class="text-xs font-bold text-white mb-1.5" data-i18n="about_m3_title">Elite Ski Mountaineering &amp; Backcountry Pioneer</h4>
+                <p class="text-xs text-slate-400 leading-relaxed" data-i18n="about_m3_desc">
+                  As a competitive ski mountaineer, Zohre represented Iran at the Asian Championships. Following the pandemic, she became a foundational figure in popularizing backcountry ski touring across Iran's majestic mountain ranges.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discipline & Expertise -->
+          <div class="glass-card p-6 rounded-3xl border border-brand-border space-y-4">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-toolbox text-brand-orange"></i>
+              <span data-i18n="about_disciplines_title">Discipline &amp; Technical Expertise</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3.5 rounded-xl bg-brand-charcoal/70 border border-brand-border">
+                <span class="font-bold text-brand-orange block mb-1">🎿 Ski Touring &amp; SkiMo</span>
+                <p class="text-slate-400">Guiding deep-powder, high-altitude backcountry lines and glacier crossings.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-brand-charcoal/70 border border-brand-border">
+                <span class="font-bold text-brand-glacier block mb-1">🏔️ Alpine Mountaineering</span>
+                <p class="text-slate-400">Leading expeditions on complex snow, blue ice, and mixed ridge terrain.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-brand-charcoal/70 border border-brand-border">
+                <span class="font-bold text-amber-400 block mb-1">🧗 Rock &amp; Ice Climbing</span>
+                <p class="text-slate-400">Instructing technical vertical ascents and multi-pitch safety systems.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-brand-charcoal/70 border border-brand-border">
+                <span class="font-bold text-emerald-400 block mb-1">🚴 Ultra-Endurance</span>
+                <p class="text-slate-400">Long-distance alpine cycling and self-sustained wilderness expeditions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mission & Philosophy -->
+          <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border space-y-3 text-xs leading-relaxed">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-heart text-rose-400"></i>
+              <span data-i18n="about_mission_title">Mission &amp; Philosophy</span>
+            </h3>
+            <p class="text-slate-300" data-i18n="about_mission_desc1">
+              Operating internationally between Tehran, Iran and Chamonix, France, Zohre splits her time between leading world-class alpine expeditions and mentoring the next generation of climbers.
+            </p>
+            <p class="text-slate-400" data-i18n="about_mission_desc2">
+              As a guide, her primary mission is to provide safe, empowering, and unforgettable mountain experiences for her clients. As an athlete, she continues to stand as a powerful symbol of determination, proving that no peak is out of reach—regardless of where your journey begins.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -2003,6 +2220,13 @@
 
     // Render Destination Cards
     
+    
+    // Arabic Localization & About Section Data
+    if (!i18nData['ar']) i18nData['ar'] = {};
+    Object.assign(i18nData['ar'], {"nav_destinations": "وجهات الرحلات", "nav_disciplines": "رسالة تسلق الجبال", "nav_about": "عن زهرة أوفوغي", "nav_safety": "معايير IFMGA للسلامة", "nav_calculator": "حاسبة التكاليف", "nav_screening": "الفحص الفني والتسجيل", "nav_dossier": "خطة العمل", "nav_apply_cta": "انضم للبعثة", "nav_gappa": "غابا 2027", "hero_badge": "التزلج على المنحدرات العالية وتسلق الجبال الاحترافي", "hero_title_1": "اصعد الأنهار الجليدية العذراء،", "hero_title_2": "وانطلق في أنقى مسارات جبال الألب", "hero_subtitle": "تنظم KEBE أرقى بعثات التزلج الحر وتسلق الجبال في كاراكورام والألب وجبال تيان شان بقيادة مرشدين دوليين معتمدين من IFMGA / UIAGM.", "hero_btn_destinations": "استكشف وجهاتنا الـ 12", "hero_btn_screening": "التقديم للفحص الفني", "metric_countries": "دول ذات مكاتب ميدانية", "metric_guides": "مرشدون معتمدون IFMGA", "metric_peak": "أعلى قمة تزلج (موزتاغ آتا)", "metric_sat": "تتبع بالأقمار الصناعية 24/7", "cat_tagline": "المهمة والركائز التشغيلية", "cat_title": "لماذا يعد تسلق الجبال الاحترافي أولويتنا ومسارنا الأساسي", "cat_desc": "لقد تجاوزنا السياحة الجماهيرية. كل بعثة مصممة للأداء العالي والنزاهة الفنية والسيطرة المطلقة على السلامة.", "gappa_tag": "الرحلة الرئيسية · ربيع 2027", "gappa_title": "غابا، وادي ناغار — التزلج الحر في باكستان", "gappa_sub": "غابا هي وجهة بكر في قلب كاراكورام في غلغت-بلتستان: مروج شاهقة، مناظر جليدية مهيبة، ومسارات تزلج غير ملموسة انطلاقاً من مخيمنا الخاص.", "gappa_stat_dates": "التاريخ", "gappa_stat_dates_val": "3 – 16 أبريل 2027", "gappa_stat_duration": "المدة", "gappa_stat_duration_val": "14 يوماً", "gappa_stat_ski": "أيام التزلج", "gappa_stat_ski_val": "7 إلى 8 أيام*", "gappa_stat_region": "المنطقة", "gappa_stat_region_val": "كاراكورام، غلغت-بلتستان", "gappa_itin_title": "برنامج الرحلة يوماً بيوم", "gappa_ski_note": "* يعتمد عدد أيام التزلج الفعلي على ظروف الطقس واستقرار الثلوج في الجبال العالية.", "gappa_inc_title": "الخدمات المشمولة", "gappa_exc_title": "الخدمات غير المشمولة", "gappa_price_label": "لكل رياضي", "gappa_deposit_label": "عربون الحجز (50%)", "gappa_final_label": "تسوية الرصيد", "gappa_final_val": "قبل 4 أسابيع من المغادرة", "gappa_pay_label": "طريقة الدفع", "gappa_pay_val": "تحويل مصرفي · يورو (€)", "gappa_btn_book": "احجز بعثة غابا 2027", "gappa_btn_terms": "شروط الحجز وسياسة الإلغاء", "gappa_leaders_title": "قادة البعثة", "about_tag": "مرشدة جبلية رائدة دولياً", "about_title": "عن زهرة أوفوغي (Zohre Ofoghi)", "about_sub": "مرشدة جبال دولية معتمدة من IFMGA، ورياضية في الرياضات الخطرة، ورائدة حقيقية للنساء في صناعة الرياضات الجبلية.", "about_side_title": "التدريب والإرشاد الاحترافي", "about_side_desc": "تمكين المتسلقين حول العالم من خلال تجارب جبلية تحويلية وآمنة بالكامل.", "about_cta_heading": "🧗 انطلق مع زهرة", "about_cta_text": "هل أنت مستعد للتخطيط لرحلتك الاستكشافية القادمة، أو دورة تسلق الصخور، أو جولة التزلج في الجبال الوعرة؟", "about_btn_contact": "تواصل للحجز والإرشاد الميداني", "about_p1": "زهرة أوفوغي هي مرشدة جبال دولية، ورياضية في رياضات المغامرة الخطرة، ورائدة في تاريخ رياضة الجبال للنساء.", "about_p2": "من خلال كسر الحواجز الصارمة منذ سن مبكرة، أمضت زهرة أكثر من 15 عاماً في تحويل شغفها بالطبيعة العذراء إلى مسيرة تاريخية استثنائية. مدفوعة بروح المغامرة والاحترام العميق للجبال، كرست حياتها للإرشاد والمنافسة وتخطي حدود ما هو ممكن.", "about_milestones_title": "تخطي الحدود: إنجازات تاريخية", "about_m1_title": "أول مرشدة جبال إيرانية معتمدة من IFMGA", "about_m1_desc": "في عام 2024، وبعد سنوات من التدريب والامتحانات الشاقة في آسيا وجبال الألب (شاموني)، أصبحت زهرة أول امرأة إيرانية تنال شهادة الإرشاد الجبلي الدولي المرموقة.", "about_m2_title": "أول قافزة B.A.S.E. إيرانية", "about_m2_desc": "كرياضية نخبوية متعددة التخصصات، حطمت التوقعات التقليدية لتصبح أول قافزة بيس في إيران، جامعة بين الدقة الهوائية وشغف الجدران العمودية.", "about_m3_title": "التزلج الحر وتسلق الجبال التنافسي", "about_m3_desc": "مثلت بلدها دولياً في بطولة آسيا للتزلج الجبلي، وأصبحت شخصية أساسية في نشر التزلج الريفي الحر عبر السلاسل الجبلية المهيبة.", "about_disciplines_title": "التخصص والخبرة الفنية", "about_mission_title": "الرسالة والفلسفة", "about_mission_desc1": "تعمل زهرة دولياً بين طهران وشاموني في فرنسا، وتقسم وقتها بين قيادة البعثات العالمية وتدريب الجيل الجديد من المتسلقين.", "about_mission_desc2": "كمرشدة، مهمتها الأساسية توفير تجارب جبلية آمنة وملهمة. وكرياضية، تقف رمزاً قوياً للعزيمة، مؤكدة أنه لا توجد قمة بعيدة المنال مهما كانت نقطة البداية.", "terms_title": "شروط الحجز الرسمية ولوائح التحويل", "terms_close": "إغلاق", "card_btn_dossier": "تفاصيل القمة", "card_btn_apply": "احجز الآن", "wa_float": "تحدث مع مرشد", "wa_prefill": "مرحباً زهرة ويانيك، أود الاستفسار عن الانضمام لبعثة KEBE إلى "});
+    if (i18nData['en']) Object.assign(i18nData['en'], {"nav_about": "About Zohre", "about_tag": "Pioneering Mountain Guide", "about_title": "About Zohre Ofoghi", "about_sub": "International Mountain Guide (IFMGA), extreme sports athlete, and a historic pioneer for women in high-altitude mountaineering.", "about_side_title": "Mentorship & Elite Guidance", "about_side_desc": "Empowering climbers worldwide with safe, transformative alpine experiences.", "about_cta_heading": "🧗 Guide with Zohre", "about_cta_text": "Are you ready to plan your next alpine expedition, rock climbing course, or backcountry ski tour?", "about_btn_contact": "Contact for Guiding & Bookings", "about_p1": "Zohre Ofoghi is an international mountain guide, extreme sports athlete, and a true pioneer for women in the outdoor industry.", "about_p2": "Breaking through strict cultural and societal boundaries from an early age, Zohre has spent over 15 years transforming her passion for the wilderness into a historic career. Driven by an unstoppable spirit of adventure and a deep respect for the mountains, she has dedicated her life to guiding, competing, and pushing the limits of what is possible.", "about_milestones_title": "Pushing Boundaries: Historic Milestones", "about_m1_title": "Iran’s First Female IFMGA Mountain Guide", "about_m1_desc": "In 2024, after years of grueling training and examinations across Asia and the Alps (Chamonix), Zohre became the first Iranian woman to earn the prestigious international mountain guide certification from the International Federation of Mountain Guides Associations (IFMGA).", "about_m2_title": "The First Iranian Female B.A.S.E. Jumper", "about_m2_desc": "An elite multi-discipline athlete, she shattered traditional expectations by becoming Iran's first female B.A.S.E. jumper, combining aerial precision with her love for vertical landscapes.", "about_m3_title": "Elite Ski Mountaineering & Backcountry Pioneer", "about_m3_desc": "As a competitive ski mountaineer, Zohre represented Iran on the international stage at the Asian Championships. Following the pandemic, she became a foundational figure in popularizing backcountry ski touring across Iran's majestic mountain ranges.", "about_disciplines_title": "Discipline & Technical Expertise", "about_mission_title": "Mission & Philosophy", "about_mission_desc1": "Operating internationally between Tehran, Iran and Chamonix, France, Zohre splits her time between leading world-class alpine expeditions and mentoring the next generation of climbers.", "about_mission_desc2": "As a guide, her primary mission is to provide safe, empowering, and unforgettable mountain experiences for her clients. As an athlete, she continues to stand as a powerful symbol of determination, proving that no peak is out of reach—regardless of where your journey begins."});
+    if (i18nData['fa']) Object.assign(i18nData['fa'], {"nav_about": "درباره زهره افقی", "about_tag": "راهنمای بین‌المللی کوهستان", "about_title": "درباره زهره افقی", "about_sub": "راهنمای بین‌المللی فدراسیون جهانی (IFMGA)، ورزشکار ورزش‌های اکستریم و پیشگام تاریخ‌ساز زنان در کوهنوردی جهان.", "about_side_title": "راهبری و مربی‌گری فنی", "about_side_desc": "هدایت امن و الهام‌بخش صعودهای آلپی در مرتفع‌ترین کوهستان‌های جهان.", "about_cta_heading": "🧗 صعود با زهره افقی", "about_cta_text": "آماده برنامه‌ریزی اکسپدیشن بعدی خود در رشته‌های اسکی تورینگ، صعودهای آلپی یا دوره‌های سنگ‌نوردی هستید؟", "about_btn_contact": "تماس جهت هماهنگی صعود و رزرو", "about_p1": "زهره افقی راهنمای بین‌المللی کوهستان، ورزشکار حرفه‌ای ورزش‌های اکستریم و نماد برجسته پیشگامی زنان در صنعت کوهنوردی است.", "about_p2": "با عبور از موانع و مرزهای سخت اجتماعی از سنین جوانی، زهره بیش از ۱۵ سال از عمر خود را وقف تبدیل عشقش به کوهستان به یک مسیر حرفه‌ای و تاریخی کرده است.", "about_milestones_title": "دستاوردهای تاریخی و شکستن مرزها", "about_m1_title": "نخستین زن ایرانی دارنده مدرک بین‌المللی IFMGA", "about_m1_desc": "در سال ۲۰۲۴ پس از سال‌ها آزمون‌های نفس‌گیر در آسیا و آلپ (شامونی)، زهره به عنوان نخستین زن ایرانی موفق به دریافت نشان طلایی فدراسیون جهانی راهنمایان کوهستان شد.", "about_m2_title": "اولین بانوی بیس‌جامپر ایران", "about_m2_desc": "او با پرش‌های موفق هوایی، عنوان اولین زن بیس‌جامپر ایران را کسب کرد و دقت پرواز را با صعودهای عمودی پیوند زد.", "about_m3_title": "اسکی کوهستان قهرمانی و گسترش تورینگ", "about_m3_desc": "نماینده ایران در مسابقات قهرمانی آسیا و از پایه‌گذاران اصلی ترویج اسکی تورینگ در کوهستان‌های وحشی و بکر.", "about_disciplines_title": "تخصص‌ها و حوزه‌های راهنمایی", "about_mission_title": "رسالت و جهان‌بینی", "about_mission_desc1": "فعالیت بین‌المللی میان تهران و شامونی فرانسه؛ هدایت اکسپدیشن‌های طراز اول جهان و آموزش نسل نوپای کوهنوردان.", "about_mission_desc2": "رسالت اصلی او ارائه تجربه‌ای امن، ارتقادهنده و فراموش‌نشدنی است. هیچ قله‌ای دور از دسترس نیست، فارغ از آن‌که مسیرتان از کجا آغاز شده باشد."});
+
     // Japanese Localization Dataset
     if (!i18nData['ja']) i18nData['ja'] = {};
     Object.assign(i18nData['ja'], {"nav_destinations": "遠征エリア一覧", "nav_disciplines": "アルピニズム使命", "nav_safety": "IFMGA安全基準", "nav_calculator": "費用計算", "nav_screening": "技術審査・応募", "nav_dossier": "経営計画書", "nav_apply_cta": "遠征に参加する", "nav_gappa": "ガッパ 2027", "hero_badge": "高所スキーツーリング＆先鋭的アルピニズム", "hero_title_1": "手つかずの氷河を登高し、", "hero_title_2": "至高のアルパインラインを刻む", "hero_subtitle": "KEBEはカラコルム、スイスアルプス、天山山脈において、国際山岳ガイド連盟（IFMGA/UIAGM）公認ガイド指揮による最高水準のスキーツーリングとアルピニズム遠征を運営しています。", "hero_btn_destinations": "世界12エリアの遠征を見る", "hero_btn_screening": "技術審査を申し込む", "metric_countries": "現地支局を持つ国", "metric_guides": "IFMGA認定ガイド", "metric_peak": "最高滑降高度 (ムスターグ・アタ)", "metric_sat": "24時間衛星監視＆航空救助", "cat_tagline": "最優先の使命と哲学", "cat_title": "なぜ先鋭的アルピニズムが私たちの原点なのか", "cat_desc": "マスツーリズムの時代は終わりました。KEBEのすべての遠征は、高所氷河の登攀、自立したロープワーク、そして完全な安全管理のもとに設計されています。", "disc_1_title": "高所スキーツーリング", "disc_1_desc": "シール登高で活発な氷河を越え、未踏の斜面を滑降。すべてのルートはUIAGM認定ガイドが先導します。", "disc_1_bullet_1": "クレバス救助訓練と氷河アンザイレン登高", "disc_1_bullet_2": "40度以上の急斜面での確実な滑降技術", "disc_1_bullet_3": "高所高山病予防と計画的順応プロトコル", "disc_2_title": "夏季アルピニズム＆氷壁登攀", "disc_2_desc": "夏期はヨーロッパアルプスと天山山脈の4,000m〜7,000m峰において、ミックス岩稜登攀と氷壁登攀に挑みます。", "disc_2_bullet_1": "アイゼン＆アックスによる急峻なリッジ走破", "disc_2_bullet_2": "岩と氷のミックスクライミング技術", "disc_2_bullet_3": "国際規格の山小屋および高所キャンプ設営", "disc_3_title": "IFMGA厳格安全基準", "disc_3_desc": "世界最高峰の山岳ガイド資格であるIFMGA/UIAGMガイドのみが率い、専属の救助プロトコルを敷いています。", "disc_3_bullet_1": "ガイド1名に対して参加者最大4名の厳格比率", "disc_3_bullet_2": "イリジウム衛星電話＆GPSリアルタイム追跡", "disc_3_bullet_3": "高所ヘリコプター救助の事前手配保証", "gappa_tag": "特別旗艦遠征 · 2027年春", "gappa_title": "パキスタン・ナガール渓谷 ガッパ スキーツーリング", "gappa_sub": "ガッパはギルギット・バルティスタン州カラコルム山脈の奥深くに位置する秘境です。専用ベースキャンプを拠点に、手つかずの雪山と氷河パノラマを滑降します。", "gappa_stat_dates": "日程", "gappa_stat_dates_val": "2027年4月3日〜16日", "gappa_stat_duration": "期間", "gappa_stat_duration_val": "14日間", "gappa_stat_ski": "スキー日数", "gappa_stat_ski_val": "7〜8日間*", "gappa_stat_region": "地域", "gappa_stat_region_val": "カラコルム、ギルギット・バルティスタン", "gappa_itin_title": "日別遠征スケジュール", "gappa_ski_note": "* 実際のスキー日数は現地の天候および積雪の安定度により変動します。", "gappa_inc_title": "費用に含まれるもの", "gappa_exc_title": "費用に含まれないもの", "gappa_price_label": "お一人様", "gappa_deposit_label": "予約時内金（50％）", "gappa_final_label": "残金お支払い期日", "gappa_final_val": "出発の4週間前まで", "gappa_pay_label": "お支払い方法", "gappa_pay_val": "銀行海外送金 · ユーロ（€）", "gappa_btn_book": "ガッパ2027遠征に申し込む", "gappa_btn_terms": "予約規約・キャンセル規定", "gappa_leaders_title": "遠征リーダー紹介", "mockup_tag": "専用装備＆ブランドアイデンティティ", "mockup_title": "公式遠征装備＆アスリート仕様モックアップ", "mockup_sub": "過酷な高所環境に耐えうる信頼性と、世代を超える家族の温もりを体現したギアデザイン。", "mockup_spec1_title": "アスリート用高所パスポート＆登山許可カード", "mockup_spec1_desc": "防水・耐寒仕様。IFMGA技術審査証明、衛星非常通信周波数、日別登攀記録を刻印。", "mockup_spec2_title": "カーボン製ツアースキー＆ビンディング", "mockup_spec2_desc": "40度のクラスト雪面でも確実なエッジホールドを発揮する軽量カーボンファイバー構造。", "mockup_spec3_title": "高所防寒ハードシェル＆ダウンパーカ", "mockup_spec3_desc": "過酷な吹雪に耐える3層ゴアテックス構造。高視認性ブレイズオレンジとKBモノグラム。", "mockup_spec4_title": "ハードカバー公式遠征日誌", "mockup_spec4_desc": "遠征参加者全員に授与される型押しハードカバー日誌。高度記録と登頂証明用。", "terms_title": "公式予約規約および送金規定（PDF契約書準拠）", "terms_close": "閉じる", "card_btn_dossier": "詳細情報", "card_btn_apply": "予約する", "wa_float": "ガイドに相談", "wa_prefill": "ヤニック＆アシマ様、KEBE遠征について相談したいです: "});
@@ -2387,7 +2611,7 @@
       currentLang = lang;
       const htmlEl = document.documentElement;
       
-      if (lang === 'fa') {
+      if (lang === 'fa' || lang === 'ar') {
         htmlEl.setAttribute('dir', 'rtl');
         htmlEl.setAttribute('lang', 'fa');
         document.body.style.fontFamily = "'Vazirmatn', system-ui, sans-serif";
@@ -2408,7 +2632,7 @@
       // Update active button indicator
       const currentFlag = document.getElementById('currentFlag');
       const currentLangCode = document.getElementById('currentLangCode');
-      const flags = { en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', fa: '🇮🇷', ja: '🇯🇵' };
+      const flags = { en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', fa: '🇮🇷', ja: '🇯🇵', ar: '🇦🇪' };
       if (currentFlag) currentFlag.textContent = flags[lang] || '🌐';
       if (currentLangCode) currentLangCode.textContent = lang.toUpperCase();
 
@@ -2460,29 +2684,32 @@
 
     // Initialize application
     
-    // Theme Toggle Functionality
+    // Robust Theme Toggle Functionality
     function initTheme() {
       const saved = localStorage.getItem('kebe_theme') || 'dark';
       applyTheme(saved);
     }
+
     function toggleTheme() {
-      const current = document.documentElement.classList.contains('theme-light') ? 'light' : 'dark';
-      const target = current === 'dark' ? 'light' : 'dark';
+      const isLight = document.documentElement.classList.contains('theme-light');
+      const target = isLight ? 'dark' : 'light';
       applyTheme(target);
     }
+
     function applyTheme(t) {
+      const root = document.documentElement;
       const icon = document.getElementById('themeIcon');
       if (t === 'light') {
-        document.documentElement.classList.add('theme-light');
-        document.documentElement.classList.remove('theme-dark');
+        root.classList.add('theme-light');
+        root.classList.remove('theme-dark');
         if (icon) {
           icon.className = 'fa-solid fa-sun text-xs text-amber-500';
         }
       } else {
-        document.documentElement.classList.remove('theme-light');
-        document.documentElement.classList.add('theme-dark');
+        root.classList.remove('theme-light');
+        root.classList.add('theme-dark');
         if (icon) {
-          icon.className = 'fa-solid fa-moon text-xs';
+          icon.className = 'fa-solid fa-moon text-xs text-slate-300';
         }
       }
       localStorage.setItem('kebe_theme', t);
